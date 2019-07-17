@@ -5814,3 +5814,13 @@ FOREIGN KEY ("user_id")
   ↳ /Users/itn.govardhan.p/.rvm/rubies/ruby-2.6.3/bin/rake:23
   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
   ↳ /Users/itn.govardhan.p/.rvm/rubies/ruby-2.6.3/bin/rake:23
+Started GET "/" for ::1 at 2019-07-17 16:53:36 +0800
+  [1m[35m (12.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (4.2ms)
+  Rendered layouts/_alerts.html.erb (0.4ms)
+Completed 200 OK in 327ms (Views: 317.8ms | ActiveRecord: 0.0ms)
+
+
