@@ -1,0 +1,21 @@
+<style>
+h1 {text-align:center;}
+</style>
+
+<div class="row-fluid">
+    <div class="span10 offset1">
+        <div class="hero-unit">
+            <h1>ToDo app</h1>
+        </div>
+    </div>
+</div>
+
+<br><br>
+
+<% if current_user %>
+    <%= link_to "Log Out", destroy_user_session_path, method: :delete %>
+<% else %>
+    <%= link_to "Sign Up", new_user_registration_path %>
+    &nbsp; &nbsp; &nbsp; &nbsp;
+    <%= link_to "Log In", new_user_session_path %>
+<% end %>
