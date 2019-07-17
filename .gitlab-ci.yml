@@ -1,0 +1,16 @@
+image: "ruby:2.6"
+
+before_script:
+  - brew update -qq && brew install -y -qq pg libpq-dev nodejs
+  - ruby -v
+  - which ruby
+  - gem install bundler --no-document
+  - bundle install --jobs $(nproc)  "${FLAGS[@]}"
+
+rspec:
+  script:
+    - bundle exec rspec
+
+rubocop:
+  script:
+    - bundle exec rubocop
