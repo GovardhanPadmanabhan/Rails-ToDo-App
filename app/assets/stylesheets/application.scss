@@ -101,10 +101,10 @@ body {
 
 #todo_items_wrapper {
 	.row {
-		width: 95%;
+		width: 99.5%;
 		border-top: 1px solid rgba(250,250,250, .3);
 		border-bottom: 1px solid rgba(250,250,250, .3);
-		margin: 10px;
+		margin: 0px;
 		.complete {
 			width: 10%;
 			float: left;
@@ -187,8 +187,8 @@ label {
 	color: $dark;
 }
 input[type="text"], textarea {
-	width: 90%;
-	margin: 15em 2% 1em 0;
+	width: 100%;
+	margin: .5em 2% 1em 0;
 	display: inline-block;
 	outline: none;
 	background: rgba(250,250,250,.4);
