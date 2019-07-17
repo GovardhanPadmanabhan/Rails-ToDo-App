@@ -1,0 +1,573 @@
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "todo_lists" DISABLE TRIGGER ALL;ALTER TABLE "todo_items" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixtures Load (1.3ms)[0m  [1m[31mDELETE FROM "users";
+DELETE FROM "todo_items";
+DELETE FROM "todo_lists";
+INSERT INTO "users" ("id", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2019-07-17 07:26:35.820336', '2019-07-17 07:26:35.820336'), (298486374, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2019-07-17 07:26:35.820336', '2019-07-17 07:26:35.820336');
+INSERT INTO "todo_items" ("id", "content", "todo_list_id", "created_at", "updated_at", "completed_at") VALUES (980190962, 'MyString', 980190962, '2019-07-17 07:26:35.825695', '2019-07-17 07:26:35.825695', DEFAULT), (298486374, 'MyString', 298486374, '2019-07-17 07:26:35.825695', '2019-07-17 07:26:35.825695', DEFAULT);
+INSERT INTO "todo_lists" ("id", "title", "description", "created_at", "updated_at", "user_id") VALUES (980190962, 'MyString', 'MyText', '2019-07-17 07:26:35.828889', '2019-07-17 07:26:35.828889', DEFAULT), (298486374, 'MyString', 'MyText', '2019-07-17 07:26:35.828889', '2019-07-17 07:26:35.828889', DEFAULT)[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "todo_lists" DISABLE TRIGGER ALL;ALTER TABLE "todo_items" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixtures Load (1.0ms)[0m  [1m[31mDELETE FROM "users";
+DELETE FROM "todo_items";
+DELETE FROM "todo_lists";
+INSERT INTO "users" ("id", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2019-07-17 07:27:26.563387', '2019-07-17 07:27:26.563387'), (298486374, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2019-07-17 07:27:26.563387', '2019-07-17 07:27:26.563387');
+INSERT INTO "todo_items" ("id", "content", "todo_list_id", "created_at", "updated_at", "completed_at") VALUES (980190962, 'MyString', 980190962, '2019-07-17 07:27:26.568060', '2019-07-17 07:27:26.568060', DEFAULT), (298486374, 'MyString', 298486374, '2019-07-17 07:27:26.568060', '2019-07-17 07:27:26.568060', DEFAULT);
+INSERT INTO "todo_lists" ("id", "title", "description", "created_at", "updated_at", "user_id") VALUES (980190962, 'MyString', 'MyText', '2019-07-17 07:27:26.570872', '2019-07-17 07:27:26.570872', DEFAULT), (298486374, 'MyString', 'MyText', '2019-07-17 07:27:26.570872', '2019-07-17 07:27:26.570872', DEFAULT)[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "todo_lists" DISABLE TRIGGER ALL;ALTER TABLE "todo_items" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixtures Load (1.0ms)[0m  [1m[31mDELETE FROM "users";
+DELETE FROM "todo_items";
+DELETE FROM "todo_lists";
+INSERT INTO "users" ("id", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2019-07-17 07:28:41.395698', '2019-07-17 07:28:41.395698'), (298486374, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2019-07-17 07:28:41.395698', '2019-07-17 07:28:41.395698');
+INSERT INTO "todo_items" ("id", "content", "todo_list_id", "created_at", "updated_at", "completed_at") VALUES (980190962, 'MyString', 980190962, '2019-07-17 07:28:41.400411', '2019-07-17 07:28:41.400411', DEFAULT), (298486374, 'MyString', 298486374, '2019-07-17 07:28:41.400411', '2019-07-17 07:28:41.400411', DEFAULT);
+INSERT INTO "todo_lists" ("id", "title", "description", "created_at", "updated_at", "user_id") VALUES (980190962, 'MyString', 'MyText', '2019-07-17 07:28:41.403387', '2019-07-17 07:28:41.403387', DEFAULT), (298486374, 'MyString', 'MyText', '2019-07-17 07:28:41.403387', '2019-07-17 07:28:41.403387', DEFAULT)[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "todo_lists" DISABLE TRIGGER ALL;ALTER TABLE "todo_items" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixtures Load (2.8ms)[0m  [1m[31mDELETE FROM "users";
+DELETE FROM "todo_items";
+DELETE FROM "todo_lists";
+INSERT INTO "users" ("id", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at") VALUES (980190962, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2019-07-17 07:48:39.913286', '2019-07-17 07:48:39.913286'), (298486374, DEFAULT, DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2019-07-17 07:48:39.913286', '2019-07-17 07:48:39.913286');
+INSERT INTO "todo_items" ("id", "content", "todo_list_id", "created_at", "updated_at", "completed_at") VALUES (980190962, 'Item#1', 980190962, '2019-07-17 07:48:39.918211', '2019-07-17 07:48:39.918211', NULL), (298486374, 'Item#2', 298486374, '2019-07-17 07:48:39.918211', '2019-07-17 07:48:39.918211', NULL);
+INSERT INTO "todo_lists" ("id", "title", "description", "created_at", "updated_at", "user_id") VALUES (980190962, 'Test#1', 'Description#1', '2019-07-17 07:48:39.921210', '2019-07-17 07:48:39.921210', 980190962), (298486374, 'Test#2', 'Description#2', '2019-07-17 07:48:39.921210', '2019-07-17 07:48:39.921210', 298486374)[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "todo_lists" DISABLE TRIGGER ALL;ALTER TABLE "todo_items" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixtures Load (1.9ms)[0m  [1m[31mDELETE FROM "users";
+DELETE FROM "todo_items";
+DELETE FROM "todo_lists";
+INSERT INTO "users" ("id", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at") VALUES (980190962, 'test1@testing.com', DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2019-07-17 07:51:18.347482', '2019-07-17 07:51:18.347482'), (298486374, 'test2@testing.com', DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2019-07-17 07:51:18.347482', '2019-07-17 07:51:18.347482');
+INSERT INTO "todo_items" ("id", "content", "todo_list_id", "created_at", "updated_at", "completed_at") VALUES (980190962, 'Item#1', 980190962, '2019-07-17 07:51:18.352554', '2019-07-17 07:51:18.352554', NULL), (298486374, 'Item#2', 298486374, '2019-07-17 07:51:18.352554', '2019-07-17 07:51:18.352554', NULL);
+INSERT INTO "todo_lists" ("id", "title", "description", "created_at", "updated_at", "user_id") VALUES (980190962, 'Test#1', 'Description#1', '2019-07-17 07:51:18.357240', '2019-07-17 07:51:18.357240', 980190962), (298486374, 'Test#2', 'Description#2', '2019-07-17 07:51:18.357240', '2019-07-17 07:51:18.357240', 298486374)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "todo_lists" ENABLE TRIGGER ALL;ALTER TABLE "todo_items" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+----------------------------
+TodoItemTest: test_todo_item
+----------------------------
+  [1m[36mTodoItem Load (0.2ms)[0m  [1m[34mSELECT  "todo_items".* FROM "todo_items" WHERE "todo_items"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTodoList Load (0.2ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTodoItem Create (0.5ms)[0m  [1m[32mINSERT INTO "todo_items" ("content", "todo_list_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["content", "Item#1"], ["todo_list_id", 980190962], ["created_at", "2019-07-17 07:51:18.393188"], ["updated_at", "2019-07-17 07:51:18.393188"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "todo_lists" DISABLE TRIGGER ALL;ALTER TABLE "todo_items" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixtures Load (1.1ms)[0m  [1m[31mDELETE FROM "users";
+DELETE FROM "todo_items";
+DELETE FROM "todo_lists";
+INSERT INTO "users" ("id", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at") VALUES (980190962, 'test1@testing.com', DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2019-07-17 07:55:21.850138', '2019-07-17 07:55:21.850138'), (298486374, 'test2@testing.com', DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2019-07-17 07:55:21.850138', '2019-07-17 07:55:21.850138');
+INSERT INTO "todo_items" ("id", "content", "todo_list_id", "created_at", "updated_at", "completed_at") VALUES (980190962, 'Item#1', 980190962, '2019-07-17 07:55:21.854834', '2019-07-17 07:55:21.854834', NULL), (298486374, 'Item#2', 298486374, '2019-07-17 07:55:21.854834', '2019-07-17 07:55:21.854834', NULL);
+INSERT INTO "todo_lists" ("id", "title", "description", "created_at", "updated_at", "user_id") VALUES (980190962, 'Test#1', 'Description#1', '2019-07-17 07:55:21.857759', '2019-07-17 07:55:21.857759', 980190962), (298486374, 'Test#2', 'Description#2', '2019-07-17 07:55:21.857759', '2019-07-17 07:55:21.857759', 298486374)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "todo_lists" ENABLE TRIGGER ALL;ALTER TABLE "todo_items" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL[0m
+  [1m[35m (4.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+----------------------------
+TodoItemTest: test_todo_item
+----------------------------
+  [1m[36mTodoItem Load (0.2ms)[0m  [1m[34mSELECT  "todo_items".* FROM "todo_items" WHERE "todo_items"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTodoList Load (0.2ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTodoItem Create (0.4ms)[0m  [1m[32mINSERT INTO "todo_items" ("content", "todo_list_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["content", "Item#1"], ["todo_list_id", 980190962], ["created_at", "2019-07-17 07:55:21.888594"], ["updated_at", "2019-07-17 07:55:21.888594"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTodoItem Load (0.2ms)[0m  [1m[34mSELECT  "todo_items".* FROM "todo_items" WHERE "todo_items"."id" = $1 LIMIT $2[0m  [["id", 980190963], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "todo_lists" DISABLE TRIGGER ALL;ALTER TABLE "todo_items" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixtures Load (1.1ms)[0m  [1m[31mDELETE FROM "users";
+DELETE FROM "todo_items";
+DELETE FROM "todo_lists";
+INSERT INTO "users" ("id", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at") VALUES (980190962, 'test1@testing.com', DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2019-07-17 07:55:39.164380', '2019-07-17 07:55:39.164380'), (298486374, 'test2@testing.com', DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2019-07-17 07:55:39.164380', '2019-07-17 07:55:39.164380');
+INSERT INTO "todo_items" ("id", "content", "todo_list_id", "created_at", "updated_at", "completed_at") VALUES (980190962, 'Item#1', 980190962, '2019-07-17 07:55:39.168961', '2019-07-17 07:55:39.168961', NULL), (298486374, 'Item#2', 298486374, '2019-07-17 07:55:39.168961', '2019-07-17 07:55:39.168961', NULL);
+INSERT INTO "todo_lists" ("id", "title", "description", "created_at", "updated_at", "user_id") VALUES (980190962, 'Test#1', 'Description#1', '2019-07-17 07:55:39.171928', '2019-07-17 07:55:39.171928', 980190962), (298486374, 'Test#2', 'Description#2', '2019-07-17 07:55:39.171928', '2019-07-17 07:55:39.171928', 298486374)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "todo_lists" ENABLE TRIGGER ALL;ALTER TABLE "todo_items" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+----------------------------
+TodoItemTest: test_todo_item
+----------------------------
+  [1m[36mTodoItem Load (0.2ms)[0m  [1m[34mSELECT  "todo_items".* FROM "todo_items" WHERE "todo_items"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTodoList Load (0.2ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTodoItem Create (0.4ms)[0m  [1m[32mINSERT INTO "todo_items" ("content", "todo_list_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["content", "Item#1"], ["todo_list_id", 980190962], ["created_at", "2019-07-17 07:55:39.214949"], ["updated_at", "2019-07-17 07:55:39.214949"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTodoItem Load (0.2ms)[0m  [1m[34mSELECT  "todo_items".* FROM "todo_items" WHERE "todo_items"."id" = $1 LIMIT $2[0m  [["id", 980190963], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTodoItem Update (0.3ms)[0m  [1m[33mUPDATE "todo_items" SET "content" = $1, "updated_at" = $2 WHERE "todo_items"."id" = $3[0m  [["content", "Test"], ["updated_at", "2019-07-17 07:55:39.217237"], ["id", 980190963]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTodoItem Destroy (0.2ms)[0m  [1m[31mDELETE FROM "todo_items" WHERE "todo_items"."id" = $1[0m  [["id", 980190963]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "todo_lists" DISABLE TRIGGER ALL;ALTER TABLE "todo_items" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixtures Load (1.1ms)[0m  [1m[31mDELETE FROM "users";
+DELETE FROM "todo_items";
+DELETE FROM "todo_lists";
+INSERT INTO "users" ("id", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at") VALUES (980190962, 'test1@testing.com', DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2019-07-17 08:08:32.207579', '2019-07-17 08:08:32.207579'), (298486374, 'test2@testing.com', DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2019-07-17 08:08:32.207579', '2019-07-17 08:08:32.207579');
+INSERT INTO "todo_items" ("id", "content", "todo_list_id", "created_at", "updated_at", "completed_at") VALUES (980190962, 'Item#1', 980190962, '2019-07-17 08:08:32.212828', '2019-07-17 08:08:32.212828', NULL), (298486374, 'Item#2', 298486374, '2019-07-17 08:08:32.212828', '2019-07-17 08:08:32.212828', NULL);
+INSERT INTO "todo_lists" ("id", "title", "description", "created_at", "updated_at", "user_id") VALUES (980190962, 'Test#1', 'Description#1', '2019-07-17 08:08:32.215788', '2019-07-17 08:08:32.215788', 980190962), (298486374, 'Test#2', 'Description#2', '2019-07-17 08:08:32.215788', '2019-07-17 08:08:32.215788', 298486374)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "todo_lists" ENABLE TRIGGER ALL;ALTER TABLE "todo_items" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+----------------------------
+TodoListTest: test_todo_list
+----------------------------
+  [1m[36mTodoList Load (0.2ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTodoList Create (0.4ms)[0m  [1m[32mINSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Test#1"], ["description", "Description#1"], ["created_at", "2019-07-17 08:08:32.248286"], ["updated_at", "2019-07-17 08:08:32.248286"], ["user_id", 980190962]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTodoList Load (0.2ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 980190963], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "todo_lists" DISABLE TRIGGER ALL;ALTER TABLE "todo_items" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixtures Load (1.3ms)[0m  [1m[31mDELETE FROM "users";
+DELETE FROM "todo_items";
+DELETE FROM "todo_lists";
+INSERT INTO "users" ("id", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at") VALUES (980190962, 'test1@testing.com', DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2019-07-17 08:09:09.936937', '2019-07-17 08:09:09.936937'), (298486374, 'test2@testing.com', DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2019-07-17 08:09:09.936937', '2019-07-17 08:09:09.936937');
+INSERT INTO "todo_items" ("id", "content", "todo_list_id", "created_at", "updated_at", "completed_at") VALUES (980190962, 'Item#1', 980190962, '2019-07-17 08:09:09.942154', '2019-07-17 08:09:09.942154', NULL), (298486374, 'Item#2', 298486374, '2019-07-17 08:09:09.942154', '2019-07-17 08:09:09.942154', NULL);
+INSERT INTO "todo_lists" ("id", "title", "description", "created_at", "updated_at", "user_id") VALUES (980190962, 'Test#1', 'Description#1', '2019-07-17 08:09:09.945212', '2019-07-17 08:09:09.945212', 980190962), (298486374, 'Test#2', 'Description#2', '2019-07-17 08:09:09.945212', '2019-07-17 08:09:09.945212', 298486374)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "todo_lists" ENABLE TRIGGER ALL;ALTER TABLE "todo_items" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+----------------------------
+TodoListTest: test_todo_list
+----------------------------
+  [1m[36mTodoList Load (0.2ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTodoList Create (0.5ms)[0m  [1m[32mINSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Test#1"], ["description", "Description#1"], ["created_at", "2019-07-17 08:09:10.050573"], ["updated_at", "2019-07-17 08:09:10.050573"], ["user_id", 980190962]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTodoList Load (0.3ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 980190963], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "todo_lists" DISABLE TRIGGER ALL;ALTER TABLE "todo_items" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixtures Load (1.0ms)[0m  [1m[31mDELETE FROM "users";
+DELETE FROM "todo_items";
+DELETE FROM "todo_lists";
+INSERT INTO "users" ("id", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at") VALUES (980190962, 'test1@testing.com', DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2019-07-17 08:09:37.384008', '2019-07-17 08:09:37.384008'), (298486374, 'test2@testing.com', DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2019-07-17 08:09:37.384008', '2019-07-17 08:09:37.384008');
+INSERT INTO "todo_items" ("id", "content", "todo_list_id", "created_at", "updated_at", "completed_at") VALUES (980190962, 'Item#1', 980190962, '2019-07-17 08:09:37.389774', '2019-07-17 08:09:37.389774', NULL), (298486374, 'Item#2', 298486374, '2019-07-17 08:09:37.389774', '2019-07-17 08:09:37.389774', NULL);
+INSERT INTO "todo_lists" ("id", "title", "description", "created_at", "updated_at", "user_id") VALUES (980190962, 'Test#1', 'Description#1', '2019-07-17 08:09:37.392937', '2019-07-17 08:09:37.392937', 980190962), (298486374, 'Test#2', 'Description#2', '2019-07-17 08:09:37.392937', '2019-07-17 08:09:37.392937', 298486374)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "todo_lists" ENABLE TRIGGER ALL;ALTER TABLE "todo_items" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+----------------------------
+TodoListTest: test_todo_list
+----------------------------
+  [1m[36mTodoList Load (0.3ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTodoList Create (0.5ms)[0m  [1m[32mINSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Test#1"], ["description", "Description#1"], ["created_at", "2019-07-17 08:09:37.427869"], ["updated_at", "2019-07-17 08:09:37.427869"], ["user_id", 980190962]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTodoList Load (0.2ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 980190963], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTodoList Update (0.3ms)[0m  [1m[33mUPDATE "todo_lists" SET "title" = $1, "updated_at" = $2 WHERE "todo_lists"."id" = $3[0m  [["title", "Change"], ["updated_at", "2019-07-17 08:09:37.431360"], ["id", 980190963]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTodoItem Destroy (0.2ms)[0m  [1m[31mDELETE FROM "todo_items" WHERE "todo_items"."todo_list_id" = $1[0m  [["todo_list_id", 980190963]]
+  [1m[36mTodoList Destroy (0.4ms)[0m  [1m[31mDELETE FROM "todo_lists" WHERE "todo_lists"."id" = $1[0m  [["id", 980190963]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "todo_lists" DISABLE TRIGGER ALL;ALTER TABLE "todo_items" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixtures Load (1.0ms)[0m  [1m[31mDELETE FROM "users";
+DELETE FROM "todo_items";
+DELETE FROM "todo_lists";
+INSERT INTO "users" ("id", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at") VALUES (980190962, 'test1@testing.com', DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2019-07-17 08:11:44.857168', '2019-07-17 08:11:44.857168'), (298486374, 'test2@testing.com', DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2019-07-17 08:11:44.857168', '2019-07-17 08:11:44.857168');
+INSERT INTO "todo_items" ("id", "content", "todo_list_id", "created_at", "updated_at", "completed_at") VALUES (980190962, 'Item#1', 980190962, '2019-07-17 08:11:44.861630', '2019-07-17 08:11:44.861630', NULL), (298486374, 'Item#2', 298486374, '2019-07-17 08:11:44.861630', '2019-07-17 08:11:44.861630', NULL);
+INSERT INTO "todo_lists" ("id", "title", "description", "created_at", "updated_at", "user_id") VALUES (980190962, 'Test#1', 'Description#1', '2019-07-17 08:11:44.864412', '2019-07-17 08:11:44.864412', 980190962), (298486374, 'Test#2', 'Description#2', '2019-07-17 08:11:44.864412', '2019-07-17 08:11:44.864412', 298486374)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "todo_lists" ENABLE TRIGGER ALL;ALTER TABLE "todo_items" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+----------------------------
+TodoItemTest: test_todo_item
+----------------------------
+  [1m[36mTodoItem Load (0.1ms)[0m  [1m[34mSELECT  "todo_items".* FROM "todo_items" WHERE "todo_items"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mTodoList Load (0.2ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTodoItem Create (0.4ms)[0m  [1m[32mINSERT INTO "todo_items" ("content", "todo_list_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["content", "Item#1"], ["todo_list_id", 980190962], ["created_at", "2019-07-17 08:11:44.911141"], ["updated_at", "2019-07-17 08:11:44.911141"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTodoItem Load (0.2ms)[0m  [1m[34mSELECT  "todo_items".* FROM "todo_items" WHERE "todo_items"."id" = $1 LIMIT $2[0m  [["id", 980190963], ["LIMIT", 1]]
+  [1m[36mTodoItem Load (0.2ms)[0m  [1m[34mSELECT  "todo_items".* FROM "todo_items" WHERE "todo_items"."id" = $1 LIMIT $2[0m  [["id", 298486374], ["LIMIT", 1]]
+  [1m[36mTodoList Load (0.2ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 298486374], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTodoItem Update (0.3ms)[0m  [1m[33mUPDATE "todo_items" SET "todo_list_id" = $1, "updated_at" = $2 WHERE "todo_items"."id" = $3[0m  [["todo_list_id", 298486374], ["updated_at", "2019-07-17 08:11:44.914445"], ["id", 980190963]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTodoItem Destroy (0.2ms)[0m  [1m[31mDELETE FROM "todo_items" WHERE "todo_items"."id" = $1[0m  [["id", 980190963]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "todo_lists" DISABLE TRIGGER ALL;ALTER TABLE "todo_items" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixtures Load (1.4ms)[0m  [1m[31mDELETE FROM "users";
+DELETE FROM "todo_items";
+DELETE FROM "todo_lists";
+INSERT INTO "users" ("id", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at") VALUES (980190962, 'test1@testing.com', DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2019-07-17 08:15:20.704153', '2019-07-17 08:15:20.704153'), (298486374, 'test2@testing.com', DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2019-07-17 08:15:20.704153', '2019-07-17 08:15:20.704153');
+INSERT INTO "todo_items" ("id", "content", "todo_list_id", "created_at", "updated_at", "completed_at") VALUES (980190962, 'Item#1', 980190962, '2019-07-17 08:15:20.709145', '2019-07-17 08:15:20.709145', NULL), (298486374, 'Item#2', 298486374, '2019-07-17 08:15:20.709145', '2019-07-17 08:15:20.709145', NULL);
+INSERT INTO "todo_lists" ("id", "title", "description", "created_at", "updated_at", "user_id") VALUES (980190962, 'Test#1', 'Description#1', '2019-07-17 08:15:20.712666', '2019-07-17 08:15:20.712666', 980190962), (298486374, 'Test#2', 'Description#2', '2019-07-17 08:15:20.712666', '2019-07-17 08:15:20.712666', 298486374)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "todo_lists" ENABLE TRIGGER ALL;ALTER TABLE "todo_items" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+--------------------
+UserTest: test_users
+--------------------
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "todo_lists" DISABLE TRIGGER ALL;ALTER TABLE "todo_items" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixtures Load (1.0ms)[0m  [1m[31mDELETE FROM "users";
+DELETE FROM "todo_items";
+DELETE FROM "todo_lists";
+INSERT INTO "users" ("id", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at") VALUES (980190962, 'test1@testing.com', DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2019-07-17 08:15:34.837291', '2019-07-17 08:15:34.837291'), (298486374, 'test2@testing.com', DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2019-07-17 08:15:34.837291', '2019-07-17 08:15:34.837291');
+INSERT INTO "todo_items" ("id", "content", "todo_list_id", "created_at", "updated_at", "completed_at") VALUES (980190962, 'Item#1', 980190962, '2019-07-17 08:15:34.842219', '2019-07-17 08:15:34.842219', NULL), (298486374, 'Item#2', 298486374, '2019-07-17 08:15:34.842219', '2019-07-17 08:15:34.842219', NULL);
+INSERT INTO "todo_lists" ("id", "title", "description", "created_at", "updated_at", "user_id") VALUES (980190962, 'Test#1', 'Description#1', '2019-07-17 08:15:34.845384', '2019-07-17 08:15:34.845384', 980190962), (298486374, 'Test#2', 'Description#2', '2019-07-17 08:15:34.845384', '2019-07-17 08:15:34.845384', 298486374)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "todo_lists" ENABLE TRIGGER ALL;ALTER TABLE "todo_items" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+--------------------
+UserTest: test_users
+--------------------
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 298486374], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test2@testing.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "todo_lists" DISABLE TRIGGER ALL;ALTER TABLE "todo_items" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixtures Load (1.0ms)[0m  [1m[31mDELETE FROM "users";
+DELETE FROM "todo_items";
+DELETE FROM "todo_lists";
+INSERT INTO "users" ("id", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at") VALUES (980190962, 'test1@testing.com', DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2019-07-17 08:16:33.457713', '2019-07-17 08:16:33.457713'), (298486374, 'test2@testing.com', DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2019-07-17 08:16:33.457713', '2019-07-17 08:16:33.457713');
+INSERT INTO "todo_items" ("id", "content", "todo_list_id", "created_at", "updated_at", "completed_at") VALUES (980190962, 'Item#1', 980190962, '2019-07-17 08:16:33.462644', '2019-07-17 08:16:33.462644', NULL), (298486374, 'Item#2', 298486374, '2019-07-17 08:16:33.462644', '2019-07-17 08:16:33.462644', NULL);
+INSERT INTO "todo_lists" ("id", "title", "description", "created_at", "updated_at", "user_id") VALUES (980190962, 'Test#1', 'Description#1', '2019-07-17 08:16:33.465696', '2019-07-17 08:16:33.465696', 980190962), (298486374, 'Test#2', 'Description#2', '2019-07-17 08:16:33.465696', '2019-07-17 08:16:33.465696', 298486374)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "todo_lists" ENABLE TRIGGER ALL;ALTER TABLE "todo_items" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+--------------------
+UserTest: test_users
+--------------------
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 298486374], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test2@testing.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "todo_lists" DISABLE TRIGGER ALL;ALTER TABLE "todo_items" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixtures Load (1.1ms)[0m  [1m[31mDELETE FROM "users";
+DELETE FROM "todo_items";
+DELETE FROM "todo_lists";
+INSERT INTO "users" ("id", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at") VALUES (980190962, 'test1@testing.com', DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2019-07-17 08:18:17.499766', '2019-07-17 08:18:17.499766'), (298486374, 'test2@testing.com', DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2019-07-17 08:18:17.499766', '2019-07-17 08:18:17.499766');
+INSERT INTO "todo_items" ("id", "content", "todo_list_id", "created_at", "updated_at", "completed_at") VALUES (980190962, 'Item#1', 980190962, '2019-07-17 08:18:17.504741', '2019-07-17 08:18:17.504741', NULL), (298486374, 'Item#2', 298486374, '2019-07-17 08:18:17.504741', '2019-07-17 08:18:17.504741', NULL);
+INSERT INTO "todo_lists" ("id", "title", "description", "created_at", "updated_at", "user_id") VALUES (980190962, 'Test#1', 'Description#1', '2019-07-17 08:18:17.507839', '2019-07-17 08:18:17.507839', 980190962), (298486374, 'Test#2', 'Description#2', '2019-07-17 08:18:17.507839', '2019-07-17 08:18:17.507839', 298486374)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "todo_lists" ENABLE TRIGGER ALL;ALTER TABLE "todo_items" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+------------------------
+UserTest: test_the_users
+------------------------
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 298486374], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test2@testing.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "todo_lists" DISABLE TRIGGER ALL;ALTER TABLE "todo_items" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixtures Load (1.2ms)[0m  [1m[31mDELETE FROM "users";
+DELETE FROM "todo_items";
+DELETE FROM "todo_lists";
+INSERT INTO "users" ("id", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at") VALUES (980190962, 'test1@testing.com', DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2019-07-17 08:23:58.560641', '2019-07-17 08:23:58.560641'), (298486374, 'test2@testing.com', DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2019-07-17 08:23:58.560641', '2019-07-17 08:23:58.560641');
+INSERT INTO "todo_items" ("id", "content", "todo_list_id", "created_at", "updated_at", "completed_at") VALUES (980190962, 'Item#1', 980190962, '2019-07-17 08:23:58.566002', '2019-07-17 08:23:58.566002', NULL), (298486374, 'Item#2', 298486374, '2019-07-17 08:23:58.566002', '2019-07-17 08:23:58.566002', NULL);
+INSERT INTO "todo_lists" ("id", "title", "description", "created_at", "updated_at", "user_id") VALUES (980190962, 'Test#1', 'Description#1', '2019-07-17 08:23:58.569566', '2019-07-17 08:23:58.569566', 980190962), (298486374, 'Test#2', 'Description#2', '2019-07-17 08:23:58.569566', '2019-07-17 08:23:58.569566', 298486374)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "todo_lists" ENABLE TRIGGER ALL;ALTER TABLE "todo_items" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+-----------------------------------------
+PagesControllerTest: test_should_get_home
+-----------------------------------------
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "todo_lists" DISABLE TRIGGER ALL;ALTER TABLE "todo_items" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixtures Load (1.1ms)[0m  [1m[31mDELETE FROM "users";
+DELETE FROM "todo_items";
+DELETE FROM "todo_lists";
+INSERT INTO "users" ("id", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at") VALUES (980190962, 'test1@testing.com', DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2019-07-17 08:33:26.680694', '2019-07-17 08:33:26.680694'), (298486374, 'test2@testing.com', DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2019-07-17 08:33:26.680694', '2019-07-17 08:33:26.680694');
+INSERT INTO "todo_items" ("id", "content", "todo_list_id", "created_at", "updated_at", "completed_at") VALUES (980190962, 'Item#1', 980190962, '2019-07-17 08:33:26.685615', '2019-07-17 08:33:26.685615', NULL), (298486374, 'Item#2', 298486374, '2019-07-17 08:33:26.685615', '2019-07-17 08:33:26.685615', NULL);
+INSERT INTO "todo_lists" ("id", "title", "description", "created_at", "updated_at", "user_id") VALUES (980190962, 'Test#1', 'Description#1', '2019-07-17 08:33:26.688635', '2019-07-17 08:33:26.688635', 980190962), (298486374, 'Test#2', 'Description#2', '2019-07-17 08:33:26.688635', '2019-07-17 08:33:26.688635', 298486374)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "todo_lists" ENABLE TRIGGER ALL;ALTER TABLE "todo_items" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------
+TodoItemsControllerTest: test_complete_todo_item
+------------------------------------------------
+  [1m[36mTodoItem Load (0.2ms)[0m  [1m[34mSELECT  "todo_items".* FROM "todo_items" WHERE "todo_items"."id" = $1 LIMIT $2[0m  [["id", 298486374], ["LIMIT", 1]]
+  [1m[36mTodoList Load (0.2ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 298486374], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "todo_lists" DISABLE TRIGGER ALL;ALTER TABLE "todo_items" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixtures Load (1.1ms)[0m  [1m[31mDELETE FROM "users";
+DELETE FROM "todo_items";
+DELETE FROM "todo_lists";
+INSERT INTO "users" ("id", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at") VALUES (980190962, 'test1@testing.com', DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2019-07-17 08:33:45.024206', '2019-07-17 08:33:45.024206'), (298486374, 'test2@testing.com', DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2019-07-17 08:33:45.024206', '2019-07-17 08:33:45.024206');
+INSERT INTO "todo_items" ("id", "content", "todo_list_id", "created_at", "updated_at", "completed_at") VALUES (980190962, 'Item#1', 980190962, '2019-07-17 08:33:45.028570', '2019-07-17 08:33:45.028570', NULL), (298486374, 'Item#2', 298486374, '2019-07-17 08:33:45.028570', '2019-07-17 08:33:45.028570', NULL);
+INSERT INTO "todo_lists" ("id", "title", "description", "created_at", "updated_at", "user_id") VALUES (980190962, 'Test#1', 'Description#1', '2019-07-17 08:33:45.031253', '2019-07-17 08:33:45.031253', 980190962), (298486374, 'Test#2', 'Description#2', '2019-07-17 08:33:45.031253', '2019-07-17 08:33:45.031253', 298486374)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "todo_lists" ENABLE TRIGGER ALL;ALTER TABLE "todo_items" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------
+TodoItemsControllerTest: test_complete_todo_item
+------------------------------------------------
+  [1m[36mTodoItem Load (0.2ms)[0m  [1m[34mSELECT  "todo_items".* FROM "todo_items" WHERE "todo_items"."id" = $1 LIMIT $2[0m  [["id", 298486374], ["LIMIT", 1]]
+  [1m[36mTodoList Load (0.2ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 298486374], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "todo_lists" DISABLE TRIGGER ALL;ALTER TABLE "todo_items" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixtures Load (1.0ms)[0m  [1m[31mDELETE FROM "users";
+DELETE FROM "todo_items";
+DELETE FROM "todo_lists";
+INSERT INTO "users" ("id", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at") VALUES (980190962, 'test1@testing.com', DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2019-07-17 08:34:46.088470', '2019-07-17 08:34:46.088470'), (298486374, 'test2@testing.com', DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2019-07-17 08:34:46.088470', '2019-07-17 08:34:46.088470');
+INSERT INTO "todo_items" ("id", "content", "todo_list_id", "created_at", "updated_at", "completed_at") VALUES (980190962, 'Item#1', 980190962, '2019-07-17 08:34:46.092844', '2019-07-17 08:34:46.092844', NULL), (298486374, 'Item#2', 298486374, '2019-07-17 08:34:46.092844', '2019-07-17 08:34:46.092844', NULL);
+INSERT INTO "todo_lists" ("id", "title", "description", "created_at", "updated_at", "user_id") VALUES (980190962, 'Test#1', 'Description#1', '2019-07-17 08:34:46.095812', '2019-07-17 08:34:46.095812', 980190962), (298486374, 'Test#2', 'Description#2', '2019-07-17 08:34:46.095812', '2019-07-17 08:34:46.095812', 298486374)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "todo_lists" ENABLE TRIGGER ALL;ALTER TABLE "todo_items" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------
+TodoItemsControllerTest: test_complete_todo_item
+------------------------------------------------
+  [1m[36mTodoItem Load (0.2ms)[0m  [1m[34mSELECT  "todo_items".* FROM "todo_items" WHERE "todo_items"."id" = $1 LIMIT $2[0m  [["id", 298486374], ["LIMIT", 1]]
+  [1m[36mTodoList Load (0.2ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 298486374], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "todo_lists" DISABLE TRIGGER ALL;ALTER TABLE "todo_items" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixtures Load (0.9ms)[0m  [1m[31mDELETE FROM "users";
+DELETE FROM "todo_items";
+DELETE FROM "todo_lists";
+INSERT INTO "users" ("id", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at") VALUES (980190962, 'test1@testing.com', DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2019-07-17 08:34:56.090083', '2019-07-17 08:34:56.090083'), (298486374, 'test2@testing.com', DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2019-07-17 08:34:56.090083', '2019-07-17 08:34:56.090083');
+INSERT INTO "todo_items" ("id", "content", "todo_list_id", "created_at", "updated_at", "completed_at") VALUES (980190962, 'Item#1', 980190962, '2019-07-17 08:34:56.094511', '2019-07-17 08:34:56.094511', NULL), (298486374, 'Item#2', 298486374, '2019-07-17 08:34:56.094511', '2019-07-17 08:34:56.094511', NULL);
+INSERT INTO "todo_lists" ("id", "title", "description", "created_at", "updated_at", "user_id") VALUES (980190962, 'Test#1', 'Description#1', '2019-07-17 08:34:56.097201', '2019-07-17 08:34:56.097201', 980190962), (298486374, 'Test#2', 'Description#2', '2019-07-17 08:34:56.097201', '2019-07-17 08:34:56.097201', 298486374)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "todo_lists" ENABLE TRIGGER ALL;ALTER TABLE "todo_items" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------
+TodoItemsControllerTest: test_complete_todo_item
+------------------------------------------------
+  [1m[36mTodoItem Load (0.3ms)[0m  [1m[34mSELECT  "todo_items".* FROM "todo_items" WHERE "todo_items"."id" = $1 LIMIT $2[0m  [["id", 298486374], ["LIMIT", 1]]
+  [1m[36mTodoList Load (0.2ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 298486374], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTodoItem Create (0.4ms)[0m  [1m[32mINSERT INTO "todo_items" ("content", "todo_list_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["content", "Item#2"], ["todo_list_id", 298486374], ["created_at", "2019-07-17 08:34:56.160848"], ["updated_at", "2019-07-17 08:34:56.160848"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "todo_lists" DISABLE TRIGGER ALL;ALTER TABLE "todo_items" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixtures Load (0.9ms)[0m  [1m[31mDELETE FROM "users";
+DELETE FROM "todo_items";
+DELETE FROM "todo_lists";
+INSERT INTO "users" ("id", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at") VALUES (980190962, 'test1@testing.com', DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2019-07-17 08:38:20.480966', '2019-07-17 08:38:20.480966'), (298486374, 'test2@testing.com', DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2019-07-17 08:38:20.480966', '2019-07-17 08:38:20.480966');
+INSERT INTO "todo_items" ("id", "content", "todo_list_id", "created_at", "updated_at", "completed_at") VALUES (980190962, 'Item#1', 980190962, '2019-07-17 08:38:20.485740', '2019-07-17 08:38:20.485740', NULL), (298486374, 'Item#2', 298486374, '2019-07-17 08:38:20.485740', '2019-07-17 08:38:20.485740', NULL);
+INSERT INTO "todo_lists" ("id", "title", "description", "created_at", "updated_at", "user_id") VALUES (980190962, 'Test#1', 'Description#1', '2019-07-17 08:38:20.488475', '2019-07-17 08:38:20.488475', 980190962), (298486374, 'Test#2', 'Description#2', '2019-07-17 08:38:20.488475', '2019-07-17 08:38:20.488475', 298486374)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "todo_lists" ENABLE TRIGGER ALL;ALTER TABLE "todo_items" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------
+TodoItemsControllerTest: test_complete_todo_item
+------------------------------------------------
+  [1m[36mTodoItem Load (0.2ms)[0m  [1m[34mSELECT  "todo_items".* FROM "todo_items" WHERE "todo_items"."id" = $1 LIMIT $2[0m  [["id", 298486374], ["LIMIT", 1]]
+  [1m[36mTodoList Load (0.2ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 298486374], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "todo_lists" DISABLE TRIGGER ALL;ALTER TABLE "todo_items" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFixtures Load (1.0ms)[0m  [1m[31mDELETE FROM "users";
+DELETE FROM "todo_items";
+DELETE FROM "todo_lists";
+INSERT INTO "users" ("id", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at") VALUES (980190962, 'test1@testing.com', DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2019-07-17 08:42:31.507390', '2019-07-17 08:42:31.507390'), (298486374, 'test2@testing.com', DEFAULT, DEFAULT, DEFAULT, DEFAULT, '2019-07-17 08:42:31.507390', '2019-07-17 08:42:31.507390');
+INSERT INTO "todo_items" ("id", "content", "todo_list_id", "created_at", "updated_at", "completed_at") VALUES (980190962, 'Item#1', 980190962, '2019-07-17 08:42:31.512128', '2019-07-17 08:42:31.512128', NULL), (298486374, 'Item#2', 298486374, '2019-07-17 08:42:31.512128', '2019-07-17 08:42:31.512128', NULL);
+INSERT INTO "todo_lists" ("id", "title", "description", "created_at", "updated_at", "user_id") VALUES (980190962, 'Test#1', 'Description#1', '2019-07-17 08:42:31.515042', '2019-07-17 08:42:31.515042', 980190962), (298486374, 'Test#2', 'Description#2', '2019-07-17 08:42:31.515042', '2019-07-17 08:42:31.515042', 298486374)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "todo_lists" ENABLE TRIGGER ALL;ALTER TABLE "todo_items" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "ar_internal_metadata" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+------------------------------------------------------
+TodoListsControllerTest: test_should_destroy_todo_list
+------------------------------------------------------
+  [1m[36mTodoList Load (0.2ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "todo_lists"[0m
+Started DELETE "/todo_lists/980190962" for 127.0.0.1 at 2019-07-17 16:42:31 +0800
+Processing by TodoListsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mTodoList Load (0.3ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+Completed 401 Unauthorized in 14ms (ActiveRecord: 0.3ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "todo_lists"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+---------------------------------------------
+TodoListsControllerTest: test_should_get_edit
+---------------------------------------------
+  [1m[36mTodoList Load (0.2ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/todo_lists/980190962/edit" for 127.0.0.1 at 2019-07-17 16:42:31 +0800
+Processing by TodoListsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mTodoList Load (0.2ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+----------------------------------------------
+TodoListsControllerTest: test_should_get_index
+----------------------------------------------
+  [1m[36mTodoList Load (0.2ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/todo_lists" for 127.0.0.1 at 2019-07-17 16:42:31 +0800
+Processing by TodoListsController#index as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+-----------------------------------------------------
+TodoListsControllerTest: test_should_create_todo_list
+-----------------------------------------------------
+  [1m[36mTodoList Load (0.2ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "todo_lists"[0m
+Started POST "/todo_lists" for 127.0.0.1 at 2019-07-17 16:42:31 +0800
+Processing by TodoListsController#create as HTML
+  Parameters: {"todo_list"=>{"description"=>"Description#1", "title"=>"Test#1"}}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "todo_lists"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+---------------------------------------------------
+TodoListsControllerTest: test_should_show_todo_list
+---------------------------------------------------
+  [1m[36mTodoList Load (0.2ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/todo_lists/980190962" for 127.0.0.1 at 2019-07-17 16:42:31 +0800
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mTodoList Load (0.2ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+--------------------------------------------
+TodoListsControllerTest: test_should_get_new
+--------------------------------------------
+  [1m[36mTodoList Load (0.1ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/todo_lists/new" for 127.0.0.1 at 2019-07-17 16:42:31 +0800
+Processing by TodoListsController#new as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+-----------------------------------------------------
+TodoListsControllerTest: test_should_update_todo_list
+-----------------------------------------------------
+  [1m[36mTodoList Load (0.2ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+Started PATCH "/todo_lists/980190962" for 127.0.0.1 at 2019-07-17 16:42:31 +0800
+Processing by TodoListsController#update as HTML
+  Parameters: {"todo_list"=>{"description"=>"Description#1", "title"=>"Test#1"}, "id"=>"980190962"}
+  [1m[36mTodoList Load (0.1ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 980190962], ["LIMIT", 1]]
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m

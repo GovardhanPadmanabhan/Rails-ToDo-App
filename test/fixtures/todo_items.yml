@@ -1,9 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  content: MyString
+  content: "Item#1"
   todo_list: one
+  completed_at: ~
 
 two:
-  content: MyString
+  content: "Item#2"
   todo_list: two
+  completed_at: ~
