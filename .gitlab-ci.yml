@@ -1,4 +1,12 @@
-image: "ruby:2.6"
+image: "ruby:2.6.3"
+
+services:
+  - postgres:11.4
+  
+variables:
+  POSTGRES_DB: todo_test
+  POSTGRES_USER: postgres
+  POSTGRES_PASSWORD: root
 
 stages:
   - build
@@ -10,6 +18,7 @@ before_script:
   - which ruby
   - gem install bundler --no-document
   - bundle install --jobs $(nproc)  "${FLAGS[@]}"
+  - RAILS_ENV=test bundle exec rake db:create db:schema:load
 
 build:
   stage: build
