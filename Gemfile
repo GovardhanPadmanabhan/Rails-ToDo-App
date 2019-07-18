@@ -65,3 +65,7 @@ gem 'bootstrap', '~> 4.3', '>= 4.3.1'
 gem 'devise', '~> 4.6', '>= 4.6.2'
 
 gem 'simple_form', '~> 4.1'
+
+gem 'rubocop', '~> 0.73.0'
+
+gem 'rspec', '~> 3.8'
