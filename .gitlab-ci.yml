@@ -18,7 +18,6 @@ before_script:
   - which ruby
   - gem install bundler --no-document
   - bundle install --jobs $(nproc)  "${FLAGS[@]}"
-  - RAILS_ENV=test bundle exec rake db:create db:schema:load
 
 build:
   stage: build
@@ -29,6 +28,7 @@ test:
   stage: test
   script:
     - echo "Testing"
+    - RAILS_ENV=test bundle exec rake db:create db:schema:load
     - ruby -I test test/models/todo_item_test.rb
     - ruby -I test test/models/todo_list_test.rb
     - ruby -I test test/models/user_test.rb
