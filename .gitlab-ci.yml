@@ -1,5 +1,9 @@
 image: "ruby:2.6"
 
+stages:
+  - build
+  - test
+
 before_script:
   - brew update -qq && brew install -y -qq pg libpq-dev nodejs
   - ruby -v
@@ -7,10 +11,18 @@ before_script:
   - gem install bundler --no-document
   - bundle install --jobs $(nproc)  "${FLAGS[@]}"
 
-rspec:
+build:
+  stage: build
   script:
-    - bundle exec rspec
+    - echo "Building"
+    #- bundle exec rake assets:precompile
+    - rails s
+    - ^C
 
-rubocop:
+test:
+  stage: test
   script:
-    - bundle exec rubocop
+    - echo "Testing"
+    - ruby -I test test/models/todo_item_test.rb
+    - ruby -I test test/models/todo_list_test.rb
+    - ruby -I test test/models/user_test.rb
