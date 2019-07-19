@@ -8,9 +8,9 @@ variables:
   POSTGRES_USER: postgres
   POSTGRES_PASSWORD: root
 
-stages:
-  - build
-  - test
+#stages:
+#  - build
+#  - test
 
 before_script:
   - apt-get update -qq && apt-get install -y -qq postgresql postgresql-contrib libpq-dev cmake
@@ -19,19 +19,21 @@ before_script:
   - gem install bundler --no-document
   - bundle install --jobs $(nproc)  "${FLAGS[@]}"
 
-build:
-  stage: build
+#build:
+#  stage: build
   #image: postgres
-  script:
-    - echo "Building"
-    - export PGPASSWORD=$POSTGRES_PASSWORD
-    - psql -h "postgres" -U "$POSTGRES_USER" -d "$POSTGRES_DB" -c "SELECT 'OK' AS status;"
+#  script:
+#    - echo "Building"
+#    - export PGPASSWORD=$POSTGRES_PASSWORD
+#    - psql -h "postgres" -U "$POSTGRES_USER" -d "$POSTGRES_DB" -c "SELECT 'OK' AS status;"
 
 
 test:
-  stage: test
+  #stage: test
   script:
     - echo "Testing"
+    - export PGPASSWORD=$POSTGRES_PASSWORD
+    - psql -h "postgres" -U "$POSTGRES_USER" -d "$POSTGRES_DB" -c "SELECT 'OK' AS status;"
     - bundle exec rake db:create db:schema:load RAILS_ENV=test
     - ruby -I test test/models/todo_item_test.rb
     - ruby -I test test/models/todo_list_test.rb
