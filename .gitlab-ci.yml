@@ -13,7 +13,7 @@ stages:
   - test
 
 before_script:
-  - brew update -qq && brew install -y -qq pg libpq-dev nodejs
+  - apt-get update -qq && apt-get install -y -qq postgresql postgresql-contrib libpq-dev cmake
   - ruby -v
   - which ruby
   - gem install bundler --no-document
