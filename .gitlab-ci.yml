@@ -5,6 +5,7 @@ services:
   
 variables:
   POSTGRES_DB: todo_test
+  POSTGRES_HOST: postgres
   POSTGRES_USER: postgres
   POSTGRES_PASSWORD: root
 
