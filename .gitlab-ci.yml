@@ -14,10 +14,12 @@ stages:
   - deploy
 
 before_script:
-  - echo "deb http://toolbelt.heroku.com/ubuntu ./" > /etc/apt/sources.list.d/heroku.list
-  - wget -O- https://toolbelt.heroku.com/apt/release.key | apt-key add -
   - apt-get update -qq && apt-get install -y -qq postgresql postgresql-contrib libpq-dev cmake
-  - apt-get install -y heroku-toolbelt
+  - apt-get install apt-transport-https
+  - echo "deb https://cli-assets.heroku.com/branches/stable/apt ./" > /etc/apt/sources.list.d/heroku.list
+  - wget -O- https://cli-assets.heroku.com/apt/release.key | apt-key add -
+  - apt-get update
+  - apt-get install -y heroku
   - ruby -v
   - which ruby
   - gem install bundler --no-document
