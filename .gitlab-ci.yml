@@ -43,6 +43,7 @@ staging:
   script:
   - gem install dpl
   - dpl --provider=heroku --app=rails-todo-staging --api-key=$HEROKU_STAGING_API_KEY
+  - heroku run rake db:migrate --exit-code --app rails-todo-staging
   only:
   - master
 
@@ -51,5 +52,6 @@ production:
   script:
   - gem install dpl
   - dpl --provider=heroku --app=rails-todo-production --api-key=$HEROKU_PRODUCTION_API_KEY
+  - heroku run rake db:migrate --exit-code --app rails-todo-staging
   only:
   - tags
