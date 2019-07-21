@@ -30,7 +30,7 @@ before_script:
 
 
 test:
-  #stage: test
+  stage: test
   script:
     - echo "Testing"
     - export PGPASSWORD=$POSTGRES_PASSWORD
@@ -52,6 +52,6 @@ production:
   script:
   - gem install dpl
   - dpl --provider=heroku --app=rails-todo-production --api-key=$HEROKU_PRODUCTION_API_KEY
-  - heroku run rake db:migrate --exit-code --app rails-todo-staging
+  - heroku run rake db:migrate --exit-code --app rails-todo-production
   only:
   - tags
