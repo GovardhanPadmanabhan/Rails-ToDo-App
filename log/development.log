@@ -5824,3 +5824,1723 @@ Processing by PagesController#home as HTML
 Completed 200 OK in 327ms (Views: 317.8ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2019-07-18 16:00:54 +0800
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_alerts.html.erb (0.4ms)
+Completed 200 OK in 422ms (Views: 412.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-07-18 16:00:57 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (34.1ms)
+  Rendered layouts/_alerts.html.erb (0.3ms)
+Completed 200 OK in 78ms (Views: 62.9ms | ActiveRecord: 6.8ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-07-18 16:01:01 +0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DgRufSMW459KnkWdv3g/MsNF2rTTjwAVqlYZlsEXwEY1oGoBuVbeFZZY8X67InR9B80mL9zbqe5FwKi0or9eBQ==", "user"=>{"email"=>"govardhan.padmanabhan2@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "govardhan.padmanabhan2@gmail.com"], ["LIMIT", 1]]
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 141ms (ActiveRecord: 0.9ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DgRufSMW459KnkWdv3g/MsNF2rTTjwAVqlYZlsEXwEY1oGoBuVbeFZZY8X67InR9B80mL9zbqe5FwKi0or9eBQ==", "user"=>{"email"=>"govardhan.padmanabhan2@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_alerts.html.erb (0.3ms)
+Completed 200 OK in 130ms (Views: 34.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-07-18 16:01:08 +0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vBehVBdJP+uazkmGB62g3PxrmfHwVftppUxdi1inTTpJcrQTEHO9oo3KSGXEuM08NgVJDANv3ONXwCXPaeyExg==", "user"=>{"email"=>"govardhan.padmanabhan3@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "govardhan.padmanabhan3@gmail.com"], ["LIMIT", 1]]
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/todo_lists
+Completed 302 Found in 116ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/todo_lists" for ::1 at 2019-07-18 16:01:08 +0800
+Processing by TodoListsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering todo_lists/index.html.erb within layouts/application
+  [1m[36mTodoList Load (0.4ms)[0m  [1m[34mSELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/views/todo_lists/index.html.erb:10
+  Rendered todo_lists/index.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_alerts.html.erb (0.3ms)
+Completed 200 OK in 36ms (Views: 31.6ms | ActiveRecord: 1.4ms)
+
+
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/bin/rake:23
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ vendor/bundle/bin/rake:23
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ vendor/bundle/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ vendor/bundle/bin/rake:23
+  [1m[35mSQL (10.6ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:17
+  [1m[35m (31.7ms)[0m  [1m[35mDROP TABLE IF EXISTS "todo_items" CASCADE[0m
+  ↳ db/schema.rb:19
+  [1m[35m (15.2ms)[0m  [1m[35mCREATE TABLE "todo_items" ("id" bigserial primary key, "content" character varying, "todo_list_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "completed_at" timestamp)[0m
+  ↳ db/schema.rb:19
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE  INDEX  "index_todo_items_on_todo_list_id" ON "todo_items"  ("todo_list_id")[0m
+  ↳ db/schema.rb:19
+  [1m[35m (13.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "todo_lists" CASCADE[0m
+  ↳ db/schema.rb:28
+  [1m[35m (47.2ms)[0m  [1m[35mCREATE TABLE "todo_lists" ("id" bigserial primary key, "title" character varying, "description" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "user_id" bigint)[0m
+  ↳ db/schema.rb:28
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE  INDEX  "index_todo_lists_on_user_id" ON "todo_lists"  ("user_id")[0m
+  ↳ db/schema.rb:28
+  [1m[35m (2.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:37
+  [1m[35m (98.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:37
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/schema.rb:37
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  ↳ db/schema.rb:37
+  [1m[35m (32.9ms)[0m  [1m[35mALTER TABLE "todo_items" ADD CONSTRAINT "fk_rails_d913ce1c56"
+FOREIGN KEY ("todo_list_id")
+  REFERENCES "todo_lists" ("id")
+[0m
+  ↳ db/schema.rb:49
+  [1m[35m (31.6ms)[0m  [1m[35mALTER TABLE "todo_lists" ADD CONSTRAINT "fk_rails_c213597f32"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  ↳ db/schema.rb:50
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:15
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:15
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:15
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ vendor/bundle/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ vendor/bundle/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ vendor/bundle/bin/rake:23
+  [1m[35mSQL (1.2ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:17
+  [1m[35m (151.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "todo_items" CASCADE[0m
+  ↳ db/schema.rb:19
+  [1m[35m (83.2ms)[0m  [1m[35mCREATE TABLE "todo_items" ("id" bigserial primary key, "content" character varying, "todo_list_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "completed_at" timestamp)[0m
+  ↳ db/schema.rb:19
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_todo_items_on_todo_list_id" ON "todo_items"  ("todo_list_id")[0m
+  ↳ db/schema.rb:19
+  [1m[35m (65.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "todo_lists" CASCADE[0m
+  ↳ db/schema.rb:28
+  [1m[35m (16.9ms)[0m  [1m[35mCREATE TABLE "todo_lists" ("id" bigserial primary key, "title" character varying, "description" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "user_id" bigint)[0m
+  ↳ db/schema.rb:28
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE  INDEX  "index_todo_lists_on_user_id" ON "todo_lists"  ("user_id")[0m
+  ↳ db/schema.rb:28
+  [1m[35m (2.8ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:37
+  [1m[35m (38.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:37
+  [1m[35m (6.6ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/schema.rb:37
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  ↳ db/schema.rb:37
+  [1m[35m (4.5ms)[0m  [1m[35mALTER TABLE "todo_items" ADD CONSTRAINT "fk_rails_d913ce1c56"
+FOREIGN KEY ("todo_list_id")
+  REFERENCES "todo_lists" ("id")
+[0m
+  ↳ db/schema.rb:49
+  [1m[35m (22.7ms)[0m  [1m[35mALTER TABLE "todo_lists" ADD CONSTRAINT "fk_rails_c213597f32"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  ↳ db/schema.rb:50
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:15
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:15
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:15
+  [1m[36mActiveRecord::InternalMetadata Update (0.3ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "development"], ["updated_at", "2019-07-19 03:09:17.541157"], ["key", "environment"]]
+  ↳ db/schema.rb:15
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:15
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ vendor/bundle/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ vendor/bundle/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Update (0.3ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2019-07-19 03:09:17.544296"], ["key", "environment"]]
+  ↳ vendor/bundle/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ vendor/bundle/bin/rake:23
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE DATABASE "todo_development" ENCODING = 'unicode'[0m
+  ↳ vendor/bundle/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE DATABASE "todo_test" ENCODING = 'unicode'[0m
+  ↳ vendor/bundle/bin/rake:23
+Started GET "/" for ::1 at 2019-07-19 11:41:30 +0800
+
+PG::ConnectionBad - could not translate host name "postgres" to address: nodename nor servname provided, or not known
+:
+
+Started POST "/__better_errors/48f1b4aa874de518/variables" for ::1 at 2019-07-19 11:41:30 +0800
+Started GET "/" for ::1 at 2019-07-19 11:41:42 +0800
+
+PG::ConnectionBad - could not translate host name "postgres" to address: nodename nor servname provided, or not known
+:
+
+Started POST "/__better_errors/1e0c6fae59f66639/variables" for ::1 at 2019-07-19 11:41:42 +0800
+Started GET "/" for ::1 at 2019-07-19 11:41:43 +0800
+
+PG::ConnectionBad - could not translate host name "postgres" to address: nodename nor servname provided, or not known
+:
+
+Started POST "/__better_errors/610a631b7926bd43/variables" for ::1 at 2019-07-19 11:41:43 +0800
+Started GET "/" for ::1 at 2019-07-19 11:41:43 +0800
+
+PG::ConnectionBad - could not translate host name "postgres" to address: nodename nor servname provided, or not known
+:
+
+Started POST "/__better_errors/82fe5f53e8e85573/variables" for ::1 at 2019-07-19 11:41:43 +0800
+Started GET "/" for ::1 at 2019-07-19 11:41:43 +0800
+
+PG::ConnectionBad - could not translate host name "postgres" to address: nodename nor servname provided, or not known
+:
+
+Started POST "/__better_errors/ce68a128b0ca153b/variables" for ::1 at 2019-07-19 11:41:43 +0800
+Started GET "/" for ::1 at 2019-07-19 11:41:44 +0800
+
+PG::ConnectionBad - could not translate host name "postgres" to address: nodename nor servname provided, or not known
+:
+
+Started POST "/__better_errors/923a03291cb840e7/variables" for ::1 at 2019-07-19 11:41:44 +0800
+Started GET "/" for ::1 at 2019-07-19 11:41:44 +0800
+
+PG::ConnectionBad - could not translate host name "postgres" to address: nodename nor servname provided, or not known
+:
+
+Started POST "/__better_errors/bf250e0dd89a11d7/variables" for ::1 at 2019-07-19 11:41:44 +0800
+Started GET "/" for ::1 at 2019-07-19 11:41:44 +0800
+
+PG::ConnectionBad - could not translate host name "postgres" to address: nodename nor servname provided, or not known
+:
+
+Started POST "/__better_errors/6e8a82fa1f6aa2ae/variables" for ::1 at 2019-07-19 11:41:44 +0800
+Started GET "/" for ::1 at 2019-07-19 11:41:45 +0800
+
+PG::ConnectionBad - could not translate host name "postgres" to address: nodename nor servname provided, or not known
+:
+
+Started POST "/__better_errors/14e574e97cc5a0cc/variables" for ::1 at 2019-07-19 11:41:45 +0800
+Started GET "/" for ::1 at 2019-07-19 11:41:45 +0800
+
+PG::ConnectionBad - could not translate host name "postgres" to address: nodename nor servname provided, or not known
+:
+
+Started POST "/__better_errors/4bec96d566bfb3f8/variables" for ::1 at 2019-07-19 11:41:45 +0800
+Started GET "/" for ::1 at 2019-07-19 11:41:45 +0800
+
+PG::ConnectionBad - could not translate host name "postgres" to address: nodename nor servname provided, or not known
+:
+
+Started POST "/__better_errors/91bd4423f3d970b8/variables" for ::1 at 2019-07-19 11:41:45 +0800
+Started GET "/" for ::1 at 2019-07-19 11:41:45 +0800
+
+PG::ConnectionBad - could not translate host name "postgres" to address: nodename nor servname provided, or not known
+:
+
+Started POST "/__better_errors/49d497464cce6c5e/variables" for ::1 at 2019-07-19 11:41:46 +0800
+Started GET "/" for ::1 at 2019-07-19 11:41:46 +0800
+
+PG::ConnectionBad - could not translate host name "postgres" to address: nodename nor servname provided, or not known
+:
+
+Started POST "/__better_errors/a99eaef9a5804763/variables" for ::1 at 2019-07-19 11:41:46 +0800
+Started GET "/" for ::1 at 2019-07-19 11:41:46 +0800
+
+PG::ConnectionBad - could not translate host name "postgres" to address: nodename nor servname provided, or not known
+:
+
+Started POST "/__better_errors/78a3caa89970743a/variables" for ::1 at 2019-07-19 11:41:46 +0800
+Started GET "/" for ::1 at 2019-07-19 11:41:46 +0800
+
+PG::ConnectionBad - could not translate host name "postgres" to address: nodename nor servname provided, or not known
+:
+
+Started POST "/__better_errors/a160b7bd5a6de404/variables" for ::1 at 2019-07-19 11:41:46 +0800
+Started GET "/" for ::1 at 2019-07-19 11:41:47 +0800
+
+PG::ConnectionBad - could not translate host name "postgres" to address: nodename nor servname provided, or not known
+:
+
+Started POST "/__better_errors/5923e9491b7dee3f/variables" for ::1 at 2019-07-19 11:41:47 +0800
+Started GET "/" for ::1 at 2019-07-19 11:41:47 +0800
+
+PG::ConnectionBad - could not translate host name "postgres" to address: nodename nor servname provided, or not known
+:
+
+Started POST "/__better_errors/c2f4cd0ae38f5042/variables" for ::1 at 2019-07-19 11:41:47 +0800
+Started GET "/" for ::1 at 2019-07-19 11:41:47 +0800
+
+PG::ConnectionBad - could not translate host name "postgres" to address: nodename nor servname provided, or not known
+:
+
+Started POST "/__better_errors/84ddb654ab5eedef/variables" for ::1 at 2019-07-19 11:41:47 +0800
+Started GET "/" for ::1 at 2019-07-19 11:41:47 +0800
+
+PG::ConnectionBad - could not translate host name "postgres" to address: nodename nor servname provided, or not known
+:
+
+Started POST "/__better_errors/2024885aca4dfeb3/variables" for ::1 at 2019-07-19 11:41:47 +0800
+Started GET "/" for ::1 at 2019-07-19 11:41:47 +0800
+
+PG::ConnectionBad - could not translate host name "postgres" to address: nodename nor servname provided, or not known
+:
+
+Started POST "/__better_errors/594e4e1cb0f37dc0/variables" for ::1 at 2019-07-19 11:41:47 +0800
+Started GET "/" for ::1 at 2019-07-19 11:41:48 +0800
+
+PG::ConnectionBad - could not translate host name "postgres" to address: nodename nor servname provided, or not known
+:
+
+Started POST "/__better_errors/5b3df1f9f17b9df2/variables" for ::1 at 2019-07-19 11:41:48 +0800
+Started GET "/" for ::1 at 2019-07-19 11:42:00 +0800
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/pages/home.html.erb:15
+  Rendered pages/home.html.erb within layouts/application (13.1ms)
+  Rendered layouts/_alerts.html.erb (0.4ms)
+Completed 200 OK in 420ms (Views: 403.8ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-07-19 11:42:03 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (32.9ms)
+  Rendered layouts/_alerts.html.erb (0.3ms)
+Completed 200 OK in 68ms (Views: 59.7ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-07-19 11:42:07 +0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zslAvnHCBKmmsT01vEurS9ZNpGpnEkOeFDwU6qtpde/CDehO4HJ6Q1etyH9KoYfDbHqNqjRlsgIqKMaIJ76qaQ==", "user"=>{"email"=>"govardhan.padmanabhan3@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "govardhan.padmanabhan3@gmail.com"], ["LIMIT", 1]]
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.7ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zslAvnHCBKmmsT01vEurS9ZNpGpnEkOeFDwU6qtpde/CDehO4HJ6Q1etyH9KoYfDbHqNqjRlsgIqKMaIJ76qaQ==", "user"=>{"email"=>"govardhan.padmanabhan3@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.8ms)
+  Rendered layouts/_alerts.html.erb (0.3ms)
+Completed 200 OK in 155ms (Views: 38.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-07-19 11:42:13 +0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vVojxFhU+Wpbn+tmuXerIquQ/n29hYp6TLBmCKEY8Y3QcIth/S+VpDd1r7N8SrvT2PH8E9idXfTJ+JChvSptiQ==", "user"=>{"email"=>"govardhan.padmanabhan3@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "govardhan.padmanabhan3@gmail.com"], ["LIMIT", 1]]
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 7ms (ActiveRecord: 0.3ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vVojxFhU+Wpbn+tmuXerIquQ/n29hYp6TLBmCKEY8Y3QcIth/S+VpDd1r7N8SrvT2PH8E9idXfTJ+JChvSptiQ==", "user"=>{"email"=>"govardhan.padmanabhan3@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.8ms)
+  Rendered layouts/_alerts.html.erb (0.3ms)
+Completed 200 OK in 160ms (Views: 34.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-07-19 11:42:19 +0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iXZpLpO9exwiuhpP/fAWZhvilJEgMWVcs0huckljkqPkXMGLNsYX0k5QXpo4zQaXaIOW/0UpstI2AJjbVVEOpw==", "user"=>{"email"=>"govardhan.padmanabhan3@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "govardhan.padmanabhan3@gmail.com"], ["LIMIT", 1]]
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.4ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iXZpLpO9exwiuhpP/fAWZhvilJEgMWVcs0huckljkqPkXMGLNsYX0k5QXpo4zQaXaIOW/0UpstI2AJjbVVEOpw==", "user"=>{"email"=>"govardhan.padmanabhan3@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.7ms)
+  Rendered layouts/_alerts.html.erb (0.3ms)
+Completed 200 OK in 157ms (Views: 35.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-07-19 11:42:22 +0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7VEscs9qtWT9HG00UE7uurDwYBG1kQYblS+9KtxJhEaAe4TXahHZqpH2KeGVc/5Lw5Fif9CJ0ZUQZ0uDwHsYQg==", "user"=>{"email"=>"govardhan.padmanabhan3@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "govardhan.padmanabhan3@gmail.com"], ["LIMIT", 1]]
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.4ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7VEscs9qtWT9HG00UE7uurDwYBG1kQYblS+9KtxJhEaAe4TXahHZqpH2KeGVc/5Lw5Fif9CJ0ZUQZ0uDwHsYQg==", "user"=>{"email"=>"govardhan.padmanabhan3@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_alerts.html.erb (0.3ms)
+Completed 200 OK in 160ms (Views: 48.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-07-19 11:42:29 +0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ioZXOwKoMnslNrDaAMNJC5og4OhwvJJlIDWg8bvSKkXnrP+ep9NetUnc9A/F/ln66UHihhWkReulfVZYp+C2QQ==", "user"=>{"email"=>"govardhan.padmanabhan2@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "govardhan.padmanabhan2@gmail.com"], ["LIMIT", 1]]
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.4ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ioZXOwKoMnslNrDaAMNJC5og4OhwvJJlIDWg8bvSKkXnrP+ep9NetUnc9A/F/ln66UHihhWkReulfVZYp+C2QQ==", "user"=>{"email"=>"govardhan.padmanabhan2@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.2ms)
+  Rendered layouts/_alerts.html.erb (0.3ms)
+Completed 200 OK in 151ms (Views: 35.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-07-19 11:42:29 +0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ko3UjusdYGjI4NC6w8kHu//LUvPZnHVV9MHQ6YxGyM7/p3wrTmYMpqQKlG8G9BdKjKpQnbyEottxiSZAkHRUyg==", "user"=>{"email"=>"govardhan.padmanabhan2@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ko3UjusdYGjI4NC6w8kHu//LUvPZnHVV9MHQ6YxGyM7/p3wrTmYMpqQKlG8G9BdKjKpQnbyEottxiSZAkHRUyg==", "user"=>{"email"=>"govardhan.padmanabhan2@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (6.6ms)
+  Rendered layouts/_alerts.html.erb (0.3ms)
+Completed 200 OK in 41ms (Views: 40.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-07-19 11:42:30 +0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EI9NCHNITGyZiYVMU+cMaLr4lwDn78cfQPEkghvcpft9peWt1jMgovVjwZmW2hyZyZmVboL3EJHFudIrB+45/w==", "user"=>{"email"=>"govardhan.padmanabhan2@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EI9NCHNITGyZiYVMU+cMaLr4lwDn78cfQPEkghvcpft9peWt1jMgovVjwZmW2hyZyZmVboL3EJHFudIrB+45/w==", "user"=>{"email"=>"govardhan.padmanabhan2@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.7ms)
+  Rendered layouts/_alerts.html.erb (0.3ms)
+Completed 200 OK in 57ms (Views: 56.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-07-19 11:42:30 +0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IBjcdsosTyODOtWe9xxp/EyLerp1eyllUYTK/KoFN7RNMnTTb1cj7e/QkUsyIXkNP+p41BBj/uvUzDxVtjersA==", "user"=>{"email"=>"govardhan.padmanabhan2@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IBjcdsosTyODOtWe9xxp/EyLerp1eyllUYTK/KoFN7RNMnTTb1cj7e/QkUsyIXkNP+p41BBj/uvUzDxVtjersA==", "user"=>{"email"=>"govardhan.padmanabhan2@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (7.1ms)
+  Rendered layouts/_alerts.html.erb (0.3ms)
+Completed 200 OK in 41ms (Views: 40.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-07-19 11:42:34 +0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nytAIRVTMbiQEfZ05egBODC10KWFaUAYh2c65pc5yVzyAeiEsChddvz7sqEg1RHJQ9TSy+Bxl5YCL8xPiwtVWA==", "user"=>{"email"=>"govardhan.padmanabhan2@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "govardhan.padmanabhan2@gmail.com"], ["LIMIT", 1]]
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.4ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nytAIRVTMbiQEfZ05egBODC10KWFaUAYh2c65pc5yVzyAeiEsChddvz7sqEg1RHJQ9TSy+Bxl5YCL8xPiwtVWA==", "user"=>{"email"=>"govardhan.padmanabhan2@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_alerts.html.erb (0.3ms)
+Completed 200 OK in 148ms (Views: 32.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-07-19 11:42:35 +0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eZiC86EpyTzeMmn2sJqVt/1NpZQCswcezAfceu6a9AgUsipWBFKl8rLYLSN1p4VGjiyn+mer0JBJTyrT8qhoDA==", "user"=>{"email"=>"govardhan.padmanabhan2@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eZiC86EpyTzeMmn2sJqVt/1NpZQCswcezAfceu6a9AgUsipWBFKl8rLYLSN1p4VGjiyn+mer0JBJTyrT8qhoDA==", "user"=>{"email"=>"govardhan.padmanabhan2@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (6.6ms)
+  Rendered layouts/_alerts.html.erb (0.3ms)
+Completed 200 OK in 57ms (Views: 56.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2019-07-19 11:42:39 +0800
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (7.8ms)
+  Rendered layouts/_alerts.html.erb (0.4ms)
+Completed 200 OK in 43ms (Views: 41.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2019-07-19 11:42:47 +0800
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LTeMnD9UaHSMd4p4jIlJbUh9O8pHzgBvJFXRY0swBmKZPO58kw+cCfOw2i9EESD2Xyv9oEJ/AZpV2ro9bPkkFw==", "user"=>{"email"=>"govardhan.padmanabhan2@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "govardhan.padmanabhan2@gmail.com"], ["LIMIT", 1]]
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Create (1.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "govardhan.padmanabhan2@gmail.com"], ["encrypted_password", "$2a$11$iY22GNY1H.v2GZzqh0vhP.8m5k5dLsYqi73Fb3BZmsbZoujAYOzse"], ["created_at", "2019-07-19 03:42:47.850175"], ["updated_at", "2019-07-19 03:42:47.850175"]]
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/todo_lists
+Completed 302 Found in 124ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/todo_lists" for ::1 at 2019-07-19 11:42:47 +0800
+Processing by TodoListsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering todo_lists/index.html.erb within layouts/application
+  [1m[36mTodoList Load (2.5ms)[0m  [1m[34mSELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/todo_lists/index.html.erb:10
+  Rendered todo_lists/index.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_alerts.html.erb (0.3ms)
+Completed 200 OK in 42ms (Views: 32.4ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/users/edit" for ::1 at 2019-07-19 11:42:53 +0800
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (5.2ms)
+  Rendered layouts/_alerts.html.erb (0.4ms)
+Completed 200 OK in 59ms (Views: 56.6ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/users" for ::1 at 2019-07-19 11:42:57 +0800
+Processing by Devise::RegistrationsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"wD7CxT5UAi42vXwCF9WXFi6mD91t0wbWpewHYDhvdWutFGpgmy9u4FpXONfS6IfnXccNswjL0VggpPHJJF3pbw=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Destroy (0.8ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 1]]
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/" for ::1 at 2019-07-19 11:42:57 +0800
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_alerts.html.erb (0.3ms)
+Completed 200 OK in 33ms (Views: 32.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-07-19 11:42:59 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (6.7ms)
+  Rendered layouts/_alerts.html.erb (0.3ms)
+Completed 200 OK in 39ms (Views: 38.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-07-19 11:43:04 +0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8rs4HOHuNi7gFaEXsX+06DLzJPlJ8NOIZnu8LMdgFKn47iQI3JckoireUJtrfkJGTLJxoWEHOVUcOl3O5ETEXw==", "user"=>{"email"=>"govardhan.padmanabhan2@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "govardhan.padmanabhan2@gmail.com"], ["LIMIT", 1]]
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.3ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8rs4HOHuNi7gFaEXsX+06DLzJPlJ8NOIZnu8LMdgFKn47iQI3JckoireUJtrfkJGTLJxoWEHOVUcOl3O5ETEXw==", "user"=>{"email"=>"govardhan.padmanabhan2@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.8ms)
+  Rendered layouts/_alerts.html.erb (0.3ms)
+Completed 200 OK in 164ms (Views: 36.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-07-19 12:02:45 +0800
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_alerts.html.erb (0.3ms)
+Completed 200 OK in 280ms (Views: 272.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2019-07-19 12:02:53 +0800
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (17.6ms)
+  Rendered layouts/_alerts.html.erb (0.4ms)
+Completed 200 OK in 62ms (Views: 50.9ms | ActiveRecord: 4.4ms)
+
+
+Started POST "/users" for ::1 at 2019-07-19 12:03:09 +0800
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"afkTriAwo4n6Ecu1zm1dHbnRmltkxYzWUZPUU6XA4qwWCXx1ucfYspVwKht4uSPCL6NvFSzPmTDw7ohlOKC56Q==", "user"=>{"email"=>"hhh@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "hhh@gmail.com"], ["LIMIT", 1]]
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "hhh@gmail.com"], ["encrypted_password", "$2a$11$bWfwJKZc8.k6XP3rPX0Qc.tFdodNmwf7NIq1LAT.WhoYo6dwMG3we"], ["created_at", "2019-07-19 04:03:09.617108"], ["updated_at", "2019-07-19 04:03:09.617108"]]
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/todo_lists
+Completed 302 Found in 122ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/todo_lists" for ::1 at 2019-07-19 12:03:09 +0800
+Processing by TodoListsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering todo_lists/index.html.erb within layouts/application
+  [1m[36mTodoList Load (0.4ms)[0m  [1m[34mSELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/views/todo_lists/index.html.erb:10
+  Rendered todo_lists/index.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_alerts.html.erb (0.3ms)
+Completed 200 OK in 38ms (Views: 33.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/todo_lists/new" for ::1 at 2019-07-19 12:03:18 +0800
+Processing by TodoListsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering todo_lists/new.html.erb within layouts/application
+  Rendered todo_lists/_form.html.erb (4.8ms)
+  Rendered todo_lists/new.html.erb within layouts/application (6.2ms)
+  Rendered layouts/_alerts.html.erb (0.3ms)
+Completed 200 OK in 71ms (Views: 61.8ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/todo_lists" for ::1 at 2019-07-19 12:03:24 +0800
+Processing by TodoListsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4BYrMHNsksVp2v1Q3s32/INwRbAYor+HzJIvTRZP0xqkrQMazSGwLuas2jySzEyuh+uPh4ZdZDWoNYJYy/lmgQ==", "todo_list"=>{"title"=>"Test#1", "description"=>"ddd"}, "button"=>""}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/todo_lists_controller.rb:32
+  [1m[36mTodoList Create (0.9ms)[0m  [1m[32mINSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Test#1"], ["description", "ddd"], ["created_at", "2019-07-19 04:03:24.911648"], ["updated_at", "2019-07-19 04:03:24.911648"], ["user_id", 2]]
+  ↳ app/controllers/todo_lists_controller.rb:32
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/todo_lists_controller.rb:32
+Redirected to http://localhost:3000/todo_lists/1
+Completed 302 Found in 11ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/todo_lists/1" for ::1 at 2019-07-19 12:03:24 +0800
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTodoList Load (0.2ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:70
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering todo_lists/show.html.erb within layouts/application
+  [1m[36mTodoItem Load (0.5ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = $1[0m  [["todo_list_id", 1]]
+  ↳ app/views/todo_lists/show.html.erb:6
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered todo_items/_form.html.erb (8.1ms)
+  Rendered todo_lists/show.html.erb within layouts/application (18.9ms)
+  Rendered layouts/_alerts.html.erb (0.3ms)
+Completed 200 OK in 54ms (Views: 48.2ms | ActiveRecord: 3.5ms)
+
+
+Started POST "/todo_lists/1/todo_items" for ::1 at 2019-07-19 12:03:33 +0800
+Processing by TodoItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M/LD5f4ApMunnYoyMwJIjACKZrajp3Z0/uCT5sndCjEuUmbrrn4U3HN0hsP/yU6T1oZ/mNPsqjfcf+vGlS3xoA==", "todo_item"=>{"content"=>"cccc"}, "commit"=>"Create Todo item", "todo_list_id"=>"1"}
+  [1m[36mTodoList Load (0.4ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todo_items_controller.rb:30
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/todo_items_controller.rb:8
+  [1m[36mTodoItem Create (0.7ms)[0m  [1m[32mINSERT INTO "todo_items" ("content", "todo_list_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["content", "cccc"], ["todo_list_id", 1], ["created_at", "2019-07-19 04:03:33.264867"], ["updated_at", "2019-07-19 04:03:33.264867"]]
+  ↳ app/controllers/todo_items_controller.rb:8
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/todo_items_controller.rb:8
+Redirected to http://localhost:3000/todo_lists/1
+Completed 302 Found in 5ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/todo_lists/1" for ::1 at 2019-07-19 12:03:33 +0800
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTodoList Load (0.3ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:70
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering todo_lists/show.html.erb within layouts/application
+  [1m[36mTodoItem Load (0.4ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = $1[0m  [["todo_list_id", 1]]
+  ↳ app/views/todo_lists/show.html.erb:6
+  Rendered collection of todo_items/_todo_item.html.erb [1 times] (0.8ms)
+  Rendered todo_items/_form.html.erb (2.2ms)
+  Rendered todo_lists/show.html.erb within layouts/application (6.6ms)
+  Rendered layouts/_alerts.html.erb (0.3ms)
+Completed 200 OK in 49ms (Views: 39.3ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/todo_lists/1/todo_items" for ::1 at 2019-07-19 12:03:40 +0800
+Processing by TodoItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OTL9mJz4PDuhnGRU5Rv+AuTx+ZKPGNDvDuU8HWimDoEkkliWzIaMLHV1aKUp0PgdMv3gvP9TDKwsekQ9NFb1EA==", "todo_item"=>{"content"=>"1111"}, "commit"=>"Create Todo item", "todo_list_id"=>"1"}
+  [1m[36mTodoList Load (0.4ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todo_items_controller.rb:30
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/todo_items_controller.rb:8
+  [1m[36mTodoItem Create (0.4ms)[0m  [1m[32mINSERT INTO "todo_items" ("content", "todo_list_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["content", "1111"], ["todo_list_id", 1], ["created_at", "2019-07-19 04:03:40.185423"], ["updated_at", "2019-07-19 04:03:40.185423"]]
+  ↳ app/controllers/todo_items_controller.rb:8
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/todo_items_controller.rb:8
+Redirected to http://localhost:3000/todo_lists/1
+Completed 302 Found in 4ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/todo_lists/1" for ::1 at 2019-07-19 12:03:40 +0800
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTodoList Load (0.4ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:70
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering todo_lists/show.html.erb within layouts/application
+  [1m[36mTodoItem Load (0.2ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = $1[0m  [["todo_list_id", 1]]
+  ↳ app/views/todo_lists/show.html.erb:6
+  Rendered collection of todo_items/_todo_item.html.erb [2 times] (0.8ms)
+  Rendered todo_items/_form.html.erb (1.9ms)
+  Rendered todo_lists/show.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_alerts.html.erb (0.3ms)
+Completed 200 OK in 54ms (Views: 50.6ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/todo_lists/1/todo_items" for ::1 at 2019-07-19 12:03:43 +0800
+Processing by TodoItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gx1XvtfMq5Qb8h21DIrN2gRn0gQhP+jisrJZpgdbbNCevfKwh7Ibg88bEUTAQcvF0mvLKlF0NKGQLSGGW6uXQQ==", "todo_item"=>{"content"=>"4444"}, "commit"=>"Create Todo item", "todo_list_id"=>"1"}
+  [1m[36mTodoList Load (0.3ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todo_items_controller.rb:30
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/todo_items_controller.rb:8
+  [1m[36mTodoItem Create (0.4ms)[0m  [1m[32mINSERT INTO "todo_items" ("content", "todo_list_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["content", "4444"], ["todo_list_id", 1], ["created_at", "2019-07-19 04:03:43.044995"], ["updated_at", "2019-07-19 04:03:43.044995"]]
+  ↳ app/controllers/todo_items_controller.rb:8
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/todo_items_controller.rb:8
+Redirected to http://localhost:3000/todo_lists/1
+Completed 302 Found in 4ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/todo_lists/1" for ::1 at 2019-07-19 12:03:43 +0800
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTodoList Load (0.3ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:70
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering todo_lists/show.html.erb within layouts/application
+  [1m[36mTodoItem Load (0.3ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = $1[0m  [["todo_list_id", 1]]
+  ↳ app/views/todo_lists/show.html.erb:6
+  Rendered collection of todo_items/_todo_item.html.erb [3 times] (1.0ms)
+  Rendered todo_items/_form.html.erb (3.1ms)
+  Rendered todo_lists/show.html.erb within layouts/application (6.8ms)
+  Rendered layouts/_alerts.html.erb (0.3ms)
+Completed 200 OK in 44ms (Views: 40.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/todo_lists" for ::1 at 2019-07-19 12:03:51 +0800
+Processing by TodoListsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering todo_lists/index.html.erb within layouts/application
+  [1m[36mTodoList Load (0.4ms)[0m  [1m[34mSELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/views/todo_lists/index.html.erb:10
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/todo_lists/index.html.erb:11
+  Rendered todo_lists/index.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_alerts.html.erb (0.3ms)
+Completed 200 OK in 39ms (Views: 36.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/todo_lists/new" for ::1 at 2019-07-19 12:03:54 +0800
+Processing by TodoListsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering todo_lists/new.html.erb within layouts/application
+  Rendered todo_lists/_form.html.erb (1.5ms)
+  Rendered todo_lists/new.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_alerts.html.erb (0.3ms)
+Completed 200 OK in 57ms (Views: 54.7ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/todo_lists" for ::1 at 2019-07-19 12:03:59 +0800
+Processing by TodoListsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nbJvu83LbF7Fs+vcja221AZ4+Dek3p0BQkcIPecMQdLZCUeRc4ZOtUrFzLDBrAyGAuMyADohRrMm4KUoOrr0SQ==", "todo_list"=>{"title"=>"fff", "description"=>"111"}, "button"=>""}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/todo_lists_controller.rb:32
+  [1m[36mTodoList Create (0.4ms)[0m  [1m[32mINSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "fff"], ["description", "111"], ["created_at", "2019-07-19 04:03:59.355112"], ["updated_at", "2019-07-19 04:03:59.355112"], ["user_id", 2]]
+  ↳ app/controllers/todo_lists_controller.rb:32
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/todo_lists_controller.rb:32
+Redirected to http://localhost:3000/todo_lists/2
+Completed 302 Found in 4ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/todo_lists/2" for ::1 at 2019-07-19 12:03:59 +0800
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTodoList Load (0.3ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:70
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering todo_lists/show.html.erb within layouts/application
+  [1m[36mTodoItem Load (0.4ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = $1[0m  [["todo_list_id", 2]]
+  ↳ app/views/todo_lists/show.html.erb:6
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered todo_items/_form.html.erb (2.4ms)
+  Rendered todo_lists/show.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_alerts.html.erb (0.3ms)
+Completed 200 OK in 40ms (Views: 37.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/todo_lists" for ::1 at 2019-07-19 12:04:02 +0800
+Processing by TodoListsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering todo_lists/index.html.erb within layouts/application
+  [1m[36mTodoList Load (0.4ms)[0m  [1m[34mSELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/views/todo_lists/index.html.erb:10
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/todo_lists/index.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/todo_lists/index.html.erb:11
+  Rendered todo_lists/index.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_alerts.html.erb (0.3ms)
+Completed 200 OK in 39ms (Views: 36.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/edit" for ::1 at 2019-07-19 12:04:05 +0800
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (5.3ms)
+  Rendered layouts/_alerts.html.erb (0.3ms)
+Completed 200 OK in 58ms (Views: 55.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/todo_lists" for ::1 at 2019-07-19 12:04:10 +0800
+Processing by TodoListsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering todo_lists/index.html.erb within layouts/application
+  [1m[36mTodoList Load (0.4ms)[0m  [1m[34mSELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/views/todo_lists/index.html.erb:10
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/todo_lists/index.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/todo_lists/index.html.erb:11
+  Rendered todo_lists/index.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_alerts.html.erb (0.3ms)
+Completed 200 OK in 40ms (Views: 35.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/todo_lists/2" for ::1 at 2019-07-19 12:04:14 +0800
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTodoList Load (0.3ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:70
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering todo_lists/show.html.erb within layouts/application
+  [1m[36mTodoItem Load (0.4ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = $1[0m  [["todo_list_id", 2]]
+  ↳ app/views/todo_lists/show.html.erb:6
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered todo_items/_form.html.erb (4.0ms)
+  Rendered todo_lists/show.html.erb within layouts/application (6.7ms)
+  Rendered layouts/_alerts.html.erb (0.3ms)
+Completed 200 OK in 43ms (Views: 39.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/todo_lists" for ::1 at 2019-07-19 12:04:16 +0800
+Processing by TodoListsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering todo_lists/index.html.erb within layouts/application
+  [1m[36mTodoList Load (0.4ms)[0m  [1m[34mSELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/views/todo_lists/index.html.erb:10
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/todo_lists/index.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/todo_lists/index.html.erb:11
+  Rendered todo_lists/index.html.erb within layouts/application (4.8ms)
+  Rendered layouts/_alerts.html.erb (0.4ms)
+Completed 200 OK in 58ms (Views: 54.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/todo_lists/1" for ::1 at 2019-07-19 12:04:18 +0800
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTodoList Load (0.4ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:70
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering todo_lists/show.html.erb within layouts/application
+  [1m[36mTodoItem Load (0.3ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = $1[0m  [["todo_list_id", 1]]
+  ↳ app/views/todo_lists/show.html.erb:6
+  Rendered collection of todo_items/_todo_item.html.erb [3 times] (1.1ms)
+  Rendered todo_items/_form.html.erb (2.4ms)
+  Rendered todo_lists/show.html.erb within layouts/application (6.5ms)
+  Rendered layouts/_alerts.html.erb (0.3ms)
+Completed 200 OK in 42ms (Views: 38.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/todo_lists" for ::1 at 2019-07-19 12:04:19 +0800
+Processing by TodoListsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering todo_lists/index.html.erb within layouts/application
+  [1m[36mTodoList Load (0.4ms)[0m  [1m[34mSELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/views/todo_lists/index.html.erb:10
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/todo_lists/index.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/todo_lists/index.html.erb:11
+  Rendered todo_lists/index.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_alerts.html.erb (0.3ms)
+Completed 200 OK in 41ms (Views: 37.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/todo_lists/2" for ::1 at 2019-07-19 12:04:21 +0800
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTodoList Load (0.3ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:70
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering todo_lists/show.html.erb within layouts/application
+  [1m[36mTodoItem Load (0.4ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = $1[0m  [["todo_list_id", 2]]
+  ↳ app/views/todo_lists/show.html.erb:6
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered todo_items/_form.html.erb (3.3ms)
+  Rendered todo_lists/show.html.erb within layouts/application (5.8ms)
+  Rendered layouts/_alerts.html.erb (0.3ms)
+Completed 200 OK in 58ms (Views: 53.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/todo_lists" for ::1 at 2019-07-19 12:04:22 +0800
+Processing by TodoListsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering todo_lists/index.html.erb within layouts/application
+  [1m[36mTodoList Load (0.4ms)[0m  [1m[34mSELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/views/todo_lists/index.html.erb:10
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/todo_lists/index.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/todo_lists/index.html.erb:11
+  Rendered todo_lists/index.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_alerts.html.erb (0.4ms)
+Completed 200 OK in 43ms (Views: 39.7ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2019-07-19 12:23:13 +0800
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"C6PwdRMQH3YsD+r0gFitNk6vWm7BwI9A7oxyps5ptOMWA1V7Q26vYfjm5gVMk6spmKNDQLGLUwPMEwqGkplPcg=="}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/" for ::1 at 2019-07-19 12:23:13 +0800
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_alerts.html.erb (0.3ms)
+Completed 200 OK in 51ms (Views: 50.2ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5790848985702910395)[0m
+  ↳ /Users/itn.govardhan.p/.rvm/rubies/ruby-2.6.3/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/itn.govardhan.p/.rvm/rubies/ruby-2.6.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/itn.govardhan.p/.rvm/rubies/ruby-2.6.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/itn.govardhan.p/.rvm/rubies/ruby-2.6.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/itn.govardhan.p/.rvm/rubies/ruby-2.6.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(5790848985702910395)[0m
+  ↳ /Users/itn.govardhan.p/.rvm/rubies/ruby-2.6.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/itn.govardhan.p/.rvm/rubies/ruby-2.6.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/itn.govardhan.p/.rvm/rubies/ruby-2.6.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /Users/itn.govardhan.p/.rvm/rubies/ruby-2.6.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/itn.govardhan.p/.rvm/rubies/ruby-2.6.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /Users/itn.govardhan.p/.rvm/rubies/ruby-2.6.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/itn.govardhan.p/.rvm/rubies/ruby-2.6.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /Users/itn.govardhan.p/.rvm/rubies/ruby-2.6.3/bin/rake:23
+  [1m[35m (206.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "todo_test"[0m
+  ↳ /Users/itn.govardhan.p/.rvm/rubies/ruby-2.6.3/bin/rake:23
+  [1m[35m (493.3ms)[0m  [1m[35mCREATE DATABASE "todo_test" ENCODING = 'unicode'[0m
+  ↳ /Users/itn.govardhan.p/.rvm/rubies/ruby-2.6.3/bin/rake:23
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "todo_items" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (6.3ms)[0m  [1m[35mCREATE TABLE "todo_items" ("id" bigserial primary key, "content" character varying, "todo_list_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "completed_at" timestamp)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX  "index_todo_items_on_todo_list_id" ON "todo_items"  ("todo_list_id")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "todo_lists" CASCADE[0m
+  ↳ db/schema.rb:27
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE TABLE "todo_lists" ("id" bigserial primary key, "title" character varying, "description" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "user_id" bigint)[0m
+  ↳ db/schema.rb:27
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE  INDEX  "index_todo_lists_on_user_id" ON "todo_lists"  ("user_id")[0m
+  ↳ db/schema.rb:27
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:36
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:36
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/schema.rb:36
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  ↳ db/schema.rb:36
+  [1m[35m (1.6ms)[0m  [1m[35mALTER TABLE "todo_items" ADD CONSTRAINT "fk_rails_d913ce1c56"
+FOREIGN KEY ("todo_list_id")
+  REFERENCES "todo_lists" ("id")
+[0m
+  ↳ db/schema.rb:48
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "todo_lists" ADD CONSTRAINT "fk_rails_c213597f32"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  ↳ db/schema.rb:49
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190716171757)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190716143428),
+(20190716144732),
+(20190716170030),
+(20190716150643);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-07-19 06:11:41.076239"], ["updated_at", "2019-07-19 06:11:41.076239"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/itn.govardhan.p/.rvm/rubies/ruby-2.6.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/itn.govardhan.p/.rvm/rubies/ruby-2.6.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Update (0.2ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2019-07-19 06:11:41.079036"], ["key", "environment"]]
+  ↳ /Users/itn.govardhan.p/.rvm/rubies/ruby-2.6.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/itn.govardhan.p/.rvm/rubies/ruby-2.6.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5790848985702910395)[0m
+  ↳ vendor/bundle/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ vendor/bundle/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ vendor/bundle/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ vendor/bundle/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(5790848985702910395)[0m
+  ↳ vendor/bundle/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ vendor/bundle/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ vendor/bundle/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ vendor/bundle/bin/rake:23
+  [1m[35m (201.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "todo_test"[0m
+  ↳ vendor/bundle/bin/rake:23
+  [1m[35m (397.4ms)[0m  [1m[35mCREATE DATABASE "todo_test" ENCODING = 'unicode'[0m
+  ↳ vendor/bundle/bin/rake:23
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "todo_items" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (4.9ms)[0m  [1m[35mCREATE TABLE "todo_items" ("id" bigserial primary key, "content" character varying, "todo_list_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "completed_at" timestamp)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX  "index_todo_items_on_todo_list_id" ON "todo_items"  ("todo_list_id")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "todo_lists" CASCADE[0m
+  ↳ db/schema.rb:27
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE TABLE "todo_lists" ("id" bigserial primary key, "title" character varying, "description" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "user_id" bigint)[0m
+  ↳ db/schema.rb:27
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX  "index_todo_lists_on_user_id" ON "todo_lists"  ("user_id")[0m
+  ↳ db/schema.rb:27
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:36
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:36
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/schema.rb:36
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  ↳ db/schema.rb:36
+  [1m[35m (1.7ms)[0m  [1m[35mALTER TABLE "todo_items" ADD CONSTRAINT "fk_rails_d913ce1c56"
+FOREIGN KEY ("todo_list_id")
+  REFERENCES "todo_lists" ("id")
+[0m
+  ↳ db/schema.rb:48
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "todo_lists" ADD CONSTRAINT "fk_rails_c213597f32"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  ↳ db/schema.rb:49
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190716171757)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190716143428),
+(20190716144732),
+(20190716170030),
+(20190716150643);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-07-19 06:11:50.890742"], ["updated_at", "2019-07-19 06:11:50.890742"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ vendor/bundle/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ vendor/bundle/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Update (0.2ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2019-07-19 06:11:50.893108"], ["key", "environment"]]
+  ↳ vendor/bundle/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ vendor/bundle/bin/rake:23
+Started GET "/" for ::1 at 2019-07-21 17:39:30 +0800
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (4.5ms)
+  Rendered layouts/_alerts.html.erb (0.3ms)
+Completed 200 OK in 306ms (Views: 295.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-07-21 17:39:32 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (122.9ms)
+  Rendered layouts/_alerts.html.erb (0.3ms)
+Completed 200 OK in 170ms (Views: 156.1ms | ActiveRecord: 5.4ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-07-21 17:39:40 +0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"n1RrpLh0Vzl8U2C34/3SOrBBLKokBHgmaYYxlQ9um9+Ung6SVeI5G70TJ9qJjrYi4jjqNAQe7Yu0MEkJwCbVJw==", "user"=>{"email"=>"govardhan.padmanabhan3@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "govardhan.padmanabhan3@gmail.com"], ["LIMIT", 1]]
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 17ms (ActiveRecord: 4.2ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"n1RrpLh0Vzl8U2C34/3SOrBBLKokBHgmaYYxlQ9um9+Ung6SVeI5G70TJ9qJjrYi4jjqNAQe7Yu0MEkJwCbVJw==", "user"=>{"email"=>"govardhan.padmanabhan3@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.4ms)
+  Rendered layouts/_alerts.html.erb (0.4ms)
+Completed 200 OK in 285ms (Views: 169.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2019-07-21 17:39:44 +0800
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (6.6ms)
+  Rendered layouts/_alerts.html.erb (0.5ms)
+Completed 200 OK in 76ms (Views: 75.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2019-07-21 17:39:55 +0800
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3cbj9GUdsYGwlETD8pJyjmxZCN8q0Ldcbd5eIdvtUkChyY1luxcctE37ePh0sKUA0OZOh27IK9Xv4EiibHKXxA==", "user"=>{"email"=>"govardhan.padmanabhan99@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "govardhan.padmanabhan99@gmail.com"], ["LIMIT", 1]]
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Create (1.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "govardhan.padmanabhan99@gmail.com"], ["encrypted_password", "$2a$11$OjcDK8Mh.TkicQD0nRD8bOzoqu99psyQLA5X90mwgw8lvw/fAZC6C"], ["created_at", "2019-07-21 09:39:55.926287"], ["updated_at", "2019-07-21 09:39:55.926287"]]
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/todo_lists
+Completed 302 Found in 127ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/todo_lists" for ::1 at 2019-07-21 17:39:55 +0800
+Processing by TodoListsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering todo_lists/index.html.erb within layouts/application
+  [1m[36mTodoList Load (1.1ms)[0m  [1m[34mSELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/views/todo_lists/index.html.erb:10
+  Rendered todo_lists/index.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_alerts.html.erb (0.3ms)
+Completed 200 OK in 79ms (Views: 70.5ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/todo_lists/new" for ::1 at 2019-07-21 17:39:57 +0800
+Processing by TodoListsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering todo_lists/new.html.erb within layouts/application
+  Rendered todo_lists/_form.html.erb (3.5ms)
+  Rendered todo_lists/new.html.erb within layouts/application (5.3ms)
+  Rendered layouts/_alerts.html.erb (0.3ms)
+Completed 200 OK in 47ms (Views: 39.5ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/todo_lists" for ::1 at 2019-07-21 17:40:00 +0800
+Processing by TodoListsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QCqs6IynV2ob/rk/YshL/iZdWYtHeADzhcsG1NUtkp8lxvS92OzHe/utE/dfTdlVjqOV58CLoF7uPMXO6Og5FA==", "todo_list"=>{"title"=>"Test#1", "description"=>""}, "button"=>""}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/todo_lists_controller.rb:32
+  [1m[36mTodoList Create (0.7ms)[0m  [1m[32mINSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Test#1"], ["description", ""], ["created_at", "2019-07-21 09:40:00.553561"], ["updated_at", "2019-07-21 09:40:00.553561"], ["user_id", 3]]
+  ↳ app/controllers/todo_lists_controller.rb:32
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/todo_lists_controller.rb:32
+Redirected to http://localhost:3000/todo_lists/3
+Completed 302 Found in 7ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/todo_lists/3" for ::1 at 2019-07-21 17:40:00 +0800
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTodoList Load (0.2ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:70
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering todo_lists/show.html.erb within layouts/application
+  [1m[36mTodoItem Load (0.5ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = $1[0m  [["todo_list_id", 3]]
+  ↳ app/views/todo_lists/show.html.erb:6
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered todo_items/_form.html.erb (8.3ms)
+  Rendered todo_lists/show.html.erb within layouts/application (16.9ms)
+  Rendered layouts/_alerts.html.erb (0.3ms)
+Completed 200 OK in 55ms (Views: 48.8ms | ActiveRecord: 3.3ms)
+
+
+Started POST "/todo_lists/3/todo_items" for ::1 at 2019-07-21 17:40:04 +0800
+Processing by TodoItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pdI7m7Nf3E+f/4ehBZJeAGAKbNJHfENL3wTsjD7pQQXxU5z2TmzNlg/bFhyvI/GX/Au4KOvN5lj9rm4hOdnezA==", "todo_item"=>{"content"=>"todo"}, "commit"=>"Create Todo item", "todo_list_id"=>"3"}
+  [1m[36mTodoList Load (0.3ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/todo_items_controller.rb:30
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/todo_items_controller.rb:8
+  [1m[36mTodoItem Create (0.5ms)[0m  [1m[32mINSERT INTO "todo_items" ("content", "todo_list_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["content", "todo"], ["todo_list_id", 3], ["created_at", "2019-07-21 09:40:04.646991"], ["updated_at", "2019-07-21 09:40:04.646991"]]
+  ↳ app/controllers/todo_items_controller.rb:8
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/todo_items_controller.rb:8
+Redirected to http://localhost:3000/todo_lists/3
+Completed 302 Found in 5ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/todo_lists/3" for ::1 at 2019-07-21 17:40:04 +0800
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTodoList Load (0.3ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:70
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering todo_lists/show.html.erb within layouts/application
+  [1m[36mTodoItem Load (0.3ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = $1[0m  [["todo_list_id", 3]]
+  ↳ app/views/todo_lists/show.html.erb:6
+  Rendered collection of todo_items/_todo_item.html.erb [1 times] (0.8ms)
+  Rendered todo_items/_form.html.erb (2.4ms)
+  Rendered todo_lists/show.html.erb within layouts/application (6.1ms)
+  Rendered layouts/_alerts.html.erb (0.3ms)
+Completed 200 OK in 43ms (Views: 40.4ms | ActiveRecord: 0.9ms)
+
+
+Started PATCH "/todo_lists/3/todo_items/4/complete" for ::1 at 2019-07-21 17:40:05 +0800
+Processing by TodoItemsController#complete as HTML
+  Parameters: {"authenticity_token"=>"K0BVRIt3VqzktyvrMi3hAn3++REiGbZC7jXwB0Zkpfp/wfIpdkRHdXSTulaYnE6V4f8t646oE1HMn3KqQVQ6Mw==", "todo_list_id"=>"3", "id"=>"4"}
+  [1m[36mTodoList Load (0.4ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/todo_items_controller.rb:30
+  [1m[36mTodoItem Load (0.3ms)[0m  [1m[34mSELECT  "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = $1 AND "todo_items"."id" = $2 LIMIT $3[0m  [["todo_list_id", 3], ["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/todo_items_controller.rb:38
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/todo_items_controller.rb:23
+  [1m[36mTodoItem Update (0.3ms)[0m  [1m[33mUPDATE "todo_items" SET "completed_at" = $1, "updated_at" = $2 WHERE "todo_items"."id" = $3[0m  [["completed_at", "2019-07-21 09:40:05.645723"], ["updated_at", "2019-07-21 09:40:05.646274"], ["id", 4]]
+  ↳ app/controllers/todo_items_controller.rb:23
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/todo_items_controller.rb:23
+Redirected to http://localhost:3000/todo_lists/3
+Completed 302 Found in 5ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/todo_lists/3" for ::1 at 2019-07-21 17:40:05 +0800
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTodoList Load (0.3ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:70
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering todo_lists/show.html.erb within layouts/application
+  [1m[36mTodoItem Load (0.3ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = $1[0m  [["todo_list_id", 3]]
+  ↳ app/views/todo_lists/show.html.erb:6
+  Rendered collection of todo_items/_todo_item.html.erb [1 times] (0.8ms)
+  Rendered todo_items/_form.html.erb (2.3ms)
+  Rendered todo_lists/show.html.erb within layouts/application (5.8ms)
+  Rendered layouts/_alerts.html.erb (0.3ms)
+Completed 200 OK in 44ms (Views: 40.4ms | ActiveRecord: 0.9ms)
+
+
+Started PATCH "/todo_lists/3/todo_items/4/complete" for ::1 at 2019-07-21 17:40:06 +0800
+Processing by TodoItemsController#complete as HTML
+  Parameters: {"authenticity_token"=>"KBDdXEpYMikMxqb+H+w+TdSSCbRs643y24RSGxTH+2B8kXoxt2sj8JziN0O1XZHaSJPdTsBaKOH5LtC2E/dkqQ==", "todo_list_id"=>"3", "id"=>"4"}
+  [1m[36mTodoList Load (0.3ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/todo_items_controller.rb:30
+  [1m[36mTodoItem Load (0.3ms)[0m  [1m[34mSELECT  "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = $1 AND "todo_items"."id" = $2 LIMIT $3[0m  [["todo_list_id", 3], ["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/todo_items_controller.rb:38
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/todo_items_controller.rb:23
+  [1m[36mTodoItem Update (0.4ms)[0m  [1m[33mUPDATE "todo_items" SET "completed_at" = $1, "updated_at" = $2 WHERE "todo_items"."id" = $3[0m  [["completed_at", "2019-07-21 09:40:06.815762"], ["updated_at", "2019-07-21 09:40:06.816443"], ["id", 4]]
+  ↳ app/controllers/todo_items_controller.rb:23
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/todo_items_controller.rb:23
+Redirected to http://localhost:3000/todo_lists/3
+Completed 302 Found in 5ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/todo_lists/3" for ::1 at 2019-07-21 17:40:06 +0800
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTodoList Load (0.2ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:70
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering todo_lists/show.html.erb within layouts/application
+  [1m[36mTodoItem Load (0.2ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = $1[0m  [["todo_list_id", 3]]
+  ↳ app/views/todo_lists/show.html.erb:6
+  Rendered collection of todo_items/_todo_item.html.erb [1 times] (0.8ms)
+  Rendered todo_items/_form.html.erb (2.1ms)
+  Rendered todo_lists/show.html.erb within layouts/application (5.4ms)
+  Rendered layouts/_alerts.html.erb (0.3ms)
+Completed 200 OK in 42ms (Views: 39.6ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/todo_lists/3/todo_items/4/complete" for ::1 at 2019-07-21 17:40:07 +0800
+Processing by TodoItemsController#complete as HTML
+  Parameters: {"authenticity_token"=>"Gs1+n28UA6CwxfS3+zLkAaORg2wU13i/H6Z4xuKr9EFOTNnykicSeSDhZQpRg0uWP5BXlrhm3aw9DPpr5ZtriA==", "todo_list_id"=>"3", "id"=>"4"}
+  [1m[36mTodoList Load (0.2ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/todo_items_controller.rb:30
+  [1m[36mTodoItem Load (0.3ms)[0m  [1m[34mSELECT  "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = $1 AND "todo_items"."id" = $2 LIMIT $3[0m  [["todo_list_id", 3], ["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/todo_items_controller.rb:38
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/todo_items_controller.rb:23
+  [1m[36mTodoItem Update (0.3ms)[0m  [1m[33mUPDATE "todo_items" SET "completed_at" = $1, "updated_at" = $2 WHERE "todo_items"."id" = $3[0m  [["completed_at", "2019-07-21 09:40:07.731079"], ["updated_at", "2019-07-21 09:40:07.731630"], ["id", 4]]
+  ↳ app/controllers/todo_items_controller.rb:23
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/todo_items_controller.rb:23
+Redirected to http://localhost:3000/todo_lists/3
+Completed 302 Found in 5ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/todo_lists/3" for ::1 at 2019-07-21 17:40:07 +0800
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTodoList Load (0.2ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:70
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering todo_lists/show.html.erb within layouts/application
+  [1m[36mTodoItem Load (0.2ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = $1[0m  [["todo_list_id", 3]]
+  ↳ app/views/todo_lists/show.html.erb:6
+  Rendered collection of todo_items/_todo_item.html.erb [1 times] (0.9ms)
+  Rendered todo_items/_form.html.erb (2.4ms)
+  Rendered todo_lists/show.html.erb within layouts/application (5.8ms)
+  Rendered layouts/_alerts.html.erb (0.3ms)
+Completed 200 OK in 42ms (Views: 39.8ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/todo_lists/3/todo_items/4/complete" for ::1 at 2019-07-21 17:40:07 +0800
+Processing by TodoItemsController#complete as HTML
+  Parameters: {"authenticity_token"=>"V46BDaD/TJxK51rpPy+Sdw6LqvOpBDoHHqBRYbydjuQDDyZgXcxdRdrDy1SVnj3gkop+CQW1nxQ8CtPMu60RLQ==", "todo_list_id"=>"3", "id"=>"4"}
+  [1m[36mTodoList Load (0.3ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/todo_items_controller.rb:30
+  [1m[36mTodoItem Load (0.4ms)[0m  [1m[34mSELECT  "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = $1 AND "todo_items"."id" = $2 LIMIT $3[0m  [["todo_list_id", 3], ["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/todo_items_controller.rb:38
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/todo_items_controller.rb:23
+  [1m[36mTodoItem Update (0.3ms)[0m  [1m[33mUPDATE "todo_items" SET "completed_at" = $1, "updated_at" = $2 WHERE "todo_items"."id" = $3[0m  [["completed_at", "2019-07-21 09:40:07.963595"], ["updated_at", "2019-07-21 09:40:07.964157"], ["id", 4]]
+  ↳ app/controllers/todo_items_controller.rb:23
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/todo_items_controller.rb:23
+Redirected to http://localhost:3000/todo_lists/3
+Completed 302 Found in 35ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/todo_lists/3" for ::1 at 2019-07-21 17:40:07 +0800
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTodoList Load (0.2ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:70
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering todo_lists/show.html.erb within layouts/application
+  [1m[36mTodoItem Load (0.3ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = $1[0m  [["todo_list_id", 3]]
+  ↳ app/views/todo_lists/show.html.erb:6
+  Rendered collection of todo_items/_todo_item.html.erb [1 times] (0.7ms)
+  Rendered todo_items/_form.html.erb (2.1ms)
+  Rendered todo_lists/show.html.erb within layouts/application (5.2ms)
+  Rendered layouts/_alerts.html.erb (0.3ms)
+Completed 200 OK in 40ms (Views: 37.0ms | ActiveRecord: 0.7ms)
+
+
+Started PATCH "/todo_lists/3/todo_items/4/complete" for ::1 at 2019-07-21 17:40:08 +0800
+Processing by TodoItemsController#complete as HTML
+  Parameters: {"authenticity_token"=>"5h1SVv+Ak4h0O6LNu0YhruFa/YheNsdYD2wjB8O8RCCynPU7ArOCUeQfM3AR9445fVspcvKHYkstxqGqxIzb6Q==", "todo_list_id"=>"3", "id"=>"4"}
+  [1m[36mTodoList Load (0.2ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/todo_items_controller.rb:30
+  [1m[36mTodoItem Load (0.3ms)[0m  [1m[34mSELECT  "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = $1 AND "todo_items"."id" = $2 LIMIT $3[0m  [["todo_list_id", 3], ["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/todo_items_controller.rb:38
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/todo_items_controller.rb:23
+  [1m[36mTodoItem Update (0.3ms)[0m  [1m[33mUPDATE "todo_items" SET "completed_at" = $1, "updated_at" = $2 WHERE "todo_items"."id" = $3[0m  [["completed_at", "2019-07-21 09:40:08.328319"], ["updated_at", "2019-07-21 09:40:08.328869"], ["id", 4]]
+  ↳ app/controllers/todo_items_controller.rb:23
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/todo_items_controller.rb:23
+Redirected to http://localhost:3000/todo_lists/3
+Completed 302 Found in 5ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/todo_lists/3" for ::1 at 2019-07-21 17:40:08 +0800
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTodoList Load (0.3ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:70
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering todo_lists/show.html.erb within layouts/application
+  [1m[36mTodoItem Load (0.2ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = $1[0m  [["todo_list_id", 3]]
+  ↳ app/views/todo_lists/show.html.erb:6
+  Rendered collection of todo_items/_todo_item.html.erb [1 times] (0.8ms)
+  Rendered todo_items/_form.html.erb (2.1ms)
+  Rendered todo_lists/show.html.erb within layouts/application (5.3ms)
+  Rendered layouts/_alerts.html.erb (0.2ms)
+Completed 200 OK in 43ms (Views: 40.3ms | ActiveRecord: 0.7ms)
+
+
+Started PATCH "/todo_lists/3/todo_items/4/complete" for ::1 at 2019-07-21 17:40:08 +0800
+Processing by TodoItemsController#complete as HTML
+  Parameters: {"authenticity_token"=>"DnQDjrNGQKo/ginkLYgRS0Gj2Q0PozuPOfUgiPr6/GRa9aTjTnVRc6+muFmHOb7c3aIN96MSnpwbX6Il/cpjrQ==", "todo_list_id"=>"3", "id"=>"4"}
+  [1m[36mTodoList Load (0.3ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/todo_items_controller.rb:30
+  [1m[36mTodoItem Load (0.3ms)[0m  [1m[34mSELECT  "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = $1 AND "todo_items"."id" = $2 LIMIT $3[0m  [["todo_list_id", 3], ["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/todo_items_controller.rb:38
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/todo_items_controller.rb:23
+  [1m[36mTodoItem Update (0.3ms)[0m  [1m[33mUPDATE "todo_items" SET "completed_at" = $1, "updated_at" = $2 WHERE "todo_items"."id" = $3[0m  [["completed_at", "2019-07-21 09:40:08.670623"], ["updated_at", "2019-07-21 09:40:08.671172"], ["id", 4]]
+  ↳ app/controllers/todo_items_controller.rb:23
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/todo_items_controller.rb:23
+Redirected to http://localhost:3000/todo_lists/3
+Completed 302 Found in 5ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/todo_lists/3" for ::1 at 2019-07-21 17:40:08 +0800
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTodoList Load (0.2ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:70
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering todo_lists/show.html.erb within layouts/application
+  [1m[36mTodoItem Load (0.2ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = $1[0m  [["todo_list_id", 3]]
+  ↳ app/views/todo_lists/show.html.erb:6
+  Rendered collection of todo_items/_todo_item.html.erb [1 times] (0.7ms)
+  Rendered todo_items/_form.html.erb (2.0ms)
+  Rendered todo_lists/show.html.erb within layouts/application (4.9ms)
+  Rendered layouts/_alerts.html.erb (0.3ms)
+Completed 200 OK in 37ms (Views: 34.0ms | ActiveRecord: 0.7ms)
+
+
+Started PATCH "/todo_lists/3/todo_items/4/complete" for ::1 at 2019-07-21 17:40:08 +0800
+Processing by TodoItemsController#complete as HTML
+  Parameters: {"authenticity_token"=>"Y5hwvSZMVcPC4O3iNeXkx1vO1UQ90p1FKM4RbP1dHWo3GdfQ239EGlLEfF+fVEtQx88BvpFjOFYKZJPB+m2Cow==", "todo_list_id"=>"3", "id"=>"4"}
+  [1m[36mTodoList Load (0.2ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/todo_items_controller.rb:30
+  [1m[36mTodoItem Load (0.2ms)[0m  [1m[34mSELECT  "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = $1 AND "todo_items"."id" = $2 LIMIT $3[0m  [["todo_list_id", 3], ["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/todo_items_controller.rb:38
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/todo_items_controller.rb:23
+  [1m[36mTodoItem Update (0.3ms)[0m  [1m[33mUPDATE "todo_items" SET "completed_at" = $1, "updated_at" = $2 WHERE "todo_items"."id" = $3[0m  [["completed_at", "2019-07-21 09:40:08.926970"], ["updated_at", "2019-07-21 09:40:08.927432"], ["id", 4]]
+  ↳ app/controllers/todo_items_controller.rb:23
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/todo_items_controller.rb:23
+Redirected to http://localhost:3000/todo_lists/3
+Completed 302 Found in 4ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/todo_lists/3" for ::1 at 2019-07-21 17:40:08 +0800
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTodoList Load (0.2ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:70
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering todo_lists/show.html.erb within layouts/application
+  [1m[36mTodoItem Load (0.3ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = $1[0m  [["todo_list_id", 3]]
+  ↳ app/views/todo_lists/show.html.erb:6
+  Rendered collection of todo_items/_todo_item.html.erb [1 times] (0.9ms)
+  Rendered todo_items/_form.html.erb (2.0ms)
+  Rendered todo_lists/show.html.erb within layouts/application (5.5ms)
+  Rendered layouts/_alerts.html.erb (0.3ms)
+Completed 200 OK in 39ms (Views: 35.7ms | ActiveRecord: 0.8ms)
+
+
+Started PATCH "/todo_lists/3/todo_items/4/complete" for ::1 at 2019-07-21 17:40:09 +0800
+Processing by TodoItemsController#complete as HTML
+  Parameters: {"authenticity_token"=>"ZIYivnAjdxjWv18kd3W1ZNrqJHyhg7yxlVY/mjmbd/8wB4XTjRBmwUabzpndxBrzRuvwhg0yGaK3/L03PqvoNg==", "todo_list_id"=>"3", "id"=>"4"}
+  [1m[36mTodoList Load (0.3ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/todo_items_controller.rb:30
+  [1m[36mTodoItem Load (0.3ms)[0m  [1m[34mSELECT  "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = $1 AND "todo_items"."id" = $2 LIMIT $3[0m  [["todo_list_id", 3], ["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/todo_items_controller.rb:38
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/todo_items_controller.rb:23
+  [1m[36mTodoItem Update (0.3ms)[0m  [1m[33mUPDATE "todo_items" SET "completed_at" = $1, "updated_at" = $2 WHERE "todo_items"."id" = $3[0m  [["completed_at", "2019-07-21 09:40:09.120603"], ["updated_at", "2019-07-21 09:40:09.121175"], ["id", 4]]
+  ↳ app/controllers/todo_items_controller.rb:23
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/todo_items_controller.rb:23
+Redirected to http://localhost:3000/todo_lists/3
+Completed 302 Found in 5ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/todo_lists/3" for ::1 at 2019-07-21 17:40:09 +0800
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTodoList Load (0.3ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:70
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering todo_lists/show.html.erb within layouts/application
+  [1m[36mTodoItem Load (0.2ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = $1[0m  [["todo_list_id", 3]]
+  ↳ app/views/todo_lists/show.html.erb:6
+  Rendered collection of todo_items/_todo_item.html.erb [1 times] (0.7ms)
+  Rendered todo_items/_form.html.erb (2.0ms)
+  Rendered todo_lists/show.html.erb within layouts/application (4.9ms)
+  Rendered layouts/_alerts.html.erb (0.3ms)
+Completed 200 OK in 37ms (Views: 34.2ms | ActiveRecord: 0.7ms)
+
+
+Started PATCH "/todo_lists/3/todo_items/4/complete" for ::1 at 2019-07-21 17:40:11 +0800
+Processing by TodoItemsController#complete as HTML
+  Parameters: {"authenticity_token"=>"kLdu5iRMyXTCOu8ABjZoyQTpIyyrK/pj4d+TMQNDJo7ENsmL2X/YrVIefr2sh8demOj31geaX3DDdRGcBHO5Rw==", "todo_list_id"=>"3", "id"=>"4"}
+  [1m[36mTodoList Load (0.3ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/todo_items_controller.rb:30
+  [1m[36mTodoItem Load (0.2ms)[0m  [1m[34mSELECT  "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = $1 AND "todo_items"."id" = $2 LIMIT $3[0m  [["todo_list_id", 3], ["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/todo_items_controller.rb:38
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/todo_items_controller.rb:23
+  [1m[36mTodoItem Update (0.3ms)[0m  [1m[33mUPDATE "todo_items" SET "completed_at" = $1, "updated_at" = $2 WHERE "todo_items"."id" = $3[0m  [["completed_at", "2019-07-21 09:40:11.440923"], ["updated_at", "2019-07-21 09:40:11.441490"], ["id", 4]]
+  ↳ app/controllers/todo_items_controller.rb:23
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/todo_items_controller.rb:23
+Redirected to http://localhost:3000/todo_lists/3
+Completed 302 Found in 5ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/todo_lists/3" for ::1 at 2019-07-21 17:40:11 +0800
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTodoList Load (0.2ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:70
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering todo_lists/show.html.erb within layouts/application
+  [1m[36mTodoItem Load (0.3ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = $1[0m  [["todo_list_id", 3]]
+  ↳ app/views/todo_lists/show.html.erb:6
+  Rendered collection of todo_items/_todo_item.html.erb [1 times] (0.8ms)
+  Rendered todo_items/_form.html.erb (2.2ms)
+  Rendered todo_lists/show.html.erb within layouts/application (5.7ms)
+  Rendered layouts/_alerts.html.erb (0.3ms)
+Completed 200 OK in 41ms (Views: 38.8ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/todo_lists/3/todo_items/4/complete" for ::1 at 2019-07-21 17:40:11 +0800
+Processing by TodoItemsController#complete as HTML
+  Parameters: {"authenticity_token"=>"KtJGVddugguMh+d8nSJBz1Li6iwjHLYnF9h4aNDcVu5+U+E4Kl2T0hyjdsE3k+5YzuM+1o+tEzQ1cvrF1+zJJw==", "todo_list_id"=>"3", "id"=>"4"}
+  [1m[36mTodoList Load (0.3ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/todo_items_controller.rb:30
+  [1m[36mTodoItem Load (0.2ms)[0m  [1m[34mSELECT  "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = $1 AND "todo_items"."id" = $2 LIMIT $3[0m  [["todo_list_id", 3], ["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/todo_items_controller.rb:38
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/todo_items_controller.rb:23
+  [1m[36mTodoItem Update (0.3ms)[0m  [1m[33mUPDATE "todo_items" SET "completed_at" = $1, "updated_at" = $2 WHERE "todo_items"."id" = $3[0m  [["completed_at", "2019-07-21 09:40:11.738708"], ["updated_at", "2019-07-21 09:40:11.739333"], ["id", 4]]
+  ↳ app/controllers/todo_items_controller.rb:23
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/todo_items_controller.rb:23
+Redirected to http://localhost:3000/todo_lists/3
+Completed 302 Found in 5ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/todo_lists/3" for ::1 at 2019-07-21 17:40:11 +0800
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTodoList Load (0.2ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:70
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering todo_lists/show.html.erb within layouts/application
+  [1m[36mTodoItem Load (0.2ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = $1[0m  [["todo_list_id", 3]]
+  ↳ app/views/todo_lists/show.html.erb:6
+  Rendered collection of todo_items/_todo_item.html.erb [1 times] (0.7ms)
+  Rendered todo_items/_form.html.erb (2.5ms)
+  Rendered todo_lists/show.html.erb within layouts/application (5.7ms)
+  Rendered layouts/_alerts.html.erb (0.3ms)
+Completed 200 OK in 69ms (Views: 66.1ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/todo_lists/3/todo_items/4" for ::1 at 2019-07-21 17:40:14 +0800
+Processing by TodoItemsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"u2jZhNHCK/qawMtRzDklXZWESMkQPKZFFEFXNupA8WDv6X7pLPE6IwrkWuxmiIrKCYWcM7yNA1Y269Wb7XBuqQ==", "todo_list_id"=>"3", "id"=>"4"}
+  [1m[36mTodoList Load (0.2ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/todo_items_controller.rb:30
+  [1m[36mTodoItem Load (0.2ms)[0m  [1m[34mSELECT  "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = $1 AND "todo_items"."id" = $2 LIMIT $3[0m  [["todo_list_id", 3], ["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/todo_items_controller.rb:38
+  [1m[36mCACHE TodoItem Load (0.0ms)[0m  [1m[34mSELECT  "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = $1 AND "todo_items"."id" = $2 LIMIT $3[0m  [["todo_list_id", 3], ["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/todo_items_controller.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/todo_items_controller.rb:14
+  [1m[36mTodoItem Destroy (0.3ms)[0m  [1m[31mDELETE FROM "todo_items" WHERE "todo_items"."id" = $1[0m  [["id", 4]]
+  ↳ app/controllers/todo_items_controller.rb:14
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/todo_items_controller.rb:14
+Redirected to http://localhost:3000/todo_lists/3
+Completed 302 Found in 5ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/todo_lists/3" for ::1 at 2019-07-21 17:40:14 +0800
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTodoList Load (0.3ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:70
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering todo_lists/show.html.erb within layouts/application
+  [1m[36mTodoItem Load (0.3ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = $1[0m  [["todo_list_id", 3]]
+  ↳ app/views/todo_lists/show.html.erb:6
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered todo_items/_form.html.erb (2.5ms)
+  Rendered todo_lists/show.html.erb within layouts/application (4.8ms)
+  Rendered layouts/_alerts.html.erb (0.3ms)
+Completed 200 OK in 42ms (Views: 39.1ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/todo_lists/3/todo_items" for ::1 at 2019-07-21 17:40:20 +0800
+Processing by TodoItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0lmaSv8dt2bxu2WjjaZtLBjGtUD9HfN9hii2JSV+EWSG2D0nAi6mv2Gf9B4nF8K7hMdhulGsVm6kgjSIIk6OrQ==", "todo_item"=>{"content"=>"todo\r\n\r\n"}, "commit"=>"Create Todo item", "todo_list_id"=>"3"}
+  [1m[36mTodoList Load (0.2ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/todo_items_controller.rb:30
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/todo_items_controller.rb:8
+  [1m[36mTodoItem Create (0.5ms)[0m  [1m[32mINSERT INTO "todo_items" ("content", "todo_list_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["content", "todo\r\n\r\n"], ["todo_list_id", 3], ["created_at", "2019-07-21 09:40:20.049505"], ["updated_at", "2019-07-21 09:40:20.049505"]]
+  ↳ app/controllers/todo_items_controller.rb:8
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/todo_items_controller.rb:8
+Redirected to http://localhost:3000/todo_lists/3
+Completed 302 Found in 5ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/todo_lists/3" for ::1 at 2019-07-21 17:40:20 +0800
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTodoList Load (0.3ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:70
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering todo_lists/show.html.erb within layouts/application
+  [1m[36mTodoItem Load (0.3ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = $1[0m  [["todo_list_id", 3]]
+  ↳ app/views/todo_lists/show.html.erb:6
+  Rendered collection of todo_items/_todo_item.html.erb [1 times] (0.7ms)
+  Rendered todo_items/_form.html.erb (2.1ms)
+  Rendered todo_lists/show.html.erb within layouts/application (5.2ms)
+  Rendered layouts/_alerts.html.erb (0.3ms)
+Completed 200 OK in 41ms (Views: 38.6ms | ActiveRecord: 0.8ms)
+
+

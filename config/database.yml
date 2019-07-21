@@ -16,6 +16,8 @@
 #
 default: &default
   adapter: postgresql
+  #to run locally, change it to localhost
+  host: postgres
   encoding: unicode
   username: postgres
   password: root
