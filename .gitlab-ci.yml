@@ -1,36 +1,41 @@
-image: "ruby:2.6"
+image: "ruby:2.6.3"
 
-stages:
-  - build
-  - test
+services:
+  - postgres:11.4
+  
+variables:
+  POSTGRES_DB: todo_test
+  POSTGRES_HOST: postgres
+  POSTGRES_USER: postgres
+  POSTGRES_PASSWORD: root
+
+#stages:
+#  - build
+#  - test
 
 before_script:
-  - brew update -qq && brew install -y -qq pg libpq-dev nodejs
+#  - apt-get update -qq && apt-get install -y -qq postgresql postgresql-contrib libpq-dev cmake
   - ruby -v
   - which ruby
   - gem install bundler --no-document
   - bundle install --jobs $(nproc)  "${FLAGS[@]}"
 
-build:
-  stage: build
-  script:
-    - echo "Building"
-    - bundle exec rake assets:precompile
-    - rails s
-    - ^C
+#build:
+#  stage: build
+  #image: postgres
+#  script:
+#    - echo "Building"
+#    - export PGPASSWORD=$POSTGRES_PASSWORD
+#    - psql -h "postgres" -U "$POSTGRES_USER" -d "$POSTGRES_DB" -c "SELECT 'OK' AS status;"
+
 
 test:
-  stage: test
+  #stage: test
   script:
     - echo "Testing"
+    - export PGPASSWORD=$POSTGRES_PASSWORD
+#    - psql -h "postgres" -U "$POSTGRES_USER" -d "$POSTGRES_DB" -c "SELECT 'OK' AS status;"
+    - bundle exec rake db:create db:schema:load RAILS_ENV=test
     - ruby -I test test/models/todo_item_test.rb
     - ruby -I test test/models/todo_list_test.rb
     - ruby -I test test/models/user_test.rb
-
-#rspec:
-  #script:
-    #- bundle exec rspec
-
-#rubocop:
-  #script:
-    #- bundle exec rubocop
