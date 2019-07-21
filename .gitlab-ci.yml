@@ -9,9 +9,9 @@ variables:
   POSTGRES_USER: postgres
   POSTGRES_PASSWORD: root
 
-#stages:
-#  - build
-#  - test
+stages:
+  - test
+  - deploy
 
 before_script:
   - apt-get update -qq && apt-get install -y -qq postgresql postgresql-contrib libpq-dev cmake
@@ -37,3 +37,19 @@ test:
     - psql -h "postgres" -U "$POSTGRES_USER" -d "$POSTGRES_DB" -c "SELECT 'OK' AS status;"
     - bundle exec rake db:create db:schema:load RAILS_ENV=test
     - bundle exec rspec
+    
+staging:
+  type: deploy
+  script:
+  - gem install dpl
+  - dpl --provider=heroku --app=rails-todo-staging --api-key=$HEROKU_STAGING_API_KEY
+  only:
+  - master
+
+production:
+  type: deploy
+  script:
+  - gem install dpl
+  - dpl --provider=heroku --app=rails-todo-production --api-key=$HEROKU_PRODUCTION_API_KEY
+  only:
+  - tags
