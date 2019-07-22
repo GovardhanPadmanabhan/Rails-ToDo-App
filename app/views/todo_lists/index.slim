@@ -1,0 +1,12 @@
+div style="text-align:right" 
+  = link_to('Logout', destroy_user_session_path, method: :delete)
+  div style=("test-align:left; inline-block; float:left;") 
+    = link_to('User Options', edit_user_registration_path)
+br
+- @todo_lists.each do |todo_list|
+  - if todo_list.user == current_user
+    .index_row.clearfix
+      h2.todo_list_title= link_to todo_list.title, todo_list
+      p.todo_list_sub_title= todo_list.description
+.links style="text-align:center" 
+  = link_to "New Todo List", new_todo_list_path, class:"btn btn-primary"

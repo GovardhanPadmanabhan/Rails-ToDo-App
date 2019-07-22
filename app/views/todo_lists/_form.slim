@@ -1,0 +1,17 @@
+= form_with(model: todo_list, local: true) do |form|
+  - if todo_list.errors.any?
+    #error-explanation
+      h2
+        = pluralize(todo_list.errors.count, "error")
+        | prohibited this todo_list from being saved:
+      ul
+        - todo_list.errors.full.messages.each do |message|
+          li= message
+  .field
+    = form.label :title
+    = form.text_field :title, required: true
+  .field
+    = form.label :description
+    = form.text_area :description
+  .actions
+    = form.button :Create, class: "btn btn-dark"

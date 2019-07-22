@@ -82,3 +82,5 @@ gem 'rubocop', '~> 0.73.0'
 gem 'faker', '~> 1.9', '>= 1.9.6'
 
 gem 'rails-controller-testing', '~> 1.0', '>= 1.0.4'
+
+gem 'slim', '~> 4.0', '>= 4.0.1'

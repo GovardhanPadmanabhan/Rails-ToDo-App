@@ -1,0 +1,20 @@
+.row.clearfix
+  - if todo_item.completed?
+    .complete
+      = link_to complete_todo_list_todo_item_path(@todo_list, todo_item.id), method: :patch do
+        i.fa.fa-check style=("opacity: 0.4;") 
+    .todo_item
+      p style=("opacity: 0.4;") 
+        s= todo_item.content
+    .trash
+      = link_to todo_list_todo_item_path(@todo_list, todo_item.id), method: :delete, data: { confirm: "Are you sure?" } do
+        i.fa.fa-trash
+  - else
+    .complete
+      = link_to complete_todo_list_todo_item_path(@todo_list, todo_item.id), method: :patch do
+        i.fa.fa-circle-thin
+    .todo_item
+      p= todo_item.content
+    .trash
+      = link_to todo_list_todo_item_path(@todo_list, todo_item.id), method: :delete, data: { confirm: "Are you sure?" } do
+        i.fa.fa-trash

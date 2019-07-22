@@ -1,0 +1,14 @@
+h2 Forgot your password?
+= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f|
+  = f.error_notification
+  .form-inputs
+    = f.label :email, "Enter your email"
+    = f.input :email,                       \
+      label: false,                         \
+      required: true,                       \
+      autofocus: true,                      \
+      input_html: { autocomplete: "email" }
+  .form-actions
+    = f.button :submit, "Send link"
+= render "devise/shared/links"
+
