@@ -7536,3 +7536,593 @@ UserTest: test_the_users
   [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test2@testing.com"], ["LIMIT", 1]]
   [1m[35m (0.4ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
   [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ryann@schumm.name"], ["LIMIT", 1]]
+  [1m[36mUser Create (3.8ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "ryann@schumm.name"], ["encrypted_password", "$2a$04$wsXrGuUfb0nqIoPa0QSyI.ixjQVDf4oVwybYXYHsnVSZ7qSNYlOYa"], ["created_at", "2019-07-22 14:32:11.324803"], ["updated_at", "2019-07-22 14:32:11.324803"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "cecilytowne@schuster.name"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "cecilytowne@schuster.name"], ["encrypted_password", "$2a$04$oQCzNs3INc2HeYbyyQpgG.cWmPViMTFVSLDdCuWtnjD6lL52zrGt2"], ["created_at", "2019-07-22 14:32:11.352222"], ["updated_at", "2019-07-22 14:32:11.352222"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTodoList Create (0.6ms)[0m  [1m[32mINSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Test#1"], ["description", "testing"], ["created_at", "2019-07-22 14:32:11.359605"], ["updated_at", "2019-07-22 14:32:11.359605"], ["user_id", 980191087]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTodoItem Create (1.2ms)[0m  [1m[32mINSERT INTO "todo_items" ("content", "todo_list_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["content", "Item#1"], ["todo_list_id", 980191003], ["created_at", "2019-07-22 14:32:11.361682"], ["updated_at", "2019-07-22 14:32:11.361682"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "vernita@smith.org"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "vernita@smith.org"], ["encrypted_password", "$2a$04$mRYsISlP8mlpEfHhC6OUYOe/Bi/Qsl0yc5OVa6PrMuxDdMJGGZ6Cu"], ["created_at", "2019-07-22 14:32:11.370366"], ["updated_at", "2019-07-22 14:32:11.370366"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "tarenhilll@hyatt.info"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "tarenhilll@hyatt.info"], ["encrypted_password", "$2a$04$Bt2Tr4H79fIQBKnlJdT31egIKIOCssliz2zPyxh92as6MXjOs1HVe"], ["created_at", "2019-07-22 14:32:11.374502"], ["updated_at", "2019-07-22 14:32:11.374502"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTodoList Create (0.3ms)[0m  [1m[32mINSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Test#1"], ["description", "testing"], ["created_at", "2019-07-22 14:32:11.375894"], ["updated_at", "2019-07-22 14:32:11.375894"], ["user_id", 980191089]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTodoItem Create (0.3ms)[0m  [1m[32mINSERT INTO "todo_items" ("content", "todo_list_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["content", "Item#1"], ["todo_list_id", 980191004], ["created_at", "2019-07-22 14:32:11.377202"], ["updated_at", "2019-07-22 14:32:11.377202"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTodoItem Destroy (0.4ms)[0m  [1m[31mDELETE FROM "todo_items" WHERE "todo_items"."id" = $1[0m  [["id", 980190980]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "kaycebednar@beer.org"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "kaycebednar@beer.org"], ["encrypted_password", "$2a$04$It/sPBKNHJCgRyngU.OYHuJBT.ZdytvLWgu07aoZbVTju8z4pRAZG"], ["created_at", "2019-07-22 14:32:11.383424"], ["updated_at", "2019-07-22 14:32:11.383424"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "isaacsauer@rodriguez.org"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "isaacsauer@rodriguez.org"], ["encrypted_password", "$2a$04$sBtcc0gExziAn8MhjBy.ku9ccyIvvyR9zW94fuvarM7TPeGWZ//QC"], ["created_at", "2019-07-22 14:32:11.388147"], ["updated_at", "2019-07-22 14:32:11.388147"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTodoList Create (0.4ms)[0m  [1m[32mINSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Test#1"], ["description", "testing"], ["created_at", "2019-07-22 14:32:11.389881"], ["updated_at", "2019-07-22 14:32:11.389881"], ["user_id", 980191091]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTodoItem Create (0.3ms)[0m  [1m[32mINSERT INTO "todo_items" ("content", "todo_list_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["content", "Item#1"], ["todo_list_id", 980191005], ["created_at", "2019-07-22 14:32:11.391487"], ["updated_at", "2019-07-22 14:32:11.391487"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTodoItem Update (0.3ms)[0m  [1m[33mUPDATE "todo_items" SET "updated_at" = $1, "completed_at" = $2 WHERE "todo_items"."id" = $3[0m  [["updated_at", "2019-07-22 14:32:11.392848"], ["completed_at", "2019-07-22 14:32:11.392461"], ["id", 980190981]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "reyna@roobmckenzie.org"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "reyna@roobmckenzie.org"], ["encrypted_password", "$2a$04$g4B8N.O..6kZdS5aqLljw.8Sheh9gP7FeBAng3wixutV4Jk32KN9y"], ["created_at", "2019-07-22 14:37:39.840858"], ["updated_at", "2019-07-22 14:37:39.840858"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by TodoListsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 980191092], ["LIMIT", 1]]
+  Rendering todo_lists/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered todo_lists/index.html.erb within layouts/application (0.2ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 18ms (Views: 6.8ms | ActiveRecord: 1.4ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "elida@reichel.name"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "elida@reichel.name"], ["encrypted_password", "$2a$04$CSx2d4aOBz6gdPirc.ukQeQjtR7EIVbryPqTZcBHuo3sTXWwZ1RO."], ["created_at", "2019-07-22 14:37:39.866729"], ["updated_at", "2019-07-22 14:37:39.866729"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by TodoListsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 980191093], ["LIMIT", 1]]
+  Rendering todo_lists/new.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered todo_lists/new.html.erb within layouts/application (0.2ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 8ms (Views: 0.7ms | ActiveRecord: 1.5ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "lesschaefer@rempel.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "lesschaefer@rempel.com"], ["encrypted_password", "$2a$04$cl.NtgCf7R9.kgikLOe0eOm/r/Vpu1oxIgB3nd/na51VyAECV3G7W"], ["created_at", "2019-07-22 14:37:39.881256"], ["updated_at", "2019-07-22 14:37:39.881256"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "joana@hermistonadams.name"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "joana@hermistonadams.name"], ["encrypted_password", "$2a$04$DBZZedtPPXjfc8bwBMLpGOrEnqda9iKk9W6EFtDQ573P9CMdNjOVC"], ["created_at", "2019-07-22 14:37:39.885297"], ["updated_at", "2019-07-22 14:37:39.885297"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTodoList Create (0.7ms)[0m  [1m[32mINSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Test#1"], ["description", "testing"], ["created_at", "2019-07-22 14:37:39.889350"], ["updated_at", "2019-07-22 14:37:39.889350"], ["user_id", 980191095]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "margarettehilll@kaulke.net"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "margarettehilll@kaulke.net"], ["encrypted_password", "$2a$04$icHrr7Onv1kWVYn5PxghT.NRfJuG7kqalMwFBaLVRhOQZrhmBUCj."], ["created_at", "2019-07-22 14:37:39.896095"], ["updated_at", "2019-07-22 14:37:39.896095"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "cristobalmurphy@kling.info"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "cristobalmurphy@kling.info"], ["encrypted_password", "$2a$04$47fUzQMoF1YtUH17ULiaP.kMyIwWXAWD07hYCesHaPjUWSb8dOc5i"], ["created_at", "2019-07-22 14:37:39.900217"], ["updated_at", "2019-07-22 14:37:39.900217"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTodoList Create (0.3ms)[0m  [1m[32mINSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Test#1"], ["description", "testing"], ["created_at", "2019-07-22 14:37:39.901700"], ["updated_at", "2019-07-22 14:37:39.901700"], ["user_id", 980191097]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "sterlingmarquardt@windlertrantow.org"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "sterlingmarquardt@windlertrantow.org"], ["encrypted_password", "$2a$04$9m7MKuX/AEd2fuMzJEt38.Y5tpJAyJm4Kb8cFlmIeuHzpjGPZZM/2"], ["created_at", "2019-07-22 14:37:39.905526"], ["updated_at", "2019-07-22 14:37:39.905526"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by TodoListsController#update as HTML
+  Parameters: {"todo_list"=>{"description"=>"some", "title"=>"List", "user"=>"980191098"}, "id"=>"980191007"}
+  [1m[36mTodoList Load (0.4ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 980191007], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 980191096], ["LIMIT", 1]]
+Unpermitted parameter: :user
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 980191097], ["LIMIT", 1]]
+  [1m[36mTodoList Update (0.4ms)[0m  [1m[33mUPDATE "todo_lists" SET "title" = $1, "description" = $2, "updated_at" = $3 WHERE "todo_lists"."id" = $4[0m  [["title", "List"], ["description", "some"], ["updated_at", "2019-07-22 14:37:39.920009"], ["id", 980191007]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/todo_lists/980191007
+Completed 302 Found in 9ms (ActiveRecord: 1.5ms)
+  [1m[36mTodoList Load (0.2ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 980191007], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "domenic@schroeder.net"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "domenic@schroeder.net"], ["encrypted_password", "$2a$04$6xMlD3xcjnv2.DOXH1RO6uMWPqFeDz3XbtL5T9H82FiFI54VMh3E."], ["created_at", "2019-07-22 14:37:39.927146"], ["updated_at", "2019-07-22 14:37:39.927146"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "todo_lists"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "hugh@lesch.io"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "hugh@lesch.io"], ["encrypted_password", "$2a$04$okEbjlrsLuJYvjMZ73HqF.s81CJHvi.KF8E9jruiIhQ9GBYolAwQ6"], ["created_at", "2019-07-22 14:37:39.934712"], ["updated_at", "2019-07-22 14:37:39.934712"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTodoList Create (0.3ms)[0m  [1m[32mINSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Test#1"], ["description", "testing"], ["created_at", "2019-07-22 14:37:39.936184"], ["updated_at", "2019-07-22 14:37:39.936184"], ["user_id", 980191100]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by TodoListsController#destroy as HTML
+  Parameters: {"id"=>"980191008"}
+  [1m[36mTodoList Load (0.2ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 980191008], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 980191099], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTodoItem Destroy (0.4ms)[0m  [1m[31mDELETE FROM "todo_items" WHERE "todo_items"."todo_list_id" = $1[0m  [["todo_list_id", 980191008]]
+  [1m[36mTodoList Destroy (0.4ms)[0m  [1m[31mDELETE FROM "todo_lists" WHERE "todo_lists"."id" = $1[0m  [["id", 980191008]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/todo_lists
+Completed 302 Found in 13ms (ActiveRecord: 2.7ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "todo_lists"[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jonell@bruenkemmer.biz"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "jonell@bruenkemmer.biz"], ["encrypted_password", "$2a$04$.25acM1Ch6gHXo4JqOR14O08mRAS5JRPNBZUJ0HB26uBWomEwfg7y"], ["created_at", "2019-07-22 14:37:52.935472"], ["updated_at", "2019-07-22 14:37:52.935472"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTodoList Create (0.8ms)[0m  [1m[32mINSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Test#1"], ["description", "testing"], ["created_at", "2019-07-22 14:37:52.948313"], ["updated_at", "2019-07-22 14:37:52.948313"], ["user_id", 980191101]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "marquis@oberbrunnertowne.biz"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "marquis@oberbrunnertowne.biz"], ["encrypted_password", "$2a$04$rHGijy1bSuvkY7fVKALQ4OJ.2tryTuAkqsdIrQUDGHx8MKWUnMMNa"], ["created_at", "2019-07-22 14:37:52.966290"], ["updated_at", "2019-07-22 14:37:52.966290"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by TodoListsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 980191102], ["LIMIT", 1]]
+  Rendering todo_lists/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered todo_lists/index.html.erb within layouts/application (0.4ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 14ms (Views: 5.2ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "rueben@king.co"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "rueben@king.co"], ["encrypted_password", "$2a$04$MsU.rBnA/wKPa96yOIoDO.fPJF3GXE.weVtLmX6L.3OhMIKVnTExi"], ["created_at", "2019-07-22 14:37:53.016810"], ["updated_at", "2019-07-22 14:37:53.016810"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTodoList Create (0.5ms)[0m  [1m[32mINSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Test#1"], ["description", "testing"], ["created_at", "2019-07-22 14:37:53.030590"], ["updated_at", "2019-07-22 14:37:53.030590"], ["user_id", 980191103]]
+  [1m[35m (0.5ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ileana@durganbalistreri.net"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "ileana@durganbalistreri.net"], ["encrypted_password", "$2a$04$HVPHuYiJI.UwMXkEzYkfVugdcu0lFDTfRJtPIeX6PcyAWwH/zf/zu"], ["created_at", "2019-07-22 14:37:53.057878"], ["updated_at", "2019-07-22 14:37:53.057878"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by TodoListsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 980191104], ["LIMIT", 1]]
+  Rendering todo_lists/new.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered todo_lists/new.html.erb within layouts/application (0.6ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 13ms (Views: 5.9ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "myrnalittle@ziemann.org"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "myrnalittle@ziemann.org"], ["encrypted_password", "$2a$04$e2lY47/8SVJ8YPduDc9Jb.2i8PXz1EtMVwp6Cher2bxLKc3uyEopC"], ["created_at", "2019-07-22 14:37:53.110184"], ["updated_at", "2019-07-22 14:37:53.110184"]]
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTodoList Create (0.6ms)[0m  [1m[32mINSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Test#1"], ["description", "testing"], ["created_at", "2019-07-22 14:37:53.124123"], ["updated_at", "2019-07-22 14:37:53.124123"], ["user_id", 980191105]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "hue@torphy.biz"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "hue@torphy.biz"], ["encrypted_password", "$2a$04$JiECpAypljmtBC1mn0cOo.ZsDDXy5VX7RK.G/KAh6T.8wSObIXq0e"], ["created_at", "2019-07-22 14:37:53.147156"], ["updated_at", "2019-07-22 14:37:53.147156"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "silva@dooleybergnaum.name"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "silva@dooleybergnaum.name"], ["encrypted_password", "$2a$04$YpobhXLXKRNE2XNu/gZvGuf8KyltWBrsxpRmzHx349xihEEVOba66"], ["created_at", "2019-07-22 14:37:53.181272"], ["updated_at", "2019-07-22 14:37:53.181272"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTodoList Create (0.4ms)[0m  [1m[32mINSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Test#1"], ["description", "testing"], ["created_at", "2019-07-22 14:37:53.192951"], ["updated_at", "2019-07-22 14:37:53.192951"], ["user_id", 980191107]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "fredericka@hane.co"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "fredericka@hane.co"], ["encrypted_password", "$2a$04$jMjj.U7m0mJETKJiejVxle9OyHXvQ36co7euSTS1Mvc/KONjYEvEW"], ["created_at", "2019-07-22 14:37:53.219525"], ["updated_at", "2019-07-22 14:37:53.219525"]]
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "kasandraharvey@crooks.biz"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "kasandraharvey@crooks.biz"], ["encrypted_password", "$2a$04$d0xy9xnCW3v3gCgxioHel.5uOufADiOAhlpmucXRHl5G5V/xhC5hC"], ["created_at", "2019-07-22 14:37:53.247165"], ["updated_at", "2019-07-22 14:37:53.247165"]]
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by TodoListsController#update as HTML
+  Parameters: {"todo_list"=>{"description"=>"some", "title"=>"List", "user"=>"980191109"}, "id"=>"980191012"}
+  [1m[36mTodoList Load (0.8ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 980191012], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 980191108], ["LIMIT", 1]]
+Unpermitted parameter: :user
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 980191107], ["LIMIT", 1]]
+  [1m[36mTodoList Update (0.6ms)[0m  [1m[33mUPDATE "todo_lists" SET "title" = $1, "description" = $2, "updated_at" = $3 WHERE "todo_lists"."id" = $4[0m  [["title", "List"], ["description", "some"], ["updated_at", "2019-07-22 14:37:53.295300"], ["id", 980191012]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/todo_lists/980191012
+Completed 302 Found in 34ms (ActiveRecord: 2.8ms)
+  [1m[36mTodoList Load (0.4ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 980191012], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "pinkie@hoppe.biz"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "pinkie@hoppe.biz"], ["encrypted_password", "$2a$04$NLfXzT50zN1AGBUf15gRpOTB04SpkT.2d5qF8BD8DUz7I0RFRHmIW"], ["created_at", "2019-07-22 14:37:53.348634"], ["updated_at", "2019-07-22 14:37:53.348634"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTodoList Create (0.4ms)[0m  [1m[32mINSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Test#1"], ["description", "testing"], ["created_at", "2019-07-22 14:37:53.355320"], ["updated_at", "2019-07-22 14:37:53.355320"], ["user_id", 980191110]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "dorla@weber.org"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "dorla@weber.org"], ["encrypted_password", "$2a$04$e4QCs6fNx6TQTGuGPIUchuA/7U0s6tkD9vQTySpfcPut7eQOsfF1."], ["created_at", "2019-07-22 14:37:53.382502"], ["updated_at", "2019-07-22 14:37:53.382502"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "todo_lists"[0m
+Processing by TodoListsController#destroy as HTML
+  Parameters: {"id"=>"980191013"}
+  [1m[36mTodoList Load (0.7ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 980191013], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 980191111], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTodoItem Destroy (0.5ms)[0m  [1m[31mDELETE FROM "todo_items" WHERE "todo_items"."todo_list_id" = $1[0m  [["todo_list_id", 980191013]]
+  [1m[36mTodoList Destroy (0.5ms)[0m  [1m[31mDELETE FROM "todo_lists" WHERE "todo_lists"."id" = $1[0m  [["id", 980191013]]
+  [1m[35m (0.5ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/todo_lists
+Completed 302 Found in 29ms (ActiveRecord: 4.3ms)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "todo_lists"[0m
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "colettadonnelly@mante.info"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "colettadonnelly@mante.info"], ["encrypted_password", "$2a$04$wTL/LhAdQ/Q4KN9kgfBPEu6xihOZQikZSR0nAkT8iG7hrcY5ldalC"], ["created_at", "2019-07-22 14:38:10.737656"], ["updated_at", "2019-07-22 14:38:10.737656"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTodoList Create (0.7ms)[0m  [1m[32mINSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Test#1"], ["description", "testing"], ["created_at", "2019-07-22 14:38:10.740996"], ["updated_at", "2019-07-22 14:38:10.740996"], ["user_id", 980191112]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "caseyullrich@kihn.net"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "caseyullrich@kihn.net"], ["encrypted_password", "$2a$04$8VF4GJEUN0GE8EY8FRLQ3.gx.ssRDf4Z6Fu5DJ0S0NCguRiSFJr0m"], ["created_at", "2019-07-22 14:38:10.744892"], ["updated_at", "2019-07-22 14:38:10.744892"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by TodoListsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 980191113], ["LIMIT", 1]]
+  Rendering todo_lists/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered todo_lists/index.html.erb within layouts/application (0.2ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 5ms (Views: 1.9ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "richie@schumm.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "richie@schumm.com"], ["encrypted_password", "$2a$04$fvy5lvUdMkTC5y/8YnSfLOss2QT4zSA2ljGL/FvxrzDo.z/fcla36"], ["created_at", "2019-07-22 14:38:10.756960"], ["updated_at", "2019-07-22 14:38:10.756960"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTodoList Create (0.3ms)[0m  [1m[32mINSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Test#1"], ["description", "testing"], ["created_at", "2019-07-22 14:38:10.758315"], ["updated_at", "2019-07-22 14:38:10.758315"], ["user_id", 980191114]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "bobbye@cruickshankwisoky.biz"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "bobbye@cruickshankwisoky.biz"], ["encrypted_password", "$2a$04$t0cCC9en5Mscbq0QM8Nyd.Lk43rtKVQzxmzppNw7nQqgMThhmXPGa"], ["created_at", "2019-07-22 14:38:10.761431"], ["updated_at", "2019-07-22 14:38:10.761431"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by TodoListsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 980191115], ["LIMIT", 1]]
+  Rendering todo_lists/new.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered todo_lists/new.html.erb within layouts/application (0.2ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "vitodibbert@mueller.org"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "vitodibbert@mueller.org"], ["encrypted_password", "$2a$04$jhUXV5NuCrQyCB76AkB6/ue84r29ksGKfoR7QU4hP07h/6F9LGuOy"], ["created_at", "2019-07-22 14:38:10.768602"], ["updated_at", "2019-07-22 14:38:10.768602"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTodoList Create (0.3ms)[0m  [1m[32mINSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Test#1"], ["description", "testing"], ["created_at", "2019-07-22 14:38:10.769988"], ["updated_at", "2019-07-22 14:38:10.769988"], ["user_id", 980191116]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jayschiller@robelhagenes.info"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "jayschiller@robelhagenes.info"], ["encrypted_password", "$2a$04$ScjOJLVoof5aEqnJdzoTj.Y5RuOyTwpVmq7SQb/OUVFqWjt1y7ouu"], ["created_at", "2019-07-22 14:38:10.773317"], ["updated_at", "2019-07-22 14:38:10.773317"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jeshanahan@cummerata.net"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "jeshanahan@cummerata.net"], ["encrypted_password", "$2a$04$EA2UaDrpAqatZt9UZeT0pOUrgUg0/wAF5ppdcxm39M9GAaVV5QKQe"], ["created_at", "2019-07-22 14:38:10.779094"], ["updated_at", "2019-07-22 14:38:10.779094"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTodoList Create (0.3ms)[0m  [1m[32mINSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Test#1"], ["description", "testing"], ["created_at", "2019-07-22 14:38:10.780623"], ["updated_at", "2019-07-22 14:38:10.780623"], ["user_id", 980191118]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "juliedamore@connelly.co"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "juliedamore@connelly.co"], ["encrypted_password", "$2a$04$JQkcWZjcDctSx371DHsLguOLbjQ5d2bNuj/Z58Iycp0yFY63rESIi"], ["created_at", "2019-07-22 14:38:10.784361"], ["updated_at", "2019-07-22 14:38:10.784361"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "mike@ziemann.info"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "mike@ziemann.info"], ["encrypted_password", "$2a$04$ywsvXxeWGmVjw44UbSoexedj4MeppO0ovNp2eQA0IXlDKveIwo00O"], ["created_at", "2019-07-22 14:38:10.788780"], ["updated_at", "2019-07-22 14:38:10.788780"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by TodoListsController#update as HTML
+  Parameters: {"todo_list"=>{"description"=>"some", "title"=>"List", "user"=>"980191120"}, "id"=>"980191017"}
+  [1m[36mTodoList Load (0.4ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 980191017], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 980191119], ["LIMIT", 1]]
+Unpermitted parameter: :user
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 980191118], ["LIMIT", 1]]
+  [1m[36mTodoList Update (0.4ms)[0m  [1m[33mUPDATE "todo_lists" SET "title" = $1, "description" = $2, "updated_at" = $3 WHERE "todo_lists"."id" = $4[0m  [["title", "List"], ["description", "some"], ["updated_at", "2019-07-22 14:38:10.797008"], ["id", 980191017]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/todo_lists/980191017
+Completed 302 Found in 7ms (ActiveRecord: 1.7ms)
+  [1m[36mTodoList Load (0.3ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 980191017], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "bradlybaumbach@gottliebdibbert.net"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "bradlybaumbach@gottliebdibbert.net"], ["encrypted_password", "$2a$04$esNlJaRtoW1fh76wkRLRIO3sI8xXCYt4z/NAfoQupt9/2BfudTql6"], ["created_at", "2019-07-22 14:38:10.806080"], ["updated_at", "2019-07-22 14:38:10.806080"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTodoList Create (0.3ms)[0m  [1m[32mINSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Test#1"], ["description", "testing"], ["created_at", "2019-07-22 14:38:10.807608"], ["updated_at", "2019-07-22 14:38:10.807608"], ["user_id", 980191121]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "craigwitting@cainmacgyver.biz"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "craigwitting@cainmacgyver.biz"], ["encrypted_password", "$2a$04$/6YlEBMDuxZG0zCr3RUh6OuqmWr92b8kEq1ZXo2avAS3AHR7Epz62"], ["created_at", "2019-07-22 14:38:10.811605"], ["updated_at", "2019-07-22 14:38:10.811605"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "todo_lists"[0m
+Processing by TodoListsController#destroy as HTML
+  Parameters: {"id"=>"980191018"}
+  [1m[36mTodoList Load (0.2ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 980191018], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 980191122], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTodoItem Destroy (0.4ms)[0m  [1m[31mDELETE FROM "todo_items" WHERE "todo_items"."todo_list_id" = $1[0m  [["todo_list_id", 980191018]]
+  [1m[36mTodoList Destroy (0.4ms)[0m  [1m[31mDELETE FROM "todo_lists" WHERE "todo_lists"."id" = $1[0m  [["id", 980191018]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/todo_lists
+Completed 302 Found in 7ms (ActiveRecord: 2.6ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "todo_lists"[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "robertblock@kirlinwalsh.info"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "robertblock@kirlinwalsh.info"], ["encrypted_password", "$2a$04$3IqF3Wfk7uXPd.8vLlSu.e7gAjS/8wABd0k.kCMy3b5u3PApL0JM."], ["created_at", "2019-07-22 14:39:33.856307"], ["updated_at", "2019-07-22 14:39:33.856307"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "martin@carroll.biz"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "martin@carroll.biz"], ["encrypted_password", "$2a$04$uLOrNhMrW09ZYe0O5LMSLOyMxJbaCW7548j90P2vmgWBt43ETNxnG"], ["created_at", "2019-07-22 14:39:33.876652"], ["updated_at", "2019-07-22 14:39:33.876652"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "bartlehner@ledner.net"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "bartlehner@ledner.net"], ["encrypted_password", "$2a$04$6K6IUmvjWSiOfiCeEeP3fe0CVfNj2id1Cdj7YnJsKF8.px366qK3m"], ["created_at", "2019-07-22 14:39:33.883087"], ["updated_at", "2019-07-22 14:39:33.883087"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "yuriko@murazik.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "yuriko@murazik.com"], ["encrypted_password", "$2a$04$ZtyXVgkaIHOcRO497EKLgu/0vJH4Zlblwu.GiCUZ0VoSGkXFT.G5e"], ["created_at", "2019-07-22 14:41:08.794584"], ["updated_at", "2019-07-22 14:41:08.794584"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "lacie@ko.info"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "lacie@ko.info"], ["encrypted_password", "$2a$04$h8pVgZ8NMMAgqvFMxWfFouFzWGqrClW10bSSNm/jF9gIywECjyyuO"], ["created_at", "2019-07-22 14:41:08.809799"], ["updated_at", "2019-07-22 14:41:08.809799"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTodoList Create (0.6ms)[0m  [1m[32mINSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Test#1"], ["description", "testing"], ["created_at", "2019-07-22 14:41:08.814667"], ["updated_at", "2019-07-22 14:41:08.814667"], ["user_id", 980191127]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTodoItem Create (0.5ms)[0m  [1m[32mINSERT INTO "todo_items" ("content", "todo_list_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["content", "Item#1"], ["todo_list_id", 980191019], ["created_at", "2019-07-22 14:41:08.816734"], ["updated_at", "2019-07-22 14:41:08.816734"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jesus@wiegandtreutel.biz"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "jesus@wiegandtreutel.biz"], ["encrypted_password", "$2a$04$z6JFev0AZfytpDoEJkOifeO8H3gz44t1Km0Km0izWktbabPWz97fe"], ["created_at", "2019-07-22 14:41:08.823194"], ["updated_at", "2019-07-22 14:41:08.823194"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "keeshasmitham@pourosrobel.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "keeshasmitham@pourosrobel.com"], ["encrypted_password", "$2a$04$plYaPP0yUD0QQv8/uV7xBe6616QcrX2jXKX3ct73NcDO5OqcWnF12"], ["created_at", "2019-07-22 14:41:08.827257"], ["updated_at", "2019-07-22 14:41:08.827257"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTodoList Create (0.3ms)[0m  [1m[32mINSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Test#1"], ["description", "testing"], ["created_at", "2019-07-22 14:41:08.828649"], ["updated_at", "2019-07-22 14:41:08.828649"], ["user_id", 980191129]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTodoItem Create (0.3ms)[0m  [1m[32mINSERT INTO "todo_items" ("content", "todo_list_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["content", "Item#1"], ["todo_list_id", 980191020], ["created_at", "2019-07-22 14:41:08.829952"], ["updated_at", "2019-07-22 14:41:08.829952"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTodoItem Destroy (0.3ms)[0m  [1m[31mDELETE FROM "todo_items" WHERE "todo_items"."id" = $1[0m  [["id", 980190983]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "randi@okeefe.biz"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "randi@okeefe.biz"], ["encrypted_password", "$2a$04$Rlkmk1INwBPMbiklw4K.Du9arl4.I.qMMxbT2HsllRtKyefTr9UzG"], ["created_at", "2019-07-22 14:41:08.835819"], ["updated_at", "2019-07-22 14:41:08.835819"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "augustcrooks@hansendietrich.net"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "augustcrooks@hansendietrich.net"], ["encrypted_password", "$2a$04$/Mnn62Pi.zBavGSjVf.wnu4XgoSpddXdKd6n9CUfpB0jpeCv2D.Uq"], ["created_at", "2019-07-22 14:41:08.839808"], ["updated_at", "2019-07-22 14:41:08.839808"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTodoList Create (0.3ms)[0m  [1m[32mINSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Test#1"], ["description", "testing"], ["created_at", "2019-07-22 14:41:08.841433"], ["updated_at", "2019-07-22 14:41:08.841433"], ["user_id", 980191131]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTodoItem Create (0.3ms)[0m  [1m[32mINSERT INTO "todo_items" ("content", "todo_list_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["content", "Item#1"], ["todo_list_id", 980191021], ["created_at", "2019-07-22 14:41:08.842868"], ["updated_at", "2019-07-22 14:41:08.842868"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTodoItem Update (0.3ms)[0m  [1m[33mUPDATE "todo_items" SET "updated_at" = $1, "completed_at" = $2 WHERE "todo_items"."id" = $3[0m  [["updated_at", "2019-07-22 14:41:08.844139"], ["completed_at", "2019-07-22 14:41:08.843760"], ["id", 980190984]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "shielakonopelski@rutherford.co"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "shielakonopelski@rutherford.co"], ["encrypted_password", "$2a$04$Xt2T2rjYkJk..Vm0aC8pN.AlN19ntqw2IJDwO0STzjK8rqYSIKkL6"], ["created_at", "2019-07-22 14:41:08.849377"], ["updated_at", "2019-07-22 14:41:08.849377"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTodoList Create (0.3ms)[0m  [1m[32mINSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Test#1"], ["description", "testing"], ["created_at", "2019-07-22 14:41:08.850737"], ["updated_at", "2019-07-22 14:41:08.850737"], ["user_id", 980191132]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "johnettamckenzie@berge.co"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "johnettamckenzie@berge.co"], ["encrypted_password", "$2a$04$0zHrwXSG8r7DTQ9e5oUaGu4dwMoy1bvCiSZGEhaHnbgsH5kLSpUly"], ["created_at", "2019-07-22 14:41:08.853958"], ["updated_at", "2019-07-22 14:41:08.853958"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by TodoListsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 980191133], ["LIMIT", 1]]
+  Rendering todo_lists/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered todo_lists/index.html.erb within layouts/application (0.2ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 9ms (Views: 4.0ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "maplerodriguez@krajcikherman.io"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "maplerodriguez@krajcikherman.io"], ["encrypted_password", "$2a$04$Gqu2Mt/uhc2MY.EJ6j4X7ei1pO4r0N7v5NStt.5B8G.9cb.1uIYyC"], ["created_at", "2019-07-22 14:41:08.870295"], ["updated_at", "2019-07-22 14:41:08.870295"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTodoList Create (0.4ms)[0m  [1m[32mINSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Test#1"], ["description", "testing"], ["created_at", "2019-07-22 14:41:08.871791"], ["updated_at", "2019-07-22 14:41:08.871791"], ["user_id", 980191134]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "clairrodriguez@vandervort.net"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "clairrodriguez@vandervort.net"], ["encrypted_password", "$2a$04$NzAZl3aHn2a03UN5qD67rORfOAyH3SvnCpRZkmOeYDltj6lWPfSe."], ["created_at", "2019-07-22 14:41:08.875934"], ["updated_at", "2019-07-22 14:41:08.875934"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by TodoListsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 980191135], ["LIMIT", 1]]
+  Rendering todo_lists/new.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered todo_lists/new.html.erb within layouts/application (0.2ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "marietta@goyetterolfson.org"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "marietta@goyetterolfson.org"], ["encrypted_password", "$2a$04$pnzIclIFdI2uvSK42VYTI./yOKK2w60YRHa9Pe0xhBOk09qNniNbu"], ["created_at", "2019-07-22 14:41:08.884091"], ["updated_at", "2019-07-22 14:41:08.884091"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTodoList Create (0.3ms)[0m  [1m[32mINSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Test#1"], ["description", "testing"], ["created_at", "2019-07-22 14:41:08.885468"], ["updated_at", "2019-07-22 14:41:08.885468"], ["user_id", 980191136]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ahmed@wyman.info"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "ahmed@wyman.info"], ["encrypted_password", "$2a$04$CEoBdbMig.4YSVeU.6CzWOuwRwObCw9sPscuLQ92z6kfkC/nvoClm"], ["created_at", "2019-07-22 14:41:08.888918"], ["updated_at", "2019-07-22 14:41:08.888918"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "kraig@rau.io"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "kraig@rau.io"], ["encrypted_password", "$2a$04$/h9uIbraAEtwaILvBgBaA.6YgkY83fFP29jpXQeK0shM95Hq5N8uO"], ["created_at", "2019-07-22 14:41:08.894884"], ["updated_at", "2019-07-22 14:41:08.894884"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTodoList Create (0.3ms)[0m  [1m[32mINSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Test#1"], ["description", "testing"], ["created_at", "2019-07-22 14:41:08.896355"], ["updated_at", "2019-07-22 14:41:08.896355"], ["user_id", 980191138]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "burtonlangosh@koelpin.co"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "burtonlangosh@koelpin.co"], ["encrypted_password", "$2a$04$U1oSLQBALAbHYy/9VmpmJOVWW9kFtOiicNF99lxj3cBWt3SGYSqk6"], ["created_at", "2019-07-22 14:41:08.899739"], ["updated_at", "2019-07-22 14:41:08.899739"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "rey@riceziemann.co"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "rey@riceziemann.co"], ["encrypted_password", "$2a$04$SK1bEQEWgIqfKeuzitY6nOMQm/yyak.1Kgm7KLh9W5ujNtvybEo/6"], ["created_at", "2019-07-22 14:41:08.903306"], ["updated_at", "2019-07-22 14:41:08.903306"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by TodoListsController#update as HTML
+  Parameters: {"todo_list"=>{"description"=>"some", "title"=>"List", "user"=>"980191140"}, "id"=>"980191025"}
+  [1m[36mTodoList Load (0.3ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 980191025], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 980191139], ["LIMIT", 1]]
+Unpermitted parameter: :user
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 980191138], ["LIMIT", 1]]
+  [1m[36mTodoList Update (0.3ms)[0m  [1m[33mUPDATE "todo_lists" SET "title" = $1, "description" = $2, "updated_at" = $3 WHERE "todo_lists"."id" = $4[0m  [["title", "List"], ["description", "some"], ["updated_at", "2019-07-22 14:41:08.913170"], ["id", 980191025]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/todo_lists/980191025
+Completed 302 Found in 7ms (ActiveRecord: 1.3ms)
+  [1m[36mTodoList Load (0.2ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 980191025], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "brentchristiansen@powlowski.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "brentchristiansen@powlowski.com"], ["encrypted_password", "$2a$04$qttx302U5DdWZ7jzafG8Ee8mwtbNHwZwyqQOthWz53ea0BekOSTUO"], ["created_at", "2019-07-22 14:41:08.920494"], ["updated_at", "2019-07-22 14:41:08.920494"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTodoList Create (0.3ms)[0m  [1m[32mINSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Test#1"], ["description", "testing"], ["created_at", "2019-07-22 14:41:08.922015"], ["updated_at", "2019-07-22 14:41:08.922015"], ["user_id", 980191141]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "modestokuvalis@nolan.io"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "modestokuvalis@nolan.io"], ["encrypted_password", "$2a$04$HKjSLQbyBRXkfYUcviw6fuPE.YUBdoNKaWlSFTtWpkxxCfcYKzO9K"], ["created_at", "2019-07-22 14:41:08.926151"], ["updated_at", "2019-07-22 14:41:08.926151"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "todo_lists"[0m
+Processing by TodoListsController#destroy as HTML
+  Parameters: {"id"=>"980191026"}
+  [1m[36mTodoList Load (0.2ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 980191026], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 980191142], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTodoItem Destroy (0.2ms)[0m  [1m[31mDELETE FROM "todo_items" WHERE "todo_items"."todo_list_id" = $1[0m  [["todo_list_id", 980191026]]
+  [1m[36mTodoList Destroy (0.4ms)[0m  [1m[31mDELETE FROM "todo_lists" WHERE "todo_lists"."id" = $1[0m  [["id", 980191026]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/todo_lists
+Completed 302 Found in 6ms (ActiveRecord: 1.4ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "todo_lists"[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "franklynmoriette@bode.biz"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "franklynmoriette@bode.biz"], ["encrypted_password", "$2a$04$BBHkxPIKgrt7xB7febbbie0lZ0jN33mCaSAQL5rwMm9SVOGWlzjUC"], ["created_at", "2019-07-22 14:41:08.941134"], ["updated_at", "2019-07-22 14:41:08.941134"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTodoList Create (0.3ms)[0m  [1m[32mINSERT INTO "todo_lists" ("title", "description", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Test#1"], ["description", "testing"], ["created_at", "2019-07-22 14:41:08.942714"], ["updated_at", "2019-07-22 14:41:08.942714"], ["user_id", 980191143]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTodoItem Create (0.3ms)[0m  [1m[32mINSERT INTO "todo_items" ("content", "todo_list_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["content", "Item#1"], ["todo_list_id", 980191027], ["created_at", "2019-07-22 14:41:08.944119"], ["updated_at", "2019-07-22 14:41:08.944119"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "velmawiza@gottlieb.co"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "velmawiza@gottlieb.co"], ["encrypted_password", "$2a$04$jsfp9haK6UpR6ZHE9Oh.pei0Zck1wWlwhsmak5rhQBEqiP9HSEUhi"], ["created_at", "2019-07-22 14:41:08.950669"], ["updated_at", "2019-07-22 14:41:08.950669"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "onie@gorczany.net"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "onie@gorczany.net"], ["encrypted_password", "$2a$04$EADZjYLQ71EaWshfEdn1WuvGAXoae4s921i4LfM2HTbtFLSVqcsBq"], ["created_at", "2019-07-22 14:41:08.955447"], ["updated_at", "2019-07-22 14:41:08.955447"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "maude@moriette.name"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "maude@moriette.name"], ["encrypted_password", "$2a$04$xz4RPyPd7xY.9izytamDl.wIKV5AszUGXgrWZhbMM87.ZYb9im8Ie"], ["created_at", "2019-07-22 14:41:08.961413"], ["updated_at", "2019-07-22 14:41:08.961413"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "kristopher@hirthe.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "kristopher@hirthe.com"], ["encrypted_password", "$2a$04$48j3vMYbIfumMpWcA1icF.MTwLIumFIzus1TmmQB.uu8UOA3eeE6C"], ["created_at", "2019-07-22 14:41:08.966831"], ["updated_at", "2019-07-22 14:41:08.966831"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "hello"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "sandeejaskolski@swaniawskischumm.org"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m

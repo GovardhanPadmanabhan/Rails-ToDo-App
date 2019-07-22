@@ -42,12 +42,12 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution
   # and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
-  gem 'factory_bot_rails', '~> 5.0', '>= 5.0.2'
   gem 'capybara', '~> 3.26'
+  gem 'factory_bot_rails', '~> 5.0', '>= 5.0.2'
   gem 'guard-rspec', '~> 4.7', '>= 4.7.3'
+  gem 'rspec-rails', '~> 3.8', '>= 3.8.2'
   gem 'spring-commands-rspec', '~> 1.0', '>= 1.0.4'
   gem 'vcr', '~> 5.0'
-  gem 'rspec-rails', '~> 3.8', '>= 3.8.2'
 end
 
 group :development do

@@ -1,29 +1,34 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe TodoItemsController, type: :controller do
-    before(:each) do
-        sign_in(FactoryBot.create(:user))
-        @item = FactoryBot.create(:todo_item)
-    end
+  let(:item) { create(:todo_item) }
+  before do
+    sign_in(FactoryBot.create(:user))
+  end
 
-    describe "POST #create" do
-        it "creates a successful item" do
-            todo_item = TodoItem.create(content: "Message")
-            expect(todo_item).to be_an_instance_of TodoItem
-        end
+  describe 'POST #create' do
+    it 'creates a successful item' do
+      expect(item).to be_an_instance_of TodoItem
     end
+  end
 
-    describe "DELETE destroy" do
-        it "deletes the item" do
-            @item.destroy
-            expect(response).to be_successful
-        end
+  describe 'DELETE destroy' do
+    before do
+      item.destroy
     end
+    it 'deletes the item' do
+      expect(response).to be_successful
+    end
+  end
 
-    describe "PUT complete" do
-        it "completed the item" do
-            @item.update_attribute(:completed_at, Time.now)
-            expect(@item.completed?).to be_truthy
-        end
+  describe 'PUT complete' do
+    before do
+      item.update_attribute(:completed_at, Time.now)
     end
+    it 'completed the item' do
+      expect(item.completed?).to be_truthy
+    end
+  end
 end
