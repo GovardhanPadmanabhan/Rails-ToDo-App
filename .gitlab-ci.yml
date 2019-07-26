@@ -41,7 +41,7 @@ test:
     - echo "Testing"
     - export PGPASSWORD=$POSTGRES_PASSWORD
     - psql -h "postgres" -U "$POSTGRES_USER" -d "$POSTGRES_DB" -c "SELECT 'OK' AS status;"
-    - bundle exec rake db:create db:schema:load RAILS_ENV=test
+    - bundle exec rake db:schema:load RAILS_ENV=test
     - bundle exec rspec
     
 staging:
