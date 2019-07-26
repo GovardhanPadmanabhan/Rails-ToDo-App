@@ -9053,3 +9053,162 @@ Processing by Devise::SessionsController#new as HTML
 Completed 200 OK in 52ms (Views: 50.9ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2019-07-26 11:21:27 +0800
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#home as HTML
+  Rendering pages/home.slim within layouts/application
+  Rendered pages/home.slim within layouts/application (11.1ms)
+  Rendered layouts/_alerts.slim (2.9ms)
+Completed 200 OK in 380ms (Views: 366.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-07-26 11:21:29 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.slim within layouts/application
+  Rendered devise/shared/_links.slim (3.0ms)
+  Rendered devise/sessions/new.slim within layouts/application (999.0ms)
+  Rendered layouts/_alerts.slim (2.7ms)
+Completed 200 OK in 1100ms (Views: 1075.6ms | ActiveRecord: 14.4ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-07-26 11:21:42 +0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M5cwYpi0ZgjXb1lHNxlHPsGMGEPKd3meIAyCl7bxp8krF9OPH6PsB0nUoNUMi/Pwo1H+MAaCLIsBSmHOuwuYpg==", "user"=>{"email"=>"govardhan.padmanabhan99@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (8.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "govardhan.padmanabhan99@gmail.com"], ["LIMIT", 1]]
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/todo_lists
+Completed 302 Found in 146ms (ActiveRecord: 9.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-07-26 11:22:02 +0800
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/todo_lists
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/todo_lists" for ::1 at 2019-07-26 11:22:02 +0800
+Processing by TodoListsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering todo_lists/index.slim within layouts/application
+  [1m[36mTodoList Load (2.5ms)[0m  [1m[34mSELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/views/todo_lists/index.slim:6
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/todo_lists/index.slim:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/todo_lists/index.slim:7
+  Rendered todo_lists/index.slim within layouts/application (68.9ms)
+  Rendered layouts/_alerts.slim (2.7ms)
+Completed 200 OK in 115ms (Views: 104.8ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/todo_lists" for ::1 at 2019-07-26 11:25:22 +0800
+Processing by TodoListsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering todo_lists/index.slim within layouts/application
+  [1m[36mTodoList Load (0.3ms)[0m  [1m[34mSELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/views/todo_lists/index.slim:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/todo_lists/index.slim:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/todo_lists/index.slim:7
+  Rendered todo_lists/index.slim within layouts/application (5.3ms)
+  Rendered layouts/_alerts.slim (1.9ms)
+Completed 200 OK in 49ms (Views: 45.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/todo_lists" for ::1 at 2019-07-26 11:25:23 +0800
+Processing by TodoListsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering todo_lists/index.slim within layouts/application
+  [1m[36mTodoList Load (0.3ms)[0m  [1m[34mSELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/views/todo_lists/index.slim:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/todo_lists/index.slim:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/todo_lists/index.slim:7
+  Rendered todo_lists/index.slim within layouts/application (5.3ms)
+  Rendered layouts/_alerts.slim (1.9ms)
+Completed 200 OK in 50ms (Views: 45.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/todo_lists" for ::1 at 2019-07-26 11:25:23 +0800
+Processing by TodoListsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering todo_lists/index.slim within layouts/application
+  [1m[36mTodoList Load (0.3ms)[0m  [1m[34mSELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/views/todo_lists/index.slim:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/todo_lists/index.slim:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/todo_lists/index.slim:7
+  Rendered todo_lists/index.slim within layouts/application (5.3ms)
+  Rendered layouts/_alerts.slim (1.8ms)
+Completed 200 OK in 52ms (Views: 48.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/todo_lists" for ::1 at 2019-07-26 11:25:23 +0800
+Processing by TodoListsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering todo_lists/index.slim within layouts/application
+  [1m[36mTodoList Load (0.3ms)[0m  [1m[34mSELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/views/todo_lists/index.slim:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/todo_lists/index.slim:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/todo_lists/index.slim:7
+  Rendered todo_lists/index.slim within layouts/application (5.0ms)
+  Rendered layouts/_alerts.slim (2.8ms)
+Completed 200 OK in 49ms (Views: 46.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/todo_lists" for ::1 at 2019-07-26 11:25:23 +0800
+Processing by TodoListsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering todo_lists/index.slim within layouts/application
+  [1m[36mTodoList Load (0.4ms)[0m  [1m[34mSELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/views/todo_lists/index.slim:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/todo_lists/index.slim:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/todo_lists/index.slim:7
+  Rendered todo_lists/index.slim within layouts/application (5.6ms)
+  Rendered layouts/_alerts.slim (1.7ms)
+Completed 200 OK in 74ms (Views: 69.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/todo_lists" for ::1 at 2019-07-26 11:25:24 +0800
+Processing by TodoListsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering todo_lists/index.slim within layouts/application
+  [1m[36mTodoList Load (0.3ms)[0m  [1m[34mSELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/views/todo_lists/index.slim:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/todo_lists/index.slim:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/todo_lists/index.slim:7
+  Rendered todo_lists/index.slim within layouts/application (5.4ms)
+  Rendered layouts/_alerts.slim (1.7ms)
+Completed 200 OK in 46ms (Views: 43.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/edit" for ::1 at 2019-07-26 11:25:25 +0800
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering devise/registrations/edit.slim within layouts/application
+  Rendered devise/registrations/edit.slim within layouts/application (9.9ms)
+  Rendered layouts/_alerts.slim (1.7ms)
+Completed 200 OK in 50ms (Views: 48.5ms | ActiveRecord: 0.3ms)
+
+
