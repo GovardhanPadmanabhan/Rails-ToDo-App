@@ -17,6 +17,6 @@ module Todo
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
-    config.action_mailer.default_url_options = { host: 'rails-todo-staging.herokuapp.com' }
+    config.action_mailer.default_url_options = { host: 'http://rails-todo-staging.herokuapp.com' }
   end
 end
