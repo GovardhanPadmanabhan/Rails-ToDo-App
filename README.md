@@ -1,24 +1,75 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### ToDo App
 
-Things you may want to cover:
+Simple todo web app built using ruby on rails. 
 
-* Ruby version
+* User Account sign up/login, reset/change password, delete account
+* Create user-specific todo lists
+* Continuous Integration using GitLab CI
+* Deployed to heroku
 
-* System dependencies
 
-* Configuration
+### Required
 
-* Database creation
+* Ruby v2.6.3
+* Rails v5.2.3
+* Node.js
+* Postgres v11.4  (be sure to change the username and password in `database.yml` and `.gitlab-ci.yml`)
+(If defautl is mysql, be sure to modify the code to mysql, mostly in `database.yml` and `.gitlab-ci.yml`)
 
-* Database initialization
+### Database Creation
 
-* How to run the test suite
+Open your SQL Shell psql (if you are using postgres), or run mysql from terminal/cmd (if you are using mysql)
 
-* Services (job queues, cache servers, search engines, etc.)
+Run
+```
+create database todo_development;
+```
+and repeat the same for `todo_test` and `todo_production`
 
-* Deployment instructions
+Note: If you are using MySQL, you need two run additional statements
+Run
+```
+GRANT ALL PRIVILEGES ON todo_development.* TO 'root'@'localhost' WITH GRANT OPTION;
+```
+and 
+```
+FLUSH PRIVILEGES;
+```
+Again, you have to repeat this process for `todo_development` and `todo_production` as well
 
-* ...
+### Starting the Service
+
+* Clone the project to your desired destination
+* Run
+```
+bundle install
+```
+in the project's root directory to install all the gems.
+* Run
+```
+rake db:create
+```
+* Run
+```
+rake db:migrate
+```
+* Run 
+```
+rails s
+``` 
+to start the service
+* Open your desired browser, and go to [localhost:3000](http://localhost:3000)
+
+Note that when running locally, the service can't send a reset password link. For that, install and run [mailcatcher](https://mailcatcher.me/)
+
+
+### Running Tests
+
+Run
+
+```
+rspec
+```
+or `bundle exec rspec` or `rake` if that didn't work, to run the test files created for each models and controllers
