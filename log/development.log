@@ -11888,3 +11888,142 @@ Processing by TodoListsController#show as HTML
 Completed 200 OK in 75ms (Views: 72.2ms | ActiveRecord: 0.8ms)
 
 
+Started GET "/" for ::1 at 2019-07-26 20:22:24 +0800
+  [1m[35m (4.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#home as HTML
+  Rendering pages/home.slim within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/pages/home.slim:7
+  Rendered pages/home.slim within layouts/application (33.8ms)
+  Rendered layouts/_alerts.slim (1.7ms)
+Completed 200 OK in 371ms (Views: 358.8ms | ActiveRecord: 4.4ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2019-07-26 20:22:26 +0800
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"9XOjrlwtNh33pHbkO50jdjFel5vQzwitFD15AaxSykS6GmUS6E3OuDhBQMIEMa91Bhk4Dll1cPuSZs3r8apwvA=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 58ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2019-07-26 20:22:26 +0800
+Processing by PagesController#home as HTML
+  Rendering pages/home.slim within layouts/application
+  Rendered pages/home.slim within layouts/application (3.4ms)
+  Rendered layouts/_alerts.slim (1.3ms)
+Completed 200 OK in 35ms (Views: 34.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-07-26 20:22:27 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.slim within layouts/application
+  Rendered devise/shared/_links.slim (3.2ms)
+  Rendered devise/sessions/new.slim within layouts/application (23.0ms)
+  Rendered layouts/_alerts.slim (5.9ms)
+Completed 200 OK in 116ms (Views: 97.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/password/new" for ::1 at 2019-07-26 20:22:28 +0800
+Processing by Devise::PasswordsController#new as HTML
+  Rendering devise/passwords/new.slim within layouts/application
+  Rendered devise/shared/_links.slim (3.0ms)
+  Rendered devise/passwords/new.slim within layouts/application (9.5ms)
+  Rendered layouts/_alerts.slim (1.7ms)
+Completed 200 OK in 46ms (Views: 44.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/password" for ::1 at 2019-07-26 20:22:31 +0800
+Processing by Devise::PasswordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sErXIJ8uLsW5XmTTEM88NkOIk1t3DA1hk+QYpaDmOcD2NiowsdkfHieYdQaUSVNMpzjMS+0c0JocvyqC9rl5CA==", "user"=>{"email"=>"govardhan.padmanabhan2@gmail.com"}, "commit"=>"Send link"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "govardhan.padmanabhan2@gmail.com"], ["LIMIT", 1]]
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering devise/passwords/new.slim within layouts/application
+  Rendered devise/shared/_links.slim (3.5ms)
+  Rendered devise/passwords/new.slim within layouts/application (9.3ms)
+  Rendered layouts/_alerts.slim (1.8ms)
+Completed 200 OK in 54ms (Views: 48.3ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users/password" for ::1 at 2019-07-26 20:22:35 +0800
+Processing by Devise::PasswordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NspWC8l1KIzKmEa/pN9u+qGazpYFnt1ovHLSTcDkZc75HuOTl1Ouyu/90O+yNt4SXKV2lV9vJPCN5qFY2eMgaQ==", "user"=>{"email"=>"govardhan.padmanabhan99@gmail.com"}, "commit"=>"Send link"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "govardhan.padmanabhan99@gmail.com"], ["LIMIT", 1]]
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."reset_password_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["reset_password_token", "99197a4dde7f37df454753b81c9298525eb7146e12dc2f7f35013ddf243e7d89"], ["LIMIT", 1]]
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "reset_password_token" = $1, "reset_password_sent_at" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["reset_password_token", "99197a4dde7f37df454753b81c9298525eb7146e12dc2f7f35013ddf243e7d89"], ["reset_password_sent_at", "2019-07-26 12:22:36.083105"], ["updated_at", "2019-07-26 12:22:36.083575"], ["id", 3]]
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering devise/mailer/reset_password_instructions.slim
+  Rendered devise/mailer/reset_password_instructions.slim (2.8ms)
+Devise::Mailer#reset_password_instructions: processed outbound mail in 451.9ms
+Sent mail to govardhan.padmanabhan99@gmail.com (183.3ms)
+Date: Fri, 26 Jul 2019 20:22:36 +0800
+From: Password Reset for ToDo App <passwords@rails-todo-staging.herokuapp.com>
+Reply-To: Password Reset for ToDo App <passwords@rails-todo-staging.herokuapp.com>
+To: govardhan.padmanabhan99@gmail.com
+Message-ID: <5d3af08caf670_169463fd938981e489075a@ITMY002972-MAC.local.mail>
+Subject: Reset password instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Hello govardhan.padmanabhan99@gmail.com!</p><p>Someone has requested a link to change your password. You can do this through the link below.</p><p><a href="http://localhost:3000/users/password/edit?reset_password_token=z1yVKHpG8UwaXWAz4aEJ">Change my password</a></p><p>If you didn't request this, please ignore this email.</p><p>Your password won't change until you access the link above and create a new one.</p>
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 926ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-07-26 20:22:36 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.slim within layouts/application
+  Rendered devise/shared/_links.slim (2.9ms)
+  Rendered devise/sessions/new.slim within layouts/application (10.1ms)
+  Rendered layouts/_alerts.slim (2.1ms)
+Completed 200 OK in 52ms (Views: 50.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/password/edit?reset_password_token=[FILTERED]" for ::1 at 2019-07-26 20:22:44 +0800
+Processing by Devise::PasswordsController#edit as HTML
+  Parameters: {"reset_password_token"=>"[FILTERED]"}
+  Rendering devise/passwords/edit.slim within layouts/application
+  Rendered devise/passwords/edit.slim within layouts/application (2.6ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected tIDENTIFIER, expecting ')'
+required: true,                      ...
+^~~~~~~~
+/Users/itn.govardhan.p/rails-todo/app/views/devise/passwords/edit.slim:10: Can't assign to true
+required: true,                            ...
+          ^~~~
+/Users/itn.govardhan.p/rails-todo/app/views/devise/passwords/edit.slim:11: Can't assign to true
+autofocus: true,                            ...
+           ^~~~
+/Users/itn.govardhan.p/rails-todo/app/views/devise/passwords/edit.slim:12: syntax error, unexpected ',', expecting ')'
+..." if @minimum_password_length), \
+...                              ^:
+  app/views/devise/passwords/edit.slim:10:in `'
+
+Started POST "/__better_errors/e75681702f12d64c/variables" for ::1 at 2019-07-26 20:22:44 +0800
+Started GET "/users/password/edit?reset_password_token=[FILTERED]" for ::1 at 2019-07-26 20:24:17 +0800
+Processing by Devise::PasswordsController#edit as HTML
+  Parameters: {"reset_password_token"=>"[FILTERED]"}
+  Rendering devise/passwords/edit.slim within layouts/application
+  Rendered devise/shared/_links.slim (2.9ms)
+  Rendered devise/passwords/edit.slim within layouts/application (43.0ms)
+  Rendered layouts/_alerts.slim (2.0ms)
+Completed 200 OK in 81ms (Views: 79.7ms | ActiveRecord: 0.0ms)
+
+

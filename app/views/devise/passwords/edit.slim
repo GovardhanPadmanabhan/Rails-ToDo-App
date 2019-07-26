@@ -6,7 +6,7 @@ h2 Change your password
   .form-inputs
     = f.label :password, "New password"
     = f.input :password,                                                                    \
-      label: false                                                                          \
+      label: false,                                                                         \
       required: true,                                                                       \
       autofocus: true,                                                                      \
       hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length), \
