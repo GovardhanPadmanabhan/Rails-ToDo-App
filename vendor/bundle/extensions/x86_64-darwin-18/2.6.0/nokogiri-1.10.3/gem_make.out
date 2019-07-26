@@ -1,5 +1,5 @@
-current directory: /Users/itn.govardhan.p/todo/vendor/bundle/gems/nokogiri-1.10.3/ext/nokogiri
-/Users/itn.govardhan.p/.rvm/rubies/ruby-2.6.3/bin/ruby -I /Users/itn.govardhan.p/.rvm/rubies/ruby-2.6.3/lib/ruby/site_ruby/2.6.0 -r ./siteconf20190717-67645-1xzdi0o.rb extconf.rb
+current directory: /Users/itn.govardhan.p/rails-todo/vendor/bundle/gems/nokogiri-1.10.3/ext/nokogiri
+/Users/itn.govardhan.p/.rvm/rubies/ruby-2.6.3/bin/ruby -I /Users/itn.govardhan.p/.rvm/rubies/ruby-2.6.3/lib/ruby/site_ruby/2.6.0 -r ./siteconf20190726-73505-pcy5lx.rb extconf.rb
 checking if the C compiler accepts  -I /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/libxml2... yes
 checking if the C compiler accepts -Wno-error=unused-command-line-argument-hard-error-in-future... no
 Building nokogiri using packaged libraries.
@@ -34,13 +34,13 @@ Note, however, that nokogiri is not fully compatible with arbitrary
 versions of libxml2 provided by OS/package vendors.
 ************************************************************************
 Extracting libxml2-2.9.9.tar.gz into tmp/x86_64-apple-darwin18.6.0/ports/libxml2/2.9.9... OK
-Running git apply with /Users/itn.govardhan.p/todo/vendor/bundle/gems/nokogiri-1.10.3/patches/libxml2/0001-Revert-Do-not-URI-escape-in-server-side-includes.patch... OK
-Running git apply with /Users/itn.govardhan.p/todo/vendor/bundle/gems/nokogiri-1.10.3/patches/libxml2/0002-Remove-script-macro-support.patch... OK
-Running git apply with /Users/itn.govardhan.p/todo/vendor/bundle/gems/nokogiri-1.10.3/patches/libxml2/0003-Update-entities-to-remove-handling-of-ssi.patch... OK
+Running git apply with /Users/itn.govardhan.p/rails-todo/vendor/bundle/gems/nokogiri-1.10.3/patches/libxml2/0001-Revert-Do-not-URI-escape-in-server-side-includes.patch... OK
+Running git apply with /Users/itn.govardhan.p/rails-todo/vendor/bundle/gems/nokogiri-1.10.3/patches/libxml2/0002-Remove-script-macro-support.patch... OK
+Running git apply with /Users/itn.govardhan.p/rails-todo/vendor/bundle/gems/nokogiri-1.10.3/patches/libxml2/0003-Update-entities-to-remove-handling-of-ssi.patch... OK
 Running 'configure' for libxml2 2.9.9... OK
 Running 'compile' for libxml2 2.9.9... OK
 Running 'install' for libxml2 2.9.9... OK
-Activating libxml2 2.9.9 (from /Users/itn.govardhan.p/todo/vendor/bundle/gems/nokogiri-1.10.3/ports/x86_64-apple-darwin18.6.0/libxml2/2.9.9)...
+Activating libxml2 2.9.9 (from /Users/itn.govardhan.p/rails-todo/vendor/bundle/gems/nokogiri-1.10.3/ports/x86_64-apple-darwin18.6.0/libxml2/2.9.9)...
 ************************************************************************
 IMPORTANT NOTICE:
 
@@ -63,11 +63,11 @@ If you are using Bundler, tell it to use the option:
     bundle install
 ************************************************************************
 Extracting libxslt-1.1.33.tar.gz into tmp/x86_64-apple-darwin18.6.0/ports/libxslt/1.1.33... OK
-Running git apply with /Users/itn.govardhan.p/todo/vendor/bundle/gems/nokogiri-1.10.3/patches/libxslt/0001-Fix-security-framework-bypass.patch... OK
+Running git apply with /Users/itn.govardhan.p/rails-todo/vendor/bundle/gems/nokogiri-1.10.3/patches/libxslt/0001-Fix-security-framework-bypass.patch... OK
 Running 'configure' for libxslt 1.1.33... OK
 Running 'compile' for libxslt 1.1.33... OK
 Running 'install' for libxslt 1.1.33... OK
-Activating libxslt 1.1.33 (from /Users/itn.govardhan.p/todo/vendor/bundle/gems/nokogiri-1.10.3/ports/x86_64-apple-darwin18.6.0/libxslt/1.1.33)...
+Activating libxslt 1.1.33 (from /Users/itn.govardhan.p/rails-todo/vendor/bundle/gems/nokogiri-1.10.3/ports/x86_64-apple-darwin18.6.0/libxslt/1.1.33)...
 checking for -llzma... yes
 checking for xmlParseDoc() in libxml/parser.h... yes
 checking for xsltParseStylesheetDoc() in libxslt/xslt.h... yes
@@ -81,10 +81,10 @@ checking for xmlSchemaSetValidStructuredErrors()... yes
 checking for xmlSchemaSetParserStructuredErrors()... yes
 creating Makefile
 
-current directory: /Users/itn.govardhan.p/todo/vendor/bundle/gems/nokogiri-1.10.3/ext/nokogiri
+current directory: /Users/itn.govardhan.p/rails-todo/vendor/bundle/gems/nokogiri-1.10.3/ext/nokogiri
 make "DESTDIR=" clean
 
-current directory: /Users/itn.govardhan.p/todo/vendor/bundle/gems/nokogiri-1.10.3/ext/nokogiri
+current directory: /Users/itn.govardhan.p/rails-todo/vendor/bundle/gems/nokogiri-1.10.3/ext/nokogiri
 make "DESTDIR="
 compiling html_document.c
 html_document.c:16:28: warning: cast from 'const char *' to 'char *' drops const qualifier [-Wcast-qual]
@@ -214,9 +214,9 @@ static void swallow_superfluous_xml_errors(void * userdata, xmlErrorPtr error, .
 2 warnings generated.
 linking shared-object nokogiri/nokogiri.bundle
 Cleaning files only used during build.
-rm -rf /Users/itn.govardhan.p/todo/vendor/bundle/gems/nokogiri-1.10.3/ext/nokogiri/tmp/x86_64-apple-darwin18.6.0/ports
-rm -rf /Users/itn.govardhan.p/todo/vendor/bundle/gems/nokogiri-1.10.3/ports
+rm -rf /Users/itn.govardhan.p/rails-todo/vendor/bundle/gems/nokogiri-1.10.3/ext/nokogiri/tmp/x86_64-apple-darwin18.6.0/ports
+rm -rf /Users/itn.govardhan.p/rails-todo/vendor/bundle/gems/nokogiri-1.10.3/ports
 
-current directory: /Users/itn.govardhan.p/todo/vendor/bundle/gems/nokogiri-1.10.3/ext/nokogiri
+current directory: /Users/itn.govardhan.p/rails-todo/vendor/bundle/gems/nokogiri-1.10.3/ext/nokogiri
 make "DESTDIR=" install
-/usr/local/opt/coreutils/bin/ginstall -c -m 0755 nokogiri.bundle ./.gem.20190717-67645-1twp8q0/nokogiri
+/usr/local/opt/coreutils/bin/ginstall -c -m 0755 nokogiri.bundle ./.gem.20190726-73505-1u5cibe/nokogiri

@@ -1,5 +1,5 @@
-current directory: /Users/itn.govardhan.p/todo/vendor/bundle/gems/pg-1.1.4/ext
-/Users/itn.govardhan.p/.rvm/rubies/ruby-2.6.3/bin/ruby -I /Users/itn.govardhan.p/.rvm/rubies/ruby-2.6.3/lib/ruby/site_ruby/2.6.0 -r ./siteconf20190717-87861-1w0ucs1.rb extconf.rb
+current directory: /Users/itn.govardhan.p/rails-todo/vendor/bundle/gems/pg-1.1.4/ext
+/Users/itn.govardhan.p/.rvm/rubies/ruby-2.6.3/bin/ruby -I /Users/itn.govardhan.p/.rvm/rubies/ruby-2.6.3/lib/ruby/site_ruby/2.6.0 -r ./siteconf20190726-73505-hhy8qm.rb extconf.rb
 checking for pg_config... yes
 Using config values from /usr/local/bin/pg_config
 checking for libpq-fe.h... yes
@@ -19,10 +19,10 @@ checking for C99 variable length arrays... yes
 creating extconf.h
 creating Makefile
 
-current directory: /Users/itn.govardhan.p/todo/vendor/bundle/gems/pg-1.1.4/ext
+current directory: /Users/itn.govardhan.p/rails-todo/vendor/bundle/gems/pg-1.1.4/ext
 make "DESTDIR=" clean
 
-current directory: /Users/itn.govardhan.p/todo/vendor/bundle/gems/pg-1.1.4/ext
+current directory: /Users/itn.govardhan.p/rails-todo/vendor/bundle/gems/pg-1.1.4/ext
 make "DESTDIR="
 compiling gvl_wrappers.c
 compiling pg.c
@@ -130,6 +130,6 @@ util.c:119:24: warning: implicit conversion loses integer precision: 'long' to '
 1 warning generated.
 linking shared-object pg_ext.bundle
 
-current directory: /Users/itn.govardhan.p/todo/vendor/bundle/gems/pg-1.1.4/ext
+current directory: /Users/itn.govardhan.p/rails-todo/vendor/bundle/gems/pg-1.1.4/ext
 make "DESTDIR=" install
-/usr/local/opt/coreutils/bin/ginstall -c -m 0755 pg_ext.bundle ./.gem.20190717-87861-1k8tb9y
+/usr/local/opt/coreutils/bin/ginstall -c -m 0755 pg_ext.bundle ./.gem.20190726-73505-smexqb

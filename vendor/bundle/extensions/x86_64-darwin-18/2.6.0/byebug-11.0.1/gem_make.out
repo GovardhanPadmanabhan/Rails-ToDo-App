@@ -1,11 +1,11 @@
-current directory: /Users/itn.govardhan.p/todo/vendor/bundle/gems/byebug-11.0.1/ext/byebug
-/Users/itn.govardhan.p/.rvm/rubies/ruby-2.6.3/bin/ruby -I /Users/itn.govardhan.p/.rvm/rubies/ruby-2.6.3/lib/ruby/site_ruby/2.6.0 -r ./siteconf20190717-67645-1i37370.rb extconf.rb
+current directory: /Users/itn.govardhan.p/rails-todo/vendor/bundle/gems/byebug-11.0.1/ext/byebug
+/Users/itn.govardhan.p/.rvm/rubies/ruby-2.6.3/bin/ruby -I /Users/itn.govardhan.p/.rvm/rubies/ruby-2.6.3/lib/ruby/site_ruby/2.6.0 -r ./siteconf20190726-73505-1awvpbn.rb extconf.rb
 creating Makefile
 
-current directory: /Users/itn.govardhan.p/todo/vendor/bundle/gems/byebug-11.0.1/ext/byebug
+current directory: /Users/itn.govardhan.p/rails-todo/vendor/bundle/gems/byebug-11.0.1/ext/byebug
 make "DESTDIR=" clean
 
-current directory: /Users/itn.govardhan.p/todo/vendor/bundle/gems/byebug-11.0.1/ext/byebug
+current directory: /Users/itn.govardhan.p/rails-todo/vendor/bundle/gems/byebug-11.0.1/ext/byebug
 make "DESTDIR="
 compiling breakpoint.c
 compiling byebug.c
@@ -14,6 +14,6 @@ compiling locker.c
 compiling threads.c
 linking shared-object byebug/byebug.bundle
 
-current directory: /Users/itn.govardhan.p/todo/vendor/bundle/gems/byebug-11.0.1/ext/byebug
+current directory: /Users/itn.govardhan.p/rails-todo/vendor/bundle/gems/byebug-11.0.1/ext/byebug
 make "DESTDIR=" install
-/usr/local/opt/coreutils/bin/ginstall -c -m 0755 byebug.bundle ./.gem.20190717-67645-guqi0s/byebug
+/usr/local/opt/coreutils/bin/ginstall -c -m 0755 byebug.bundle ./.gem.20190726-73505-1p6gc1v/byebug

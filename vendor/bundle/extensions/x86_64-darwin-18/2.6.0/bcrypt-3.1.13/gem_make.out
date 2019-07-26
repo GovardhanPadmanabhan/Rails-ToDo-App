@@ -1,11 +1,11 @@
-current directory: /Users/itn.govardhan.p/todo/vendor/bundle/gems/bcrypt-3.1.13/ext/mri
-/Users/itn.govardhan.p/.rvm/rubies/ruby-2.6.3/bin/ruby -I /Users/itn.govardhan.p/.rvm/rubies/ruby-2.6.3/lib/ruby/site_ruby/2.6.0 -r ./siteconf20190717-67645-4f69l0.rb extconf.rb
+current directory: /Users/itn.govardhan.p/rails-todo/vendor/bundle/gems/bcrypt-3.1.13/ext/mri
+/Users/itn.govardhan.p/.rvm/rubies/ruby-2.6.3/bin/ruby -I /Users/itn.govardhan.p/.rvm/rubies/ruby-2.6.3/lib/ruby/site_ruby/2.6.0 -r ./siteconf20190726-73505-m7039w.rb extconf.rb
 creating Makefile
 
-current directory: /Users/itn.govardhan.p/todo/vendor/bundle/gems/bcrypt-3.1.13/ext/mri
+current directory: /Users/itn.govardhan.p/rails-todo/vendor/bundle/gems/bcrypt-3.1.13/ext/mri
 make "DESTDIR=" clean
 
-current directory: /Users/itn.govardhan.p/todo/vendor/bundle/gems/bcrypt-3.1.13/ext/mri
+current directory: /Users/itn.govardhan.p/rails-todo/vendor/bundle/gems/bcrypt-3.1.13/ext/mri
 make "DESTDIR="
 compiling bcrypt_ext.c
 bcrypt_ext.c:17:25: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
@@ -30,6 +30,6 @@ compiling crypt_gensalt.c
 compiling wrapper.c
 linking shared-object bcrypt_ext.bundle
 
-current directory: /Users/itn.govardhan.p/todo/vendor/bundle/gems/bcrypt-3.1.13/ext/mri
+current directory: /Users/itn.govardhan.p/rails-todo/vendor/bundle/gems/bcrypt-3.1.13/ext/mri
 make "DESTDIR=" install
-/usr/local/opt/coreutils/bin/ginstall -c -m 0755 bcrypt_ext.bundle ./.gem.20190717-67645-4ina3
+/usr/local/opt/coreutils/bin/ginstall -c -m 0755 bcrypt_ext.bundle ./.gem.20190726-73505-1pfr6kb
