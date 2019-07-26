@@ -1,0 +1,37 @@
+current directory: /Users/itn.govardhan.p/rails-todo/vendor/bundle/gems/duktape-2.3.0.0/ext/duktape
+/Users/itn.govardhan.p/.rvm/rubies/ruby-2.6.3/bin/ruby -I /Users/itn.govardhan.p/.rvm/rubies/ruby-2.6.3/lib/ruby/site_ruby/2.6.0 -r ./siteconf20190726-55681-903unc.rb extconf.rb
+checking for rb_sym2str()... yes
+creating Makefile
+
+current directory: /Users/itn.govardhan.p/rails-todo/vendor/bundle/gems/duktape-2.3.0.0/ext/duktape
+make "DESTDIR=" clean
+
+current directory: /Users/itn.govardhan.p/rails-todo/vendor/bundle/gems/duktape-2.3.0.0/ext/duktape
+make "DESTDIR="
+compiling duktape.c
+duktape.c:15949:52: warning: function 'duk_debugger_attach' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+                                      void *udata) {
+                                                   ^
+duktape.c:15963:57: warning: function 'duk_debugger_detach' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+DUK_EXTERNAL void duk_debugger_detach(duk_hthread *thr) {
+                                                        ^
+duktape.c:29782:34: warning: implicit conversion loses integer precision: 'unsigned long' to 'duk_uint_fast32_t' (aka 'unsigned int') [-Wshorten-64-to-32]
+                        match_val = (1UL << part_idx) + (1UL << (sep_idx + 9));  /* match against rule part/sep bits */
+                                  ~ ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+duktape.c:34336:64: warning: function 'duk__dec_syntax_error' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+DUK_LOCAL void duk__dec_syntax_error(duk_json_dec_ctx *js_ctx) {
+                                                               ^
+4 warnings generated.
+compiling duktape_ext.c
+duktape_ext.c:300:1: warning: function 'raise_ctx_error' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+{
+^
+duktape_ext.c:625:1: warning: function 'error_handler' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+{
+^
+2 warnings generated.
+linking shared-object duktape_ext.bundle
+
+current directory: /Users/itn.govardhan.p/rails-todo/vendor/bundle/gems/duktape-2.3.0.0/ext/duktape
+make "DESTDIR=" install
+/usr/local/opt/coreutils/bin/ginstall -c -m 0755 duktape_ext.bundle ./.gem.20190726-55681-11zfb6g
