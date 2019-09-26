@@ -12027,3 +12027,447 @@ Processing by Devise::PasswordsController#edit as HTML
 Completed 200 OK in 81ms (Views: 79.7ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2019-08-06 17:49:11 +0800
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#home as HTML
+  Rendering pages/home.slim within layouts/application
+  Rendered pages/home.slim within layouts/application (12.4ms)
+Completed 500 Internal Server Error in 918ms (ActiveRecord: 0.0ms)
+
+
+
+ExecJS::ProgramError - identifier '(function(opts, pluginOpts) {return eval(process' undefined:
+  (execjs):1:in `'
+  app/views/layouts/application.slim:9:in `_app_views_layouts_application_slim__1530268825157486524_70128770543400'
+
+Started POST "/__better_errors/d9d58644ea83b054/variables" for ::1 at 2019-08-06 17:49:12 +0800
+  [1m[36mTodoList Load (0.9ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Started GET "/" for ::1 at 2019-08-06 17:51:43 +0800
+Processing by PagesController#home as HTML
+  Rendering pages/home.slim within layouts/application
+  Rendered pages/home.slim within layouts/application (2.8ms)
+Completed 500 Internal Server Error in 290ms (ActiveRecord: 0.0ms)
+
+
+
+ExecJS::ProgramError - identifier '(function(opts, pluginOpts) {return eval(process' undefined:
+  (execjs):1:in `'
+  app/views/layouts/application.slim:9:in `_app_views_layouts_application_slim__1530268825157486524_70128731117900'
+
+Started POST "/__better_errors/5a16131615adde42/variables" for ::1 at 2019-08-06 17:51:43 +0800
+  [1m[36mTodoList Load (0.2ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Started GET "/" for ::1 at 2019-08-06 17:52:35 +0800
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#home as HTML
+  Rendering pages/home.slim within layouts/application
+  Rendered pages/home.slim within layouts/application (14.1ms)
+  Rendered layouts/_alerts.slim (1.9ms)
+Completed 200 OK in 3819ms (Views: 3810.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-08-06 17:57:04 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.slim within layouts/application
+  Rendered devise/shared/_links.slim (9.2ms)
+  Rendered devise/sessions/new.slim within layouts/application (1090.6ms)
+  Rendered layouts/_alerts.slim (1.8ms)
+Completed 200 OK in 1174ms (Views: 1158.6ms | ActiveRecord: 5.2ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-08-06 17:57:20 +0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rF36EDceFIzgqLXUM0Ox9OquDb2RG6BY77ohFGoP0Uk8osVrvXiV77JXEzNObXcejWVY1Btd3Cgm3aycC5unEg==", "user"=>{"email"=>"govardhan.padmanabhan99@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "govardhan.padmanabhan99@gmail.com"], ["LIMIT", 1]]
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/todo_lists
+Completed 302 Found in 152ms (ActiveRecord: 4.7ms)
+
+
+Started GET "/todo_lists" for ::1 at 2019-08-06 17:57:20 +0800
+Processing by TodoListsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering todo_lists/index.slim within layouts/application
+  [1m[36mTodoList Load (0.4ms)[0m  [1m[34mSELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/views/todo_lists/index.slim:6
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/todo_lists/index.slim:7
+  Rendered todo_lists/index.slim within layouts/application (21.2ms)
+  Rendered layouts/_alerts.slim (2.6ms)
+Completed 200 OK in 87ms (Views: 80.1ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/todo_lists/5" for ::1 at 2019-08-06 18:03:19 +0800
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mTodoList Load (0.5ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:70
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering todo_lists/show.slim within layouts/application
+  [1m[36mTodoItem Load (0.8ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = $1[0m  [["todo_list_id", 5]]
+  ↳ app/views/todo_lists/show.slim:5
+  Rendered collection of todo_items/_todo_item.slim [2 times] (4.0ms)
+  Rendered todo_items/_form.slim (6.3ms)
+  Rendered todo_lists/show.slim within layouts/application (46.0ms)
+  Rendered layouts/_alerts.slim (2.4ms)
+Completed 200 OK in 105ms (Views: 92.5ms | ActiveRecord: 7.9ms)
+
+
+Started GET "/todo_lists/5/edit" for ::1 at 2019-08-06 18:03:22 +0800
+Processing by TodoListsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mTodoList Load (0.3ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:70
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering todo_lists/edit.slim within layouts/application
+  Rendered todo_lists/_form.slim (5.8ms)
+  Rendered todo_lists/edit.slim within layouts/application (9.0ms)
+  Rendered layouts/_alerts.slim (2.4ms)
+Completed 200 OK in 60ms (Views: 56.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/todo_lists" for ::1 at 2019-08-06 18:03:24 +0800
+Processing by TodoListsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering todo_lists/index.slim within layouts/application
+  [1m[36mTodoList Load (0.3ms)[0m  [1m[34mSELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/views/todo_lists/index.slim:6
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/todo_lists/index.slim:7
+  Rendered todo_lists/index.slim within layouts/application (5.9ms)
+  Rendered layouts/_alerts.slim (1.8ms)
+Completed 200 OK in 87ms (Views: 82.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/todo_lists/5" for ::1 at 2019-08-06 18:03:27 +0800
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mTodoList Load (0.3ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:70
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering todo_lists/show.slim within layouts/application
+  [1m[36mTodoItem Load (0.3ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = $1[0m  [["todo_list_id", 5]]
+  ↳ app/views/todo_lists/show.slim:5
+  Rendered collection of todo_items/_todo_item.slim [2 times] (5.0ms)
+  Rendered todo_items/_form.slim (4.7ms)
+  Rendered todo_lists/show.slim within layouts/application (15.7ms)
+  Rendered layouts/_alerts.slim (1.8ms)
+Completed 200 OK in 61ms (Views: 58.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/todo_lists/5/edit" for ::1 at 2019-08-06 18:03:29 +0800
+Processing by TodoListsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mTodoList Load (0.4ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:70
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering todo_lists/edit.slim within layouts/application
+  Rendered todo_lists/_form.slim (3.8ms)
+  Rendered todo_lists/edit.slim within layouts/application (6.4ms)
+  Rendered layouts/_alerts.slim (1.8ms)
+Completed 200 OK in 54ms (Views: 50.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/todo_lists" for ::1 at 2019-08-06 18:03:30 +0800
+Processing by TodoListsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering todo_lists/index.slim within layouts/application
+  [1m[36mTodoList Load (0.4ms)[0m  [1m[34mSELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/views/todo_lists/index.slim:6
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/todo_lists/index.slim:7
+  Rendered todo_lists/index.slim within layouts/application (5.8ms)
+  Rendered layouts/_alerts.slim (1.9ms)
+Completed 200 OK in 51ms (Views: 47.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/todo_lists/5" for ::1 at 2019-08-06 18:03:32 +0800
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mTodoList Load (0.5ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:70
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering todo_lists/show.slim within layouts/application
+  [1m[36mTodoItem Load (0.4ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = $1[0m  [["todo_list_id", 5]]
+  ↳ app/views/todo_lists/show.slim:5
+  Rendered collection of todo_items/_todo_item.slim [2 times] (4.3ms)
+  Rendered todo_items/_form.slim (4.0ms)
+  Rendered todo_lists/show.slim within layouts/application (14.2ms)
+  Rendered layouts/_alerts.slim (1.9ms)
+Completed 200 OK in 59ms (Views: 54.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2019-08-07 17:34:41 +0800
+
+PG::ConnectionBad - could not translate host name "postgres" to address: nodename nor servname provided, or not known
+:
+
+Started POST "/__better_errors/40e551faa4a9ba4e/variables" for ::1 at 2019-08-07 17:34:41 +0800
+Started GET "/" for ::1 at 2019-08-07 17:34:47 +0800
+
+PG::ConnectionBad - could not translate host name "postgres" to address: nodename nor servname provided, or not known
+:
+
+Started POST "/__better_errors/f6c214524f24854f/variables" for ::1 at 2019-08-07 17:34:47 +0800
+Started GET "/" for ::1 at 2019-08-07 18:02:50 +0800
+
+PG::ConnectionBad - could not translate host name "postgres" to address: nodename nor servname provided, or not known
+:
+
+Started POST "/__better_errors/0c281602aafadea1/variables" for ::1 at 2019-08-07 18:02:50 +0800
+Started GET "/" for ::1 at 2019-08-07 18:03:22 +0800
+
+PG::ConnectionBad - could not translate host name "postgres" to address: nodename nor servname provided, or not known
+:
+
+Started POST "/__better_errors/2c485b8ac3d7d8a7/variables" for ::1 at 2019-08-07 18:03:22 +0800
+Started GET "/" for ::1 at 2019-08-07 18:03:23 +0800
+
+PG::ConnectionBad - could not translate host name "postgres" to address: nodename nor servname provided, or not known
+:
+
+Started POST "/__better_errors/5f2ee952d49db36e/variables" for ::1 at 2019-08-07 18:03:23 +0800
+Started GET "/" for ::1 at 2019-08-07 18:03:23 +0800
+
+PG::ConnectionBad - could not translate host name "postgres" to address: nodename nor servname provided, or not known
+:
+
+Started POST "/__better_errors/1cb3314b503f1ea5/variables" for ::1 at 2019-08-07 18:03:23 +0800
+Started GET "/" for ::1 at 2019-08-07 18:03:23 +0800
+
+PG::ConnectionBad - could not translate host name "postgres" to address: nodename nor servname provided, or not known
+:
+
+Started POST "/__better_errors/cb19e2b835e478d2/variables" for ::1 at 2019-08-07 18:03:23 +0800
+Started GET "/" for ::1 at 2019-08-07 18:03:24 +0800
+
+PG::ConnectionBad - could not translate host name "postgres" to address: nodename nor servname provided, or not known
+:
+
+Started POST "/__better_errors/7ae31545e7ee29a1/variables" for ::1 at 2019-08-07 18:03:24 +0800
+Started GET "/" for ::1 at 2019-08-07 18:03:24 +0800
+
+PG::ConnectionBad - could not translate host name "postgres" to address: nodename nor servname provided, or not known
+:
+
+Started POST "/__better_errors/7e357de9c871964e/variables" for ::1 at 2019-08-07 18:03:24 +0800
+Started GET "/" for ::1 at 2019-08-07 18:03:24 +0800
+
+PG::ConnectionBad - could not translate host name "postgres" to address: nodename nor servname provided, or not known
+:
+
+Started POST "/__better_errors/6ea23d3e6106e59e/variables" for ::1 at 2019-08-07 18:03:24 +0800
+Started GET "/" for ::1 at 2019-08-07 18:03:24 +0800
+
+PG::ConnectionBad - could not translate host name "postgres" to address: nodename nor servname provided, or not known
+:
+
+Started POST "/__better_errors/2870e6aed972b085/variables" for ::1 at 2019-08-07 18:03:25 +0800
+Started GET "/" for ::1 at 2019-08-07 18:03:25 +0800
+
+PG::ConnectionBad - could not translate host name "postgres" to address: nodename nor servname provided, or not known
+:
+
+Started POST "/__better_errors/c4fe39c562aaa55d/variables" for ::1 at 2019-08-07 18:03:25 +0800
+Started GET "/" for ::1 at 2019-08-07 18:03:25 +0800
+
+PG::ConnectionBad - could not translate host name "postgres" to address: nodename nor servname provided, or not known
+:
+
+Started POST "/__better_errors/bc23fb4526767bd2/variables" for ::1 at 2019-08-07 18:03:25 +0800
+Started GET "/" for ::1 at 2019-08-07 18:03:25 +0800
+
+PG::ConnectionBad - could not translate host name "postgres" to address: nodename nor servname provided, or not known
+:
+
+Started POST "/__better_errors/6d2ac6f1f1bf3734/variables" for ::1 at 2019-08-07 18:03:25 +0800
+Started GET "/" for ::1 at 2019-08-07 18:03:25 +0800
+
+PG::ConnectionBad - could not translate host name "postgres" to address: nodename nor servname provided, or not known
+:
+
+Started POST "/__better_errors/cd3d8e2731c1f91a/variables" for ::1 at 2019-08-07 18:03:25 +0800
+Started GET "/" for ::1 at 2019-08-07 18:03:25 +0800
+
+PG::ConnectionBad - could not translate host name "postgres" to address: nodename nor servname provided, or not known
+:
+
+Started POST "/__better_errors/2c834ed492ed24b0/variables" for ::1 at 2019-08-07 18:03:25 +0800
+Started GET "/" for ::1 at 2019-08-07 18:03:40 +0800
+
+PG::ConnectionBad - could not translate host name "postgres" to address: nodename nor servname provided, or not known
+:
+
+Started POST "/__better_errors/686efee60915a33f/variables" for ::1 at 2019-08-07 18:03:40 +0800
+Started GET "/" for ::1 at 2019-08-07 18:03:40 +0800
+
+PG::ConnectionBad - could not translate host name "postgres" to address: nodename nor servname provided, or not known
+:
+
+Started POST "/__better_errors/05fb770c91fa861f/variables" for ::1 at 2019-08-07 18:03:40 +0800
+Started GET "/" for ::1 at 2019-08-07 18:03:41 +0800
+
+PG::ConnectionBad - could not translate host name "postgres" to address: nodename nor servname provided, or not known
+:
+
+Started POST "/__better_errors/fc4d0bb09ed16605/variables" for ::1 at 2019-08-07 18:03:41 +0800
+Started GET "/" for ::1 at 2019-08-07 18:03:41 +0800
+
+PG::ConnectionBad - could not translate host name "postgres" to address: nodename nor servname provided, or not known
+:
+
+Started POST "/__better_errors/506004938eaf3ffe/variables" for ::1 at 2019-08-07 18:03:41 +0800
+Started GET "/" for ::1 at 2019-08-07 18:03:41 +0800
+
+PG::ConnectionBad - could not translate host name "postgres" to address: nodename nor servname provided, or not known
+:
+
+Started POST "/__better_errors/c9aee362524533a6/variables" for ::1 at 2019-08-07 18:03:41 +0800
+Started GET "/" for ::1 at 2019-08-07 18:03:41 +0800
+
+PG::ConnectionBad - could not translate host name "postgres" to address: nodename nor servname provided, or not known
+:
+
+Started POST "/__better_errors/9921ea44f145382f/variables" for ::1 at 2019-08-07 18:03:41 +0800
+Started GET "/" for ::1 at 2019-08-07 18:03:41 +0800
+
+PG::ConnectionBad - could not translate host name "postgres" to address: nodename nor servname provided, or not known
+:
+
+Started POST "/__better_errors/5f370280d896a9c0/variables" for ::1 at 2019-08-07 18:03:41 +0800
+Started GET "/" for ::1 at 2019-08-07 18:03:42 +0800
+
+PG::ConnectionBad - could not translate host name "postgres" to address: nodename nor servname provided, or not known
+:
+
+Started POST "/__better_errors/722bbacd37310071/variables" for ::1 at 2019-08-07 18:03:42 +0800
+Started GET "/" for ::1 at 2019-08-07 18:03:42 +0800
+
+PG::ConnectionBad - could not translate host name "postgres" to address: nodename nor servname provided, or not known
+:
+
+Started POST "/__better_errors/f8d9faef35318a94/variables" for ::1 at 2019-08-07 18:03:42 +0800
+Started GET "/" for ::1 at 2019-08-07 18:03:42 +0800
+
+PG::ConnectionBad - could not translate host name "postgres" to address: nodename nor servname provided, or not known
+:
+
+Started POST "/__better_errors/00db00851eaed1a4/variables" for ::1 at 2019-08-07 18:03:42 +0800
+Started GET "/" for ::1 at 2019-08-07 18:03:42 +0800
+
+PG::ConnectionBad - could not translate host name "postgres" to address: nodename nor servname provided, or not known
+:
+
+Started POST "/__better_errors/68f9f6ea29257cc1/variables" for ::1 at 2019-08-07 18:03:42 +0800
+Started GET "/" for ::1 at 2019-08-07 18:03:55 +0800
+  [1m[35m (3.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#home as HTML
+  Rendering pages/home.slim within layouts/application
+  [1m[36mUser Load (5.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/pages/home.slim:7
+  Rendered pages/home.slim within layouts/application (34.3ms)
+  Rendered layouts/_alerts.slim (2.0ms)
+Completed 200 OK in 347ms (Views: 322.8ms | ActiveRecord: 16.0ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2019-08-07 18:03:57 +0800
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"LJcsxPdjdOrsud/Ck8DQjUyBKsALz16o8vXvuzaEfkcXdbQU01BjcstOCWxeG/AiSg02LP+CkdDwb+GmSkKKzA=="}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ vendor/bundle/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 129ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2019-08-07 18:03:58 +0800
+Processing by PagesController#home as HTML
+  Rendering pages/home.slim within layouts/application
+  Rendered pages/home.slim within layouts/application (3.7ms)
+  Rendered layouts/_alerts.slim (1.7ms)
+Completed 200 OK in 54ms (Views: 52.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-08-07 18:03:59 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.slim within layouts/application
+  Rendered devise/shared/_links.slim (3.2ms)
+  Rendered devise/sessions/new.slim within layouts/application (46.5ms)
+  Rendered layouts/_alerts.slim (1.8ms)
+Completed 200 OK in 92ms (Views: 90.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-08-07 18:04:05 +0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"N79EugGV3nw/9PMNSvpGMGROEDoUoeNYy0Lsedu5sW3E9Aa4MPvF2nQWvXmFQbX3ZhJIAjk7iy94GII9uwkXtg==", "user"=>{"email"=>"qwertyui@qwert.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"N79EugGV3nw/9PMNSvpGMGROEDoUoeNYy0Lsedu5sW3E9Aa4MPvF2nQWvXmFQbX3ZhJIAjk7iy94GII9uwkXtg==", "user"=>{"email"=>"qwertyui@qwert.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.slim within layouts/application
+  Rendered devise/shared/_links.slim (3.5ms)
+  Rendered devise/sessions/new.slim within layouts/application (13.0ms)
+  Rendered layouts/_alerts.slim (1.9ms)
+Completed 200 OK in 58ms (Views: 57.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-08-07 18:04:06 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.slim within layouts/application
+  Rendered devise/shared/_links.slim (3.1ms)
+  Rendered devise/sessions/new.slim within layouts/application (11.4ms)
+  Rendered layouts/_alerts.slim (1.8ms)
+Completed 200 OK in 54ms (Views: 53.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-08-07 18:04:07 +0800
+Processing by PagesController#home as HTML
+  Rendering pages/home.slim within layouts/application
+  Rendered pages/home.slim within layouts/application (2.9ms)
+  Rendered layouts/_alerts.slim (1.7ms)
+Completed 200 OK in 73ms (Views: 72.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2019-08-07 18:04:08 +0800
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.slim within layouts/application
+  Rendered devise/shared/_links.slim (3.3ms)
+  Rendered devise/registrations/new.slim within layouts/application (12.8ms)
+  Rendered layouts/_alerts.slim (1.8ms)
+Completed 200 OK in 56ms (Views: 54.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2019-08-07 18:07:17 +0800
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.slim within layouts/application
+  Rendered devise/shared/_links.slim (3.0ms)
+  Rendered devise/registrations/new.slim within layouts/application (10.3ms)
+  Rendered layouts/_alerts.slim (2.3ms)
+Completed 200 OK in 57ms (Views: 55.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2019-08-07 18:07:18 +0800
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.slim within layouts/application
+  Rendered devise/shared/_links.slim (2.5ms)
+  Rendered devise/registrations/new.slim within layouts/application (7.6ms)
+  Rendered layouts/_alerts.slim (1.8ms)
+Completed 200 OK in 50ms (Views: 49.5ms | ActiveRecord: 0.0ms)
+
+

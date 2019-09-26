@@ -1,6 +1,6 @@
 div style="text-align:right" 
   = link_to('Logout', destroy_user_session_path, method: :delete)
-  div style=("test-align:left; inline-block; float:left;") 
+  div style=("text-align:left; inline-block; float:left;") 
     = link_to('User Options', edit_user_registration_path)
 br
 - @todo_lists.each do |todo_list|
