@@ -18,8 +18,7 @@ default: &default
   adapter: postgresql
 
   #to run locally, change it to localhost
-  # host: <%= ENV.fetch("POSTGRES_HOST") { 'postgres' }%>
-  host: localhost
+  host: <%= ENV.fetch("POSTGRES_HOST") { 'postgres' }%>
 
   encoding: unicode
   username: postgres

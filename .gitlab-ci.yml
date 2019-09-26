@@ -26,15 +26,6 @@ before_script:
   - gem install dpl
   - bundle install --jobs $(nproc)  "${FLAGS[@]}"
 
-#build:
-#  stage: build
-  #image: postgres
-#  script:
-#    - echo "Building"
-#    - export PGPASSWORD=$POSTGRES_PASSWORD
-#    - psql -h "postgres" -U "$POSTGRES_USER" -d "$POSTGRES_DB" -c "SELECT 'OK' AS status;"
-
-
 test:
   stage: test
   script:
