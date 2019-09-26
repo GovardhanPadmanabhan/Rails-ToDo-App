@@ -16,7 +16,7 @@ Simple todo web app built using ruby on rails.
 * Rails v5.2.3
 * Node.js
 * Postgres v11.4  (be sure to change the username and password in `database.yml` and `.gitlab-ci.yml`)
-(If defautl is mysql, be sure to modify the code to mysql, mostly in `database.yml` and `.gitlab-ci.yml`)
+(If default is mysql, be sure to modify the code to mysql, mostly in `database.yml` and `.gitlab-ci.yml`)
 
 ### Database Creation
 
