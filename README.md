@@ -11,7 +11,6 @@ Simple todo web app built using ruby on rails.
 
 * User Account sign up/login, reset/change password, delete account
 * Create user-specific todo lists
-* Continuous Integration using GitLab CI
 * Deployed to heroku
 
 
@@ -20,8 +19,8 @@ Simple todo web app built using ruby on rails.
 * Ruby v2.6.3
 * Rails v5.2.3
 * Node.js
-* Postgres v11.4  (be sure to change the username and password in `database.yml` and `.gitlab-ci.yml`)
-(If default is mysql, be sure to modify the code to mysql, mostly in `database.yml` and `.gitlab-ci.yml`)
+* Postgres v11.4  (be sure to change the username and password in `database.yml`)
+(If default is mysql, be sure to modify the code to mysql, mostly in `database.yml`)
 
 ### Database Creation
 
