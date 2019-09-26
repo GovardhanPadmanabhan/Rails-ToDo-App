@@ -1,7 +1,7 @@
 # README
 
 ```
-Note:   This app was based on Mackenzie Child's youtube tutorial  `https://youtu.be/fd1Vn-Wvy2w`.
+Note:   This app was based on Mackenzie Child's youtube tutorial => https://youtu.be/fd1Vn-Wvy2w
         But, this is not an 1:1 exact copy. I did add a few features not shown in the tutorial.
 ```
 
